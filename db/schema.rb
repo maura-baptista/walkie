@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 20180305174726) do
 
+ActiveRecord::Schema.define(version: 20180305170712) do
+
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -23,6 +26,7 @@ ActiveRecord::Schema.define(version: 20180305174726) do
     t.index ["user_id"], name: "index_likes_on_user_id"
     t.index ["walk_id"], name: "index_likes_on_walk_id"
   end
+
 
   create_table "points_of_interest", force: :cascade do |t|
     t.string "name"
@@ -36,6 +40,7 @@ ActiveRecord::Schema.define(version: 20180305174726) do
     t.bigint "walk_id"
     t.index ["walk_id"], name: "index_points_of_interest_on_walk_id"
   end
+
 
   create_table "reviews", force: :cascade do |t|
     t.text "content"

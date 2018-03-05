@@ -11,7 +11,7 @@ class WalksController < ApplicationController
   end
 
   def show
-
+    @reviews = @walk.reviews
   end
 
   def new
