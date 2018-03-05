@@ -1,5 +1,7 @@
 class User < ApplicationRecord
+  has_many :likes
   has_many :walks
+
 
 
   # Include default devise modules. Others available are:
