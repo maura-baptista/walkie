@@ -1,7 +1,8 @@
 class WalksController < ApplicationController
-  before_action :set_venue, only: [:show, :edit, :update, :destroy]
+  before_action :set_walk, only: [:show, :edit, :update, :destroy]
 
   def index
+    @walks = Walk.all
   end
 
   def show

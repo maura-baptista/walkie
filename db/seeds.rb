@@ -5,6 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+puts "destroying all data"
+Walk.destroy_all
+User.destroy_all
+puts "creating"
 
 Walk.create!({
   name: "Santo Antonio church",
@@ -13,7 +17,7 @@ Walk.create!({
   description: "pare ribs ham boudin ham hock, pork loin drumstick ball tip pork capicola buffalo tail ground round short ribs t-bone filet mignon. Tenderloin shank sausage beef bresaola filet mignon pastrami cow. Jowl ground round short ribs capicola jerky. Meatball bresaola tail, meatloaf cupim pork chop pork belly boudin kielbasa pork loin capicola venison chicken leberkas brisket. Drumstick t-bone filet mignon beef ribs kevin pastrami. Short loin venison salami jowl meatball.
   ",
   category: "Historical",
-  remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1519815482/eloise-ambursley-355875-unsplash.jpg",
+  remote_photo_url: "http://res.cloudinary.com/jsm68/image/upload/v1520260512/carmen-penaranda-411970-unsplash.jpg",
   user_id: User.all.sample.id
   })
 
@@ -24,7 +28,7 @@ Walk.create!({
   description: "pare ribs ham boudin ham hock, pork loin drumstick ball tip pork capicola buffalo tail ground round short ribs t-bone filet mignon. Tenderloin shank sausage beef bresaola filet mignon pastrami cow. Jowl ground round short ribs capicola jerky. Meatball bresaola tail, meatloaf cupim pork chop pork belly boudin kielbasa pork loin capicola venison chicken leberkas brisket. Drumstick t-bone filet mignon beef ribs kevin pastrami. Short loin venison salami jowl meatball.
   ",
   category: "Historical",
-  remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1519815482/eloise-ambursley-355875-unsplash.jpg",
+  remote_photo_url: "http://res.cloudinary.com/jsm68/image/upload/v1520260499/alexander-watts-66219-unsplash.jpg",
   user_id: User.all.sample.id
   })
 
@@ -35,7 +39,7 @@ Walk.create!({
   description: "pare ribs ham boudin ham hock, pork loin drumstick ball tip pork capicola buffalo tail ground round short ribs t-bone filet mignon. Tenderloin shank sausage beef bresaola filet mignon pastrami cow. Jowl ground round short ribs capicola jerky. Meatball bresaola tail, meatloaf cupim pork chop pork belly boudin kielbasa pork loin capicola venison chicken leberkas brisket. Drumstick t-bone filet mignon beef ribs kevin pastrami. Short loin venison salami jowl meatball.
   ",
   category: "Historical",
-  remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1519815482/eloise-ambursley-355875-unsplash.jpg",
+  remote_photo_url: "http://res.cloudinary.com/jsm68/image/upload/v1520260534/michael-d-beckwith-579320-unsplash.jpg",
   user_id: User.all.sample.id
   })
 
@@ -46,7 +50,7 @@ Walk.create!({
   description: "pare ribs ham boudin ham hock, pork loin drumstick ball tip pork capicola buffalo tail ground round short ribs t-bone filet mignon. Tenderloin shank sausage beef bresaola filet mignon pastrami cow. Jowl ground round short ribs capicola jerky. Meatball bresaola tail, meatloaf cupim pork chop pork belly boudin kielbasa pork loin capicola venison chicken leberkas brisket. Drumstick t-bone filet mignon beef ribs kevin pastrami. Short loin venison salami jowl meatball.
   ",
   category: "Historical",
-  remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1519815482/eloise-ambursley-355875-unsplash.jpg",
+  remote_photo_url: "http://res.cloudinary.com/jsm68/image/upload/v1520260739/1200px-Lisbon_main_square__36622604910.jpg",
   user_id: User.all.sample.id
   })
 
@@ -57,6 +61,6 @@ Walk.create!({
   description: "pare ribs ham boudin ham hock, pork loin drumstick ball tip pork capicola buffalo tail ground round short ribs t-bone filet mignon. Tenderloin shank sausage beef bresaola filet mignon pastrami cow. Jowl ground round short ribs capicola jerky. Meatball bresaola tail, meatloaf cupim pork chop pork belly boudin kielbasa pork loin capicola venison chicken leberkas brisket. Drumstick t-bone filet mignon beef ribs kevin pastrami. Short loin venison salami jowl meatball.
   ",
   category: "Historical",
-  remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1519815482/eloise-ambursley-355875-unsplash.jpg",
+  remote_photo_url: "http://res.cloudinary.com/jsm68/image/upload/v1520260575/mike-wilson-195744-unsplash.jpg",
   user_id: User.all.sample.id
   })
