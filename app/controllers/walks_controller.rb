@@ -2,7 +2,11 @@ class WalksController < ApplicationController
   before_action :set_walk, only: [:show, :edit, :update, :destroy]
 
   def index
+
+    @walks = Walk.all
+
     @walks = policy_scope(Walk).order(created_at: :desc)
+
   end
 
   def show
