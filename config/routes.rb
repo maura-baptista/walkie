@@ -7,3 +7,4 @@ Rails.application.routes.draw do
     resources :user_walks, only: [ :index, :create ]
   end
 end
+
