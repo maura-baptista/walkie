@@ -74,3 +74,27 @@ Walk.create!({
   photo: "http://res.cloudinary.com/jsm68/image/upload/v1520260575/mike-wilson-195744-unsplash.jpg",
   user: User.all.sample
   })
+
+Walk.create!({
+  name: "Castelo de São Jorge",
+  location: "Lisbon",
+  address: "R. do Espírito Santo, 1100-129 Lisboa",
+  description: "pare ribs ham boudin ham hock, pork loin drumstick ball tip pork capicola buffalo tail ground round short ribs t-bone filet mignon. Tenderloin shank sausage beef bresaola filet mignon pastrami cow. Jowl ground round short ribs capicola jerky. Meatball bresaola tail, meatloaf cupim pork chop pork belly boudin kielbasa pork loin capicola venison chicken leberkas brisket. Drumstick t-bone filet mignon beef ribs kevin pastrami. Short loin venison salami jowl meatball.
+  ",
+  category: "Historical",
+  duration: 45,
+  photo: "http://res.cloudinary.com/jsm68/image/upload/v1520264635/lorenzo-castagnone-445302-unsplash.jpg",
+  user: User.all.sample
+  })
+
+Walk.create!({
+  name: "Torre de Belém",
+  location: "Lisbon",
+  address: "Av. Brasília, 1400-038 Lisboa",
+  description: "pare ribs ham boudin ham hock, pork loin drumstick ball tip pork capicola buffalo tail ground round short ribs t-bone filet mignon. Tenderloin shank sausage beef bresaola filet mignon pastrami cow. Jowl ground round short ribs capicola jerky. Meatball bresaola tail, meatloaf cupim pork chop pork belly boudin kielbasa pork loin capicola venison chicken leberkas brisket. Drumstick t-bone filet mignon beef ribs kevin pastrami. Short loin venison salami jowl meatball.
+  ",
+  category: "Historical",
+  duration: 45,
+  photo: "http://res.cloudinary.com/jsm68/image/upload/v1520264665/dominik-qn-25197-unsplash.jpg",
+  user: User.all.sample
+  })
