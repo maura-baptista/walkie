@@ -6,7 +6,7 @@ class WalksController < ApplicationController
 
     @walks = Walk.all
 
-    @walks = policy_scope(Walk).order(created_at: :desc)
+    #@walks = policy_scope(Walk).order(created_at: :desc)
 
   end
 
@@ -16,13 +16,13 @@ class WalksController < ApplicationController
 
   def new
     @walk = Walk.new
-    authorize @walk
+    #authorize @walk
   end
 
   def create
     @walk = Walk.new(walk_params)
     @walk.user = current_user
-    authorize @walk
+    #authorize @walk
     if @walk.save
       redirect_to walk_path(@walk)
     else
@@ -31,7 +31,7 @@ class WalksController < ApplicationController
   end
 
   def edit
-    authorize @walk
+    #authorize @walk
   end
 
   def update
