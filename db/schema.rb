@@ -10,10 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180305141517) do
+ActiveRecord::Schema.define(version: 20180305160630) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "likes", force: :cascade do |t|
+    t.bigint "walk_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_likes_on_user_id"
+    t.index ["walk_id"], name: "index_likes_on_walk_id"
+  end
+
+  create_table "user_walks", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "walk_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_user_walks_on_user_id"
+    t.index ["walk_id"], name: "index_user_walks_on_walk_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -45,5 +63,9 @@ ActiveRecord::Schema.define(version: 20180305141517) do
     t.index ["user_id"], name: "index_walks_on_user_id"
   end
 
+  add_foreign_key "likes", "users"
+  add_foreign_key "likes", "walks"
+  add_foreign_key "user_walks", "users"
+  add_foreign_key "user_walks", "walks"
   add_foreign_key "walks", "users"
 end
