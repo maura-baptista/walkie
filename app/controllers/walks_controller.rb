@@ -11,6 +11,7 @@ class WalksController < ApplicationController
   end
 
   def show
+
   end
 
   def new
@@ -55,7 +56,7 @@ class WalksController < ApplicationController
 
   def set_walk
     @walk = Walk.find(params[:id])
-    authorize @walk
+    # authorize @walk
   end
 
    def walk_params

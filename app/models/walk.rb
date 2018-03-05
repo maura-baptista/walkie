@@ -13,5 +13,4 @@ class Walk < ApplicationRecord
   validates :description, presence: true
   validates :photo, presence: true
 
-
 end

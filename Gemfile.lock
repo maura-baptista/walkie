@@ -70,6 +70,9 @@ GEM
       thor (~> 0.14)
     font-awesome-sass (4.7.0)
       sass (>= 3.2)
+    font-awesome-sass-rails (3.0.2.2)
+      railties (>= 3.1.1)
+      sass-rails (>= 3.1.1)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     httpclient (2.8.3)
@@ -200,6 +203,7 @@ DEPENDENCIES
   devise
   figaro
   font-awesome-sass (~> 4.7)
+  font-awesome-sass-rails
   jbuilder (~> 2.0)
   listen (~> 3.0.5)
   pg (~> 0.21)
