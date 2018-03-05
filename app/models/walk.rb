@@ -13,12 +13,4 @@ class Walk < ApplicationRecord
   validates :description, presence: true
   validates :photo, presence: true
 
-
-  # include AlgoliaSearch
-  # algoliasearch per_environment: true do
-  #   attribute :category
-  # end
-
-
-
 end

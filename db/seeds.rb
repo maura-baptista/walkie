@@ -88,13 +88,37 @@ Walk.create!({
   })
 
 Walk.create!({
-  name: "Torre de Belém",
+  name: "Padrão dos Descobrimentos",
   location: "Lisbon",
   address: "Av. Brasília, 1400-038 Lisboa",
   description: "pare ribs ham boudin ham hock, pork loin drumstick ball tip pork capicola buffalo tail ground round short ribs t-bone filet mignon. Tenderloin shank sausage beef bresaola filet mignon pastrami cow. Jowl ground round short ribs capicola jerky. Meatball bresaola tail, meatloaf cupim pork chop pork belly boudin kielbasa pork loin capicola venison chicken leberkas brisket. Drumstick t-bone filet mignon beef ribs kevin pastrami. Short loin venison salami jowl meatball.
   ",
   category: "Historical",
   duration: 45,
-  photo: "http://res.cloudinary.com/jsm68/image/upload/v1520264665/dominik-qn-25197-unsplash.jpg",
+  photo: "http://res.cloudinary.com/jsm68/image/upload/v1520265618/1200px-Belem-3__34224859085.jpg",
+  user: User.all.sample
+  })
+
+Walk.create!({
+  name: "Jerónimos Monastery",
+  location: "Lisbon",
+  address: "Praça do Império 1400-206 Lisboa, 1400-206 Lisboa",
+  description: "pare ribs ham boudin ham hock, pork loin drumstick ball tip pork capicola buffalo tail ground round short ribs t-bone filet mignon. Tenderloin shank sausage beef bresaola filet mignon pastrami cow. Jowl ground round short ribs capicola jerky. Meatball bresaola tail, meatloaf cupim pork chop pork belly boudin kielbasa pork loin capicola venison chicken leberkas brisket. Drumstick t-bone filet mignon beef ribs kevin pastrami. Short loin venison salami jowl meatball.
+  ",
+  category: "Historical",
+  duration: 45,
+  photo: "http://res.cloudinary.com/jsm68/image/upload/v1520267217/1200px-View_from_the_Cloisters_in_the_Jer%C3%B3nimos_Monastery.jpg",
+  user: User.all.sample
+  })
+
+Walk.create!({
+  name: "Palácio Nacional da Ajuda",
+  location: "Lisbon",
+  address: "Largo Ajuda 1349-021, Lisboa",
+  description: "pare ribs ham boudin ham hock, pork loin drumstick ball tip pork capicola buffalo tail ground round short ribs t-bone filet mignon. Tenderloin shank sausage beef bresaola filet mignon pastrami cow. Jowl ground round short ribs capicola jerky. Meatball bresaola tail, meatloaf cupim pork chop pork belly boudin kielbasa pork loin capicola venison chicken leberkas brisket. Drumstick t-bone filet mignon beef ribs kevin pastrami. Short loin venison salami jowl meatball.
+  ",
+  category: "Historical",
+  duration: 45,
+  photo: "http://res.cloudinary.com/jsm68/image/upload/v1520267595/lin-yu-xin-43864-unsplash.jpg",
   user: User.all.sample
   })
