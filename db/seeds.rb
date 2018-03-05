@@ -134,3 +134,11 @@ Walk.create!({
   photo: "http://res.cloudinary.com/jsm68/image/upload/v1520269598/paul-van-bloem-235179-unsplash.jpg",
   user: User.all.sample
   })
+
+Review.create!({
+  content: "Amazing place! You guys rock!!!",
+  rating: 3,
+  walk: Walk.first
+  user: Walk.all.sample.id
+
+  })
