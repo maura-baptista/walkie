@@ -137,7 +137,6 @@ Walk.create!({
 
 Review.create!({
   content: "Amazing place! You guys rock!!!",
-  rating: 3,
-  walk: Walk.first
+  walk: Walk.first,
   user: User.all.sample
   })
