@@ -8,9 +8,8 @@
        <h3>
         <strong> <%=@walk.name %></strong>
       </h3>
-      <hr>
       <%= @walk.duration %>
-      <i class="far fa-clock"></i>
+      <i class="far fa-clock"></i>&nbsp&nbsp&nbsp
 
       <%= @walk.location%>
       <hr>
@@ -61,7 +60,7 @@
 
     <div>
       <div>
-        <h3><strong>Reviews</strong></h3>
+        <h3>Reviews</h3>
 
         <% @reviews.each  do |review| %>
         <div class="message">
