@@ -3,10 +3,11 @@ class WalksController < ApplicationController
   skip_before_action :authenticate_user!, only: [:show]
 
   def index
-
+   
     @walks = Walk.all
 
-    #@walks = policy_scope(Walk).order(created_at: :desc)
+
+    @walks = policy_scope(Walk).order(created_at: :desc)
 
   end
 
@@ -31,8 +32,9 @@ class WalksController < ApplicationController
   end
 
   def edit
-    #authorize @walk
+    authorize @walk
   end
+
 
   def update
     @walk.update(walk_params)
@@ -56,6 +58,7 @@ class WalksController < ApplicationController
 
   def set_walk
     @walk = Walk.find(params[:id])
+    Walk.where(category: params[:category])
     # authorize @walk
   end
 
