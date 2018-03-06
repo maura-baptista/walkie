@@ -8,11 +8,35 @@
 puts "destroying all data"
 Walk.destroy_all
 User.destroy_all
+Category.destroy.all
 puts "creating"
 
+
+
 User.create!({
+  first_name: "Joe",
+  last_name: "Monteiro",
   email: "joemonteiro@verizon.net",
   password: "123456",
+  })
+
+Category.create!({
+  name: "Green Walks",
+  })
+Category.create!({
+  name: "Historical Walks",
+  })
+Category.create!({
+  name: "Seaside Walks",
+  })
+Category.create!({
+  name: "Alternative Walks",
+  })
+Category.create!({
+  name: "Family Walks",
+  })
+Category.create!({
+  name: "Cultural Walks",
   })
 
 Walk.create!({
@@ -21,7 +45,7 @@ Walk.create!({
   address: "Largo de Santo Antonio da Se, 1100-401 Lisboa",
   description: "pare ribs ham boudin ham hock, pork loin drumstick ball tip pork capicola buffalo tail ground round short ribs t-bone filet mignon. Tenderloin shank sausage beef bresaola filet mignon pastrami cow. Jowl ground round short ribs capicola jerky. Meatball bresaola tail, meatloaf cupim pork chop pork belly boudin kielbasa pork loin capicola venison chicken leberkas brisket. Drumstick t-bone filet mignon beef ribs kevin pastrami. Short loin venison salami jowl meatball.
   ",
-  category: "Historical",
+  category: Category.all.sample ,
   duration: 45,
   photo: "http://res.cloudinary.com/jsm68/image/upload/v1520260512/carmen-penaranda-411970-unsplash.jpg",
   user: User.all.sample
@@ -33,7 +57,7 @@ Walk.create!({
   address: "Largo da Sé, 1100-585 Lisboa",
   description: "pare ribs ham boudin ham hock, pork loin drumstick ball tip pork capicola buffalo tail ground round short ribs t-bone filet mignon. Tenderloin shank sausage beef bresaola filet mignon pastrami cow. Jowl ground round short ribs capicola jerky. Meatball bresaola tail, meatloaf cupim pork chop pork belly boudin kielbasa pork loin capicola venison chicken leberkas brisket. Drumstick t-bone filet mignon beef ribs kevin pastrami. Short loin venison salami jowl meatball.
   ",
-  category: "Historical",
+  category: Category.all.sample,
   duration: 45,
   photo: "http://res.cloudinary.com/jsm68/image/upload/v1520260499/alexander-watts-66219-unsplash.jpg",
   user: User.all.sample
@@ -45,7 +69,7 @@ Walk.create!({
   address: "Rua da Alfândega 108, 1100-016 Lisboa",
   description: "pare ribs ham boudin ham hock, pork loin drumstick ball tip pork capicola buffalo tail ground round short ribs t-bone filet mignon. Tenderloin shank sausage beef bresaola filet mignon pastrami cow. Jowl ground round short ribs capicola jerky. Meatball bresaola tail, meatloaf cupim pork chop pork belly boudin kielbasa pork loin capicola venison chicken leberkas brisket. Drumstick t-bone filet mignon beef ribs kevin pastrami. Short loin venison salami jowl meatball.
   ",
-  category: "Historical",
+  category: Category.all.sample,
   duration: 45,
   photo: "http://res.cloudinary.com/jsm68/image/upload/v1520260534/michael-d-beckwith-579320-unsplash.jpg",
   user: User.all.sample
@@ -57,7 +81,7 @@ Walk.create!({
   address: "Praça do Comércio, 1100-148 Lisboa",
   description: "pare ribs ham boudin ham hock, pork loin drumstick ball tip pork capicola buffalo tail ground round short ribs t-bone filet mignon. Tenderloin shank sausage beef bresaola filet mignon pastrami cow. Jowl ground round short ribs capicola jerky. Meatball bresaola tail, meatloaf cupim pork chop pork belly boudin kielbasa pork loin capicola venison chicken leberkas brisket. Drumstick t-bone filet mignon beef ribs kevin pastrami. Short loin venison salami jowl meatball.
   ",
-  category: "Historical",
+  category: Category.all.sample,
   duration: 45,
   photo: "http://res.cloudinary.com/jsm68/image/upload/v1520260739/1200px-Lisbon_main_square__36622604910.jpg",
   user: User.all.sample
@@ -69,7 +93,7 @@ Walk.create!({
   address: "R. de Santa Cruz do Castelo 10, 1100-078 Lisboa",
   description: "pare ribs ham boudin ham hock, pork loin drumstick ball tip pork capicola buffalo tail ground round short ribs t-bone filet mignon. Tenderloin shank sausage beef bresaola filet mignon pastrami cow. Jowl ground round short ribs capicola jerky. Meatball bresaola tail, meatloaf cupim pork chop pork belly boudin kielbasa pork loin capicola venison chicken leberkas brisket. Drumstick t-bone filet mignon beef ribs kevin pastrami. Short loin venison salami jowl meatball.
   ",
-  category: "Historical",
+  category: Category.all.sample,
   duration: 45,
   photo: "http://res.cloudinary.com/jsm68/image/upload/v1520260575/mike-wilson-195744-unsplash.jpg",
   user: User.all.sample
@@ -81,7 +105,7 @@ Walk.create!({
   address: "R. do Espírito Santo, 1100-129 Lisboa",
   description: "pare ribs ham boudin ham hock, pork loin drumstick ball tip pork capicola buffalo tail ground round short ribs t-bone filet mignon. Tenderloin shank sausage beef bresaola filet mignon pastrami cow. Jowl ground round short ribs capicola jerky. Meatball bresaola tail, meatloaf cupim pork chop pork belly boudin kielbasa pork loin capicola venison chicken leberkas brisket. Drumstick t-bone filet mignon beef ribs kevin pastrami. Short loin venison salami jowl meatball.
   ",
-  category: "Historical",
+  category: Category.all.sample,
   duration: 45,
   photo: "http://res.cloudinary.com/jsm68/image/upload/v1520264635/lorenzo-castagnone-445302-unsplash.jpg",
   user: User.all.sample
@@ -93,7 +117,7 @@ Walk.create!({
   address: "Av. Brasília, 1400-038 Lisboa",
   description: "pare ribs ham boudin ham hock, pork loin drumstick ball tip pork capicola buffalo tail ground round short ribs t-bone filet mignon. Tenderloin shank sausage beef bresaola filet mignon pastrami cow. Jowl ground round short ribs capicola jerky. Meatball bresaola tail, meatloaf cupim pork chop pork belly boudin kielbasa pork loin capicola venison chicken leberkas brisket. Drumstick t-bone filet mignon beef ribs kevin pastrami. Short loin venison salami jowl meatball.
   ",
-  category: "Historical",
+  category: Category.all.sample,
   duration: 45,
   photo: "http://res.cloudinary.com/jsm68/image/upload/v1520265618/1200px-Belem-3__34224859085.jpg",
   user: User.all.sample
@@ -105,7 +129,7 @@ Walk.create!({
   address: "Praça do Império 1400-206 Lisboa, 1400-206 Lisboa",
   description: "pare ribs ham boudin ham hock, pork loin drumstick ball tip pork capicola buffalo tail ground round short ribs t-bone filet mignon. Tenderloin shank sausage beef bresaola filet mignon pastrami cow. Jowl ground round short ribs capicola jerky. Meatball bresaola tail, meatloaf cupim pork chop pork belly boudin kielbasa pork loin capicola venison chicken leberkas brisket. Drumstick t-bone filet mignon beef ribs kevin pastrami. Short loin venison salami jowl meatball.
   ",
-  category: "Historical",
+  category: Category.all.sample,
   duration: 45,
   photo: "http://res.cloudinary.com/jsm68/image/upload/v1520267217/1200px-View_from_the_Cloisters_in_the_Jer%C3%B3nimos_Monastery.jpg",
   user: User.all.sample
@@ -117,8 +141,32 @@ Walk.create!({
   address: "Largo Ajuda 1349-021, Lisboa",
   description: "pare ribs ham boudin ham hock, pork loin drumstick ball tip pork capicola buffalo tail ground round short ribs t-bone filet mignon. Tenderloin shank sausage beef bresaola filet mignon pastrami cow. Jowl ground round short ribs capicola jerky. Meatball bresaola tail, meatloaf cupim pork chop pork belly boudin kielbasa pork loin capicola venison chicken leberkas brisket. Drumstick t-bone filet mignon beef ribs kevin pastrami. Short loin venison salami jowl meatball.
   ",
-  category: "Historical",
+  category: Category.all.sample,
   duration: 45,
   photo: "http://res.cloudinary.com/jsm68/image/upload/v1520267595/lin-yu-xin-43864-unsplash.jpg",
+  user: User.all.sample
+  })
+
+Walk.create!({
+  name: "Jardim Botânico d'Ajuda",
+  location: "Lisbon",
+  address: "Calçada Ajuda, 1300-011 Lisboa",
+  description: "pare ribs ham boudin ham hock, pork loin drumstick ball tip pork capicola buffalo tail ground round short ribs t-bone filet mignon. Tenderloin shank sausage beef bresaola filet mignon pastrami cow. Jowl ground round short ribs capicola jerky. Meatball bresaola tail, meatloaf cupim pork chop pork belly boudin kielbasa pork loin capicola venison chicken leberkas brisket. Drumstick t-bone filet mignon beef ribs kevin pastrami. Short loin venison salami jowl meatball.
+  ",
+  category: Category.all.sample,
+  duration: 120,
+  photo: "http://res.cloudinary.com/jsm68/image/upload/v1520269598/paul-van-bloem-235179-unsplash.jpg",
+  user: User.all.sample
+  })
+
+Review.create!({
+  content: "Amazing place! You guys rock!!!",
+  walk: Walk.first,
+  user: User.all.sample
+  })
+
+Review.create!({
+  content: "What a walk! The best weekend!",
+  walk: Walk.first,
   user: User.all.sample
   })

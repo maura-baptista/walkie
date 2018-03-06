@@ -1,2 +1,60 @@
-<h1>Welcome to walkie motherfuckers!</h1>
+<div id="landing-header">
+    <h1>Walkie</h1>
+    <h3><strong><u>Your</u> tailored city walk.</strong></h3>
+
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <%= link_to "Historical" , "categories/2" %>
+    <%= link_to "Green" , "categories/1" %>
+    <%= link_to "Seaside" ,  "categories/3" %>
+    <%= link_to "Alternative" , "categories/4" %>
+    <%= link_to "Family" , "categories/5" %>
+    <%= link_to "Cultural" , "categories/6" %>
+  </div>
+</div>
+
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+
+<script>
+function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+}
+</script>
+
+
+
+
+=======
+  <br>
+  <br>
+  <br>
+  <br>
+</div>
+<ul class="slideshow">
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h3><strong>Popular Walks</strong></h3>
+<%= render  @walks %>
 
