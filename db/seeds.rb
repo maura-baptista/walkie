@@ -8,6 +8,7 @@
 puts "destroying all data"
 Walk.destroy_all
 User.destroy_all
+Category.destroy.all
 puts "creating"
 
 
