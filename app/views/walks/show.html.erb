@@ -4,18 +4,16 @@
     <div class="col-xs-12">
       <div class="d-inline categories">
 
+
        <h3><%= @walk.category.name%></h3>
        <h3>
-        <strong> <%=@walk.name %></strong>
+        <h2><strong> <%=@walk.name %></strong></h2>
       </h3>
-      <hr>
-      <%= @walk.duration %>
-      <i class="far fa-clock"></i>
-
-      <%= @walk.location%>
+      <%= @walk.category%> @walk.duration %>
+      <i class="far fa-clock"></i>&nbsp&nbsp&nbsp<h5> <%= @walk.location%></h5>
       <hr>
       <p>
-        <%= @walk.description %>
+        <h4><%= @walk.description %></h4>
         <br>
       </p>
 
@@ -61,7 +59,7 @@
 
     <div>
       <div>
-        <h3><strong>Reviews</strong></h3>
+        <h3>Reviews</h3>
 
         <% @reviews.each  do |review| %>
         <div class="message">
