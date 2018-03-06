@@ -6,6 +6,13 @@ class PagesController < ApplicationController
 
 
   def search
+    @walks = Walk.all
+
+    if params[:category]
+      @walks = @walks.send(params[:category])
+    end
+
+
   end
 
 end

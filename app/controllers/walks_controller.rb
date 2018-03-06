@@ -1,12 +1,12 @@
 class WalksController < ApplicationController
-  before_action :set_walk, only: [:show, :edit, :update, :destroy, :show]
+  before_action :set_walk, only: [:show, :edit, :update, :destroy]
   skip_before_action :authenticate_user!, only: [:show]
 
   def index
+    # list user walks?
+    @walks = current_user.walks
 
-    @walks = Walk.all
-
-    @walks = policy_scope(Walk).order(created_at: :desc)
+    #@walks = policy_scope(Walk).order(created_at: :desc)
 
   end
 
@@ -22,7 +22,7 @@ class WalksController < ApplicationController
   def create
     @walk = Walk.new(walk_params)
     @walk.user = current_user
-    authorize @walk
+    #authorize @walk
     if @walk.save
       redirect_to walk_path(@walk)
     else
@@ -31,7 +31,11 @@ class WalksController < ApplicationController
   end
 
   def edit
-    authorize @walk
+    #authorize @walk
+  end
+
+  def search
+
   end
 
   def update
@@ -56,6 +60,7 @@ class WalksController < ApplicationController
 
   def set_walk
     @walk = Walk.find(params[:id])
+    Walk.where(category: params[:category])
     # authorize @walk
   end
 

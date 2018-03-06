@@ -10,12 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180305160630) do
-ActiveRecord::Schema.define(version: 20180305151523) do
-
+ActiveRecord::Schema.define(version: 20180305181433) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "likes", force: :cascade do |t|
     t.bigint "walk_id"
@@ -24,6 +28,16 @@ ActiveRecord::Schema.define(version: 20180305151523) do
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_likes_on_user_id"
     t.index ["walk_id"], name: "index_likes_on_walk_id"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.text "content"
+    t.bigint "walk_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_reviews_on_user_id"
+    t.index ["walk_id"], name: "index_reviews_on_walk_id"
   end
 
   create_table "user_walks", force: :cascade do |t|
@@ -54,7 +68,6 @@ ActiveRecord::Schema.define(version: 20180305151523) do
 
   create_table "walks", force: :cascade do |t|
     t.string "name"
-    t.string "category"
     t.string "location"
     t.string "duration"
     t.string "description"
@@ -63,12 +76,17 @@ ActiveRecord::Schema.define(version: 20180305151523) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "address"
+    t.bigint "category_id"
+    t.index ["category_id"], name: "index_walks_on_category_id"
     t.index ["user_id"], name: "index_walks_on_user_id"
   end
 
   add_foreign_key "likes", "users"
   add_foreign_key "likes", "walks"
+  add_foreign_key "reviews", "users"
+  add_foreign_key "reviews", "walks"
   add_foreign_key "user_walks", "users"
   add_foreign_key "user_walks", "walks"
+  add_foreign_key "walks", "categories"
   add_foreign_key "walks", "users"
 end
