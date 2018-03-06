@@ -1,7 +1,20 @@
 Rails.application.routes.draw do
-  get 'categories/index'
 
-  get 'categories/show'
+
+  get 'reviews/index'
+
+  get 'reviews/new'
+
+  get 'reviews/create'
+
+  get 'reviews/edit'
+
+  get 'reviews/update'
+
+  get 'reviews/destroy'
+
+  get '/search', to: 'pages#search'
+
 
   devise_for :users
   root to: 'pages#home'

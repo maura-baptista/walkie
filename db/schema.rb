@@ -10,7 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 20180305181433) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +31,21 @@ ActiveRecord::Schema.define(version: 20180305181433) do
     t.index ["user_id"], name: "index_likes_on_user_id"
     t.index ["walk_id"], name: "index_likes_on_walk_id"
   end
+
+
+  create_table "points_of_interest", force: :cascade do |t|
+    t.string "name"
+    t.string "address"
+    t.float "latitude"
+    t.float "longitude"
+    t.text "description"
+    t.integer "order"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "walk_id"
+    t.index ["walk_id"], name: "index_points_of_interest_on_walk_id"
+  end
+
 
   create_table "reviews", force: :cascade do |t|
     t.text "content"
@@ -62,6 +79,8 @@ ActiveRecord::Schema.define(version: 20180305181433) do
     t.inet "last_sign_in_ip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "first_name"
+    t.string "last_name"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
@@ -83,6 +102,9 @@ ActiveRecord::Schema.define(version: 20180305181433) do
 
   add_foreign_key "likes", "users"
   add_foreign_key "likes", "walks"
+
+  add_foreign_key "points_of_interest", "walks"
+
   add_foreign_key "reviews", "users"
   add_foreign_key "reviews", "walks"
   add_foreign_key "user_walks", "users"

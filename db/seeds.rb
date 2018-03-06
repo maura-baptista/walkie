@@ -124,3 +124,27 @@ Walk.create!({
   photo: "http://res.cloudinary.com/jsm68/image/upload/v1520267595/lin-yu-xin-43864-unsplash.jpg",
   user: User.all.sample
   })
+
+Walk.create!({
+  name: "Jardim Botânico d'Ajuda",
+  location: "Lisbon",
+  address: "Calçada Ajuda, 1300-011 Lisboa",
+  description: "pare ribs ham boudin ham hock, pork loin drumstick ball tip pork capicola buffalo tail ground round short ribs t-bone filet mignon. Tenderloin shank sausage beef bresaola filet mignon pastrami cow. Jowl ground round short ribs capicola jerky. Meatball bresaola tail, meatloaf cupim pork chop pork belly boudin kielbasa pork loin capicola venison chicken leberkas brisket. Drumstick t-bone filet mignon beef ribs kevin pastrami. Short loin venison salami jowl meatball.
+  ",
+  category: "Historical",
+  duration: 120,
+  photo: "http://res.cloudinary.com/jsm68/image/upload/v1520269598/paul-van-bloem-235179-unsplash.jpg",
+  user: User.all.sample
+  })
+
+Review.create!({
+  content: "Amazing place! You guys rock!!!",
+  walk: Walk.first,
+  user: User.all.sample
+  })
+
+Review.create!({
+  content: "What a walk! The best weekend!",
+  walk: Walk.first,
+  user: User.all.sample
+  })
