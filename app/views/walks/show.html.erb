@@ -1,6 +1,7 @@
 <%= render 'shared/jumbotron' %>
 <div class="container">
-  <div class="col-xs-12 col-sm-4">
+  <div class="row">
+  <div class="col-xs-12">
     <div class="d-inline categories">
 
      <h3><%= @walk.category%></h3>
@@ -58,13 +59,15 @@
 
 </div>
 
+<div>
+<div>
+      <h3><strong>Reviews</strong></h3>
+
 
       <% @reviews.each  do |review| %>
       <div class="message">
   <img class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/joemonteiro">
         <div class="message-name">
-          <h3><%= review.user.first_name%><%= review.user.last_name%></h3>
-
         </div>
         <div class="message-body">
           "<%= review.content %>"
@@ -72,6 +75,7 @@
       </div>
       <% end %>
     </div>
-  </div>
+</div>
+</div>
 
 
