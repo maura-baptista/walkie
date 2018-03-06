@@ -83,6 +83,7 @@ ActiveRecord::Schema.define(version: 20180305181433) do
 
   create_table "walks", force: :cascade do |t|
     t.string "name"
+    t.string "category"
     t.string "location"
     t.string "duration"
     t.string "description"
