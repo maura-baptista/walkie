@@ -6,6 +6,7 @@ class PagesController < ApplicationController
 
 
   def search
+    @walks = Walk.all.where(name: params[:search])
   end
 
 end
