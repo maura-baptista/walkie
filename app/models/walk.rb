@@ -1,7 +1,8 @@
 class Walk < ApplicationRecord
   belongs_to :user
   belongs_to :category
-  has_many :points_of_interest
+
+  has_many :points, dependent: :destroy
   has_many :reviews, dependent: :destroy
   has_many :likes
   has_many :user_walks
