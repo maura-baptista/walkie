@@ -1,12 +1,13 @@
 <%= render 'shared/jumbotron' %>
 <div class="container">
-  <div class="col-xs-12 col-sm-4">
-    <div class="d-inline categories">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="d-inline categories">
 
-     <h3><%= @walk.category%></h3>
-    <h3>
-      <strong> <%=@walk.name %></strong>
-    </h3>
+       <h3><%= @walk.category%></h3>
+       <h3>
+        <strong> <%=@walk.name %></strong>
+      </h3>
       <hr>
       <%= @walk.duration %>
       <i class="far fa-clock"></i>
@@ -20,57 +21,57 @@
 
     </div>
 
-<div class="fullwidth">
+    <div class="fullwidth">
 
-  <div class="timeline group">
+      <div class="timeline group">
 
-    <div class="item">
-      <h4>Point of Interest 1</h4>
-      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
-    </div>
-
-    <div class="item">
-      <h4>Point of Interest 2</h4>
-      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes.</p>
-    </div>
-
-    <div class="item">
-      <h4>Point of Interest 3 </h4>
-      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
-    </div>
-
-    <div class="item">
-      <h4>Point of Interest 4 </h4>
-      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
-    </div>
-
-    <div class="item">
-      <h4> Point of Interest 5</h4>
-      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
-    </div>
-
-    <div class="item">
-      <h4>Point of Interest</h4>
-      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. </p>
-    </div>
-
-  </div>
-
-</div>
-
-
-      <% @reviews.each  do |review| %>
-      <div class="message">
-  <img class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/joemonteiro">
-        <div class="message-name">
-          <h3><%= review.user.first_name%><%= review.user.last_name%></h3>
-
+        <div class="item">
+          <h4>Point of Interest 1</h4>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
         </div>
-        <div class="message-body">
-          "<%= review.content %>"
+
+        <div class="item">
+          <h4>Point of Interest 2</h4>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes.</p>
         </div>
+
+        <div class="item">
+          <h4>Point of Interest 3 </h4>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
+        </div>
+
+        <div class="item">
+          <h4>Point of Interest 4 </h4>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
+        </div>
+
+        <div class="item">
+          <h4> Point of Interest 5</h4>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
+        </div>
+
+        <div class="item">
+          <h4>Point of Interest</h4>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. </p>
+        </div>
+
       </div>
-      <% end %>
+
+    </div>
+
+    <div>
+      <div>
+        <h3><strong>Reviews</strong></h3>
+
+        <% @reviews.each  do |review| %>
+        <div class="message">
+          <img class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/joemonteiro">
+          <div class="message-body">
+            "<%= review.content %>"
+          </div>
+        </div>
+        <% end %>
+      </div>
     </div>
   </div>
 
