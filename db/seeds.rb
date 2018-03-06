@@ -11,6 +11,8 @@ User.destroy_all
 puts "creating"
 
 User.create!({
+  first_name: "Joe",
+  last_name: "Monteiro",
   email: "joemonteiro@verizon.net",
   password: "123456",
   })
