@@ -13,8 +13,29 @@ puts "creating"
 
 
 User.create!({
+  first_name: "Joe",
+  last_name: "Monteiro",
   email: "joemonteiro@verizon.net",
   password: "123456",
+  })
+
+Category.create!({
+  name: "Green Walks",
+  })
+Category.create!({
+  name: "Historical Walks",
+  })
+Category.create!({
+  name: "Seaside Walks",
+  })
+Category.create!({
+  name: "Alternative Walks",
+  })
+Category.create!({
+  name: "Family Walks",
+  })
+Category.create!({
+  name: "Cultural Walks",
   })
 
 Walk.create!({
@@ -131,7 +152,7 @@ Walk.create!({
   address: "Calçada Ajuda, 1300-011 Lisboa",
   description: "pare ribs ham boudin ham hock, pork loin drumstick ball tip pork capicola buffalo tail ground round short ribs t-bone filet mignon. Tenderloin shank sausage beef bresaola filet mignon pastrami cow. Jowl ground round short ribs capicola jerky. Meatball bresaola tail, meatloaf cupim pork chop pork belly boudin kielbasa pork loin capicola venison chicken leberkas brisket. Drumstick t-bone filet mignon beef ribs kevin pastrami. Short loin venison salami jowl meatball.
   ",
-  category: "Historical",
+  category: Category.all.sample,
   duration: 120,
   photo: "http://res.cloudinary.com/jsm68/image/upload/v1520269598/paul-van-bloem-235179-unsplash.jpg",
   user: User.all.sample

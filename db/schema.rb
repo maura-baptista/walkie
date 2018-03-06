@@ -10,9 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
 ActiveRecord::Schema.define(version: 20180305181433) do
-
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,7 +30,6 @@ ActiveRecord::Schema.define(version: 20180305181433) do
     t.index ["walk_id"], name: "index_likes_on_walk_id"
   end
 
-
   create_table "points_of_interest", force: :cascade do |t|
     t.string "name"
     t.string "address"
@@ -45,7 +42,6 @@ ActiveRecord::Schema.define(version: 20180305181433) do
     t.bigint "walk_id"
     t.index ["walk_id"], name: "index_points_of_interest_on_walk_id"
   end
-
 
   create_table "reviews", force: :cascade do |t|
     t.text "content"
@@ -102,9 +98,7 @@ ActiveRecord::Schema.define(version: 20180305181433) do
 
   add_foreign_key "likes", "users"
   add_foreign_key "likes", "walks"
-
   add_foreign_key "points_of_interest", "walks"
-
   add_foreign_key "reviews", "users"
   add_foreign_key "reviews", "walks"
   add_foreign_key "user_walks", "users"
