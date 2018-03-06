@@ -10,10 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180305174726) do
+ActiveRecord::Schema.define(version: 20180306171937) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "likes", force: :cascade do |t|
     t.bigint "walk_id"
@@ -26,7 +32,6 @@ ActiveRecord::Schema.define(version: 20180305174726) do
 
   create_table "points_of_interest", force: :cascade do |t|
     t.string "name"
-    t.string "address"
     t.float "latitude"
     t.float "longitude"
     t.text "description"
@@ -77,7 +82,6 @@ ActiveRecord::Schema.define(version: 20180305174726) do
 
   create_table "walks", force: :cascade do |t|
     t.string "name"
-    t.string "category"
     t.string "location"
     t.string "duration"
     t.string "description"
@@ -86,6 +90,8 @@ ActiveRecord::Schema.define(version: 20180305174726) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "address"
+    t.bigint "category_id"
+    t.index ["category_id"], name: "index_walks_on_category_id"
     t.index ["user_id"], name: "index_walks_on_user_id"
   end
 
@@ -96,5 +102,6 @@ ActiveRecord::Schema.define(version: 20180305174726) do
   add_foreign_key "reviews", "walks"
   add_foreign_key "user_walks", "users"
   add_foreign_key "user_walks", "walks"
+  add_foreign_key "walks", "categories"
   add_foreign_key "walks", "users"
 end
