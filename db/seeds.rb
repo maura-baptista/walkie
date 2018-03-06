@@ -140,3 +140,9 @@ Review.create!({
   walk: Walk.first,
   user: User.all.sample
   })
+
+Review.create!({
+  content: "What a walk! The best weekend!",
+  walk: Walk.first,
+  user: User.all.sample
+  })
