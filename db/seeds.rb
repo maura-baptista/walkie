@@ -12,7 +12,6 @@ Category.destroy_all
 puts "creating"
 
 
-
 User.create!({
   first_name: "Joe",
   last_name: "Monteiro",
