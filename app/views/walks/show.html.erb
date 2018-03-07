@@ -25,42 +25,16 @@
     </div>
 
     <div class="fullwidth">
-
-      <div class="timeline group">
-
-        <div class="item">
-          <h4>Point of Interest 1</h4>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
-        </div>
-
-        <div class="item">
-          <h4>Point of Interest 2</h4>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes.</p>
-        </div>
-
-        <div class="item">
-          <h4>Point of Interest 3 </h4>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
-        </div>
-
-        <div class="item">
-          <h4>Point of Interest 4 </h4>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
-        </div>
-
-        <div class="item">
-          <h4> Point of Interest 5</h4>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
-        </div>
-
-        <div class="item">
-          <h4>Point of Interest</h4>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. </p>
-        </div>
-
-      </div>
-
-    </div>
+     <div class="timeline group">
+       <% @walk.points.each do |point| %>
+       <div class="item">
+         <h4><%= point.order %>.</h4>
+         <h4><%= point.name %>.</h4>
+         <h4><%= point.description %>.</h4>
+       </div>
+       <% end %>
+     </div>
+   </div>
 
     <div>
       <div>
