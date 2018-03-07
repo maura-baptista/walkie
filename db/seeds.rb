@@ -40,18 +40,18 @@ Category.create!({
   })
 
 walk = Walk.create!({
-  name: "Santo Antonio church",
+  name: "Marvila Street Art Walk",
   location: "Lisbon",
-  address: "Largo de Santo Antonio da Se, 1100-401 Lisboa",
+  address: "Marvila",
   description: "pare ribs ham boudin ham hock, pork loin drumstick ball tip pork capicola buffalo tail ground round short ribs t-bone filet mignon. Tenderloin shank sausage beef bresaola filet mignon pastrami cow. Jowl ground round short ribs capicola jerky. Meatball bresaola tail, meatloaf cupim pork chop pork belly boudin kielbasa pork loin capicola venison chicken leberkas brisket. Drumstick t-bone filet mignon beef ribs kevin pastrami. Short loin venison salami jowl meatball.
   ",
   category: Category.all.sample ,
   duration: 45,
   user: User.all.sample
   })
-walk.walk_attachments.create!(photo: "http://res.cloudinary.com/jsm68/image/upload/v1520260512/carmen-penaranda-411970-unsplash.jpg")
-walk.walk_attachments.create!(photo: "http://res.cloudinary.com/jsm68/image/upload/v1520260512/carmen-penaranda-411970-unsplash.jpg")
-walk.walk_attachments.create!(photo: "http://res.cloudinary.com/jsm68/image/upload/v1520260499/alexander-watts-66219-unsplash.jpg")
+walk.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446746/street-art-kobra.jpg")
+walk.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
+walk.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
 
 walk2 = Walk.create!({
   name: "Sé de Lisboa",
@@ -63,9 +63,11 @@ walk2 = Walk.create!({
   duration: 45,
   user: User.all.sample
   })
-walk2.walk_attachments.create!(photo: "http://res.cloudinary.com/jsm68/image/upload/v1520260499/alexander-watts-66219-unsplash.jpg")
+walk2.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446746/street-art-kobra.jpg")
+walk2.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
+walk2.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
 
-Walk.create!({
+walk3 = Walk.create!({
   name: "Church of Nossa Senhora da Conceição Velha",
   location: "Lisbon",
   address: "Rua da Alfândega 108, 1100-016 Lisboa",
@@ -75,8 +77,11 @@ Walk.create!({
   duration: 45,
   user: User.all.sample
   })
+walk3.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446746/street-art-kobra.jpg")
+walk3.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
+walk3.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
 
-Walk.create!({
+walk4 = Walk.create!({
   name: "Praça do Comércio",
   location: "Lisbon",
   address: "Praça do Comércio, 1100-148 Lisboa",
@@ -86,8 +91,12 @@ Walk.create!({
   duration: 45,
   user: User.all.sample
   })
+walk4.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446746/street-art-kobra.jpg")
+walk4.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
+walk4.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
 
-Walk.create!({
+
+walk5 = Walk.create!({
   name: "Arco do Castelo",
   location: "Lisbon",
   address: "R. de Santa Cruz do Castelo 10, 1100-078 Lisboa",
@@ -97,8 +106,12 @@ Walk.create!({
   duration: 45,
   user: User.all.sample
   })
+walk5.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446746/street-art-kobra.jpg")
+walk5.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
+walk5.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
 
-Walk.create!({
+
+walk6 = Walk.create!({
   name: "Castelo de São Jorge",
   location: "Lisbon",
   address: "R. do Espírito Santo, 1100-129 Lisboa",
@@ -108,50 +121,54 @@ Walk.create!({
   duration: 45,
   user: User.all.sample
   })
+walk6.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446746/street-art-kobra.jpg")
+walk6.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
+walk6.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
 
-Walk.create!({
-  name: "Padrão dos Descobrimentos",
-  location: "Lisbon",
-  address: "Av. Brasília, 1400-038 Lisboa",
-  description: "pare ribs ham boudin ham hock, pork loin drumstick ball tip pork capicola buffalo tail ground round short ribs t-bone filet mignon. Tenderloin shank sausage beef bresaola filet mignon pastrami cow. Jowl ground round short ribs capicola jerky. Meatball bresaola tail, meatloaf cupim pork chop pork belly boudin kielbasa pork loin capicola venison chicken leberkas brisket. Drumstick t-bone filet mignon beef ribs kevin pastrami. Short loin venison salami jowl meatball.
-  ",
-  category: Category.all.sample,
-  duration: 45,
-  user: User.all.sample
-  })
 
-Walk.create!({
-  name: "Jerónimos Monastery",
-  location: "Lisbon",
-  address: "Praça do Império 1400-206 Lisboa, 1400-206 Lisboa",
-  description: "pare ribs ham boudin ham hock, pork loin drumstick ball tip pork capicola buffalo tail ground round short ribs t-bone filet mignon. Tenderloin shank sausage beef bresaola filet mignon pastrami cow. Jowl ground round short ribs capicola jerky. Meatball bresaola tail, meatloaf cupim pork chop pork belly boudin kielbasa pork loin capicola venison chicken leberkas brisket. Drumstick t-bone filet mignon beef ribs kevin pastrami. Short loin venison salami jowl meatball.
-  ",
-  category: Category.all.sample,
-  duration: 45,
-  user: User.all.sample
-  })
+# Walk.create!({
+#   name: "Padrão dos Descobrimentos",
+#   location: "Lisbon",
+#   address: "Av. Brasília, 1400-038 Lisboa",
+#   description: "pare ribs ham boudin ham hock, pork loin drumstick ball tip pork capicola buffalo tail ground round short ribs t-bone filet mignon. Tenderloin shank sausage beef bresaola filet mignon pastrami cow. Jowl ground round short ribs capicola jerky. Meatball bresaola tail, meatloaf cupim pork chop pork belly boudin kielbasa pork loin capicola venison chicken leberkas brisket. Drumstick t-bone filet mignon beef ribs kevin pastrami. Short loin venison salami jowl meatball.
+#   ",
+#   category: Category.all.sample,
+#   duration: 45,
+#   user: User.all.sample
+#   })
 
-Walk.create!({
-  name: "Palácio Nacional da Ajuda",
-  location: "Lisbon",
-  address: "Largo Ajuda 1349-021, Lisboa",
-  description: "pare ribs ham boudin ham hock, pork loin drumstick ball tip pork capicola buffalo tail ground round short ribs t-bone filet mignon. Tenderloin shank sausage beef bresaola filet mignon pastrami cow. Jowl ground round short ribs capicola jerky. Meatball bresaola tail, meatloaf cupim pork chop pork belly boudin kielbasa pork loin capicola venison chicken leberkas brisket. Drumstick t-bone filet mignon beef ribs kevin pastrami. Short loin venison salami jowl meatball.
-  ",
-  category: Category.all.sample,
-  duration: 45,
-  user: User.all.sample
-  })
+# Walk.create!({
+#   name: "Jerónimos Monastery",
+#   location: "Lisbon",
+#   address: "Praça do Império 1400-206 Lisboa, 1400-206 Lisboa",
+#   description: "pare ribs ham boudin ham hock, pork loin drumstick ball tip pork capicola buffalo tail ground round short ribs t-bone filet mignon. Tenderloin shank sausage beef bresaola filet mignon pastrami cow. Jowl ground round short ribs capicola jerky. Meatball bresaola tail, meatloaf cupim pork chop pork belly boudin kielbasa pork loin capicola venison chicken leberkas brisket. Drumstick t-bone filet mignon beef ribs kevin pastrami. Short loin venison salami jowl meatball.
+#   ",
+#   category: Category.all.sample,
+#   duration: 45,
+#   user: User.all.sample
+#   })
 
-Walk.create!({
-  name: "Jardim Botânico d'Ajuda",
-  location: "Lisbon",
-  address: "Calçada Ajuda, 1300-011 Lisboa",
-  description: "pare ribs ham boudin ham hock, pork loin drumstick ball tip pork capicola buffalo tail ground round short ribs t-bone filet mignon. Tenderloin shank sausage beef bresaola filet mignon pastrami cow. Jowl ground round short ribs capicola jerky. Meatball bresaola tail, meatloaf cupim pork chop pork belly boudin kielbasa pork loin capicola venison chicken leberkas brisket. Drumstick t-bone filet mignon beef ribs kevin pastrami. Short loin venison salami jowl meatball.
-  ",
-  category: Category.all.sample,
-  duration: 120,
-  user: User.all.sample
-  })
+# Walk.create!({
+#   name: "Palácio Nacional da Ajuda",
+#   location: "Lisbon",
+#   address: "Largo Ajuda 1349-021, Lisboa",
+#   description: "pare ribs ham boudin ham hock, pork loin drumstick ball tip pork capicola buffalo tail ground round short ribs t-bone filet mignon. Tenderloin shank sausage beef bresaola filet mignon pastrami cow. Jowl ground round short ribs capicola jerky. Meatball bresaola tail, meatloaf cupim pork chop pork belly boudin kielbasa pork loin capicola venison chicken leberkas brisket. Drumstick t-bone filet mignon beef ribs kevin pastrami. Short loin venison salami jowl meatball.
+#   ",
+#   category: Category.all.sample,
+#   duration: 45,
+#   user: User.all.sample
+#   })
+
+# Walk.create!({
+#   name: "Jardim Botânico d'Ajuda",
+#   location: "Lisbon",
+#   address: "Calçada Ajuda, 1300-011 Lisboa",
+#   description: "pare ribs ham boudin ham hock, pork loin drumstick ball tip pork capicola buffalo tail ground round short ribs t-bone filet mignon. Tenderloin shank sausage beef bresaola filet mignon pastrami cow. Jowl ground round short ribs capicola jerky. Meatball bresaola tail, meatloaf cupim pork chop pork belly boudin kielbasa pork loin capicola venison chicken leberkas brisket. Drumstick t-bone filet mignon beef ribs kevin pastrami. Short loin venison salami jowl meatball.
+#   ",
+#   category: Category.all.sample,
+#   duration: 120,
+#   user: User.all.sample
+#   })
 
 Review.create!({
   content: "Amazing place! You guys rock!!!",
