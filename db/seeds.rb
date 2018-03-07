@@ -38,7 +38,7 @@ Category.create!({
   name: "Cultural Walks",
   })
 
-Walk.create!({
+walk = Walk.create!({
   name: "Santo Antonio church",
   location: "Lisbon",
   address: "Largo de Santo Antonio da Se, 1100-401 Lisboa",
@@ -46,9 +46,10 @@ Walk.create!({
   ",
   category: Category.all.sample ,
   duration: 45,
-  photo: "http://res.cloudinary.com/jsm68/image/upload/v1520260512/carmen-penaranda-411970-unsplash.jpg",
   user: User.all.sample
   })
+walk.walk_attachments << WalkAttachment.new(url: "http://res.cloudinary.com/jsm68/image/upload/v1520260512/carmen-penaranda-411970-unsplash.jpg")
+walk.walk_attachments.save
 
 Walk.create!({
   name: "Sé de Lisboa",
