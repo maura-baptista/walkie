@@ -212,15 +212,15 @@
 // buttons css
 
 .btn-circle {
-  width: 44px;
+  width: 44px !important;
   height: 44px;
-  padding: 2px 0px 15px 0px;
   font-size: 12px;
   line-height: 2.1;
-  border-radius: 22px;
+  border-radius: 50%;
   display: inline-block;
   color: white;
   margin: 0px 20px 0px 20px;
+  justify-content: center !important;
 }
 
 .go-rounded-border {
