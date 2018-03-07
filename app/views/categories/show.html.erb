@@ -1,4 +1,9 @@
-<h1>Show page motherfucker</h1>
+<h2>Available walks to this category:</h2>
+
+
+<h4><%= @category.name %></h4>
+
 <% @walks.each do |walk| %>
-<%= walk.name %>
+
+   <p><%= walk.name %></p>
 <% end %>
