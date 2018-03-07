@@ -74,9 +74,8 @@ class WalksController < ApplicationController
   end
 
    def walk_params
-    params.require(:walk).permit(:name, :category, :location, :duration, :description,  walk_attachments_attributes: [:id, walk_id, :photo)
+    params.require(:walk).permit(:name, :category, :location, :duration, :description,  walk_attachments_attributes: [:id, walk_id, :photo])
   end
 end
-
 
 

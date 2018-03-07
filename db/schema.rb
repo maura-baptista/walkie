@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180307161709) do
+ActiveRecord::Schema.define(version: 20180307165738) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -83,9 +83,9 @@ ActiveRecord::Schema.define(version: 20180307161709) do
 
   create_table "walk_attachments", force: :cascade do |t|
     t.bigint "walk_id"
-    t.string "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo"
     t.index ["walk_id"], name: "index_walk_attachments_on_walk_id"
   end
 

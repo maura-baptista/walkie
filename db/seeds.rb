@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 puts "destroying all data"
+WalkAttachment.destroy_all
 Walk.destroy_all
 User.destroy_all
 Category.destroy_all
@@ -48,10 +49,11 @@ walk = Walk.create!({
   duration: 45,
   user: User.all.sample
   })
-walk.walk_attachments << WalkAttachment.new(url: "http://res.cloudinary.com/jsm68/image/upload/v1520260512/carmen-penaranda-411970-unsplash.jpg")
-walk.walk_attachments.save
+walk.walk_attachments.create!(photo: "http://res.cloudinary.com/jsm68/image/upload/v1520260512/carmen-penaranda-411970-unsplash.jpg")
+walk.walk_attachments.create!(photo: "http://res.cloudinary.com/jsm68/image/upload/v1520260512/carmen-penaranda-411970-unsplash.jpg")
+walk.walk_attachments.create!(photo: "http://res.cloudinary.com/jsm68/image/upload/v1520260499/alexander-watts-66219-unsplash.jpg")
 
-Walk.create!({
+walk2 = Walk.create!({
   name: "Sé de Lisboa",
   location: "Lisbon",
   address: "Largo da Sé, 1100-585 Lisboa",
@@ -59,9 +61,9 @@ Walk.create!({
   ",
   category: Category.all.sample,
   duration: 45,
-  photo: "http://res.cloudinary.com/jsm68/image/upload/v1520260499/alexander-watts-66219-unsplash.jpg",
   user: User.all.sample
   })
+walk2.walk_attachments.create!(photo: "http://res.cloudinary.com/jsm68/image/upload/v1520260499/alexander-watts-66219-unsplash.jpg")
 
 Walk.create!({
   name: "Church of Nossa Senhora da Conceição Velha",
@@ -71,7 +73,6 @@ Walk.create!({
   ",
   category: Category.all.sample,
   duration: 45,
-  photo: "http://res.cloudinary.com/jsm68/image/upload/v1520260534/michael-d-beckwith-579320-unsplash.jpg",
   user: User.all.sample
   })
 
@@ -83,7 +84,6 @@ Walk.create!({
   ",
   category: Category.all.sample,
   duration: 45,
-  photo: "http://res.cloudinary.com/jsm68/image/upload/v1520260739/1200px-Lisbon_main_square__36622604910.jpg",
   user: User.all.sample
   })
 
@@ -95,7 +95,6 @@ Walk.create!({
   ",
   category: Category.all.sample,
   duration: 45,
-  photo: "http://res.cloudinary.com/jsm68/image/upload/v1520260575/mike-wilson-195744-unsplash.jpg",
   user: User.all.sample
   })
 
@@ -107,7 +106,6 @@ Walk.create!({
   ",
   category: Category.all.sample,
   duration: 45,
-  photo: "http://res.cloudinary.com/jsm68/image/upload/v1520264635/lorenzo-castagnone-445302-unsplash.jpg",
   user: User.all.sample
   })
 
@@ -119,7 +117,6 @@ Walk.create!({
   ",
   category: Category.all.sample,
   duration: 45,
-  photo: "http://res.cloudinary.com/jsm68/image/upload/v1520265618/1200px-Belem-3__34224859085.jpg",
   user: User.all.sample
   })
 
@@ -131,7 +128,6 @@ Walk.create!({
   ",
   category: Category.all.sample,
   duration: 45,
-  photo: "http://res.cloudinary.com/jsm68/image/upload/v1520267217/1200px-View_from_the_Cloisters_in_the_Jer%C3%B3nimos_Monastery.jpg",
   user: User.all.sample
   })
 
@@ -143,7 +139,6 @@ Walk.create!({
   ",
   category: Category.all.sample,
   duration: 45,
-  photo: "http://res.cloudinary.com/jsm68/image/upload/v1520267595/lin-yu-xin-43864-unsplash.jpg",
   user: User.all.sample
   })
 
@@ -155,7 +150,6 @@ Walk.create!({
   ",
   category: Category.all.sample,
   duration: 120,
-  photo: "http://res.cloudinary.com/jsm68/image/upload/v1520269598/paul-van-bloem-235179-unsplash.jpg",
   user: User.all.sample
   })
 

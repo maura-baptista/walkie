@@ -10,9 +10,6 @@ gem 'rails', '5.1.5'
 gem 'redis'
 gem "geocoder"
 gem 'omniauth-facebook'
-gem 'carrierwave'
-
-
 
 gem 'cloudinary'
 gem 'autoprefixer-rails'
