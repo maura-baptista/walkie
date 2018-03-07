@@ -3,11 +3,11 @@ class WalksController < ApplicationController
   skip_before_action :authenticate_user!, only: [:show]
 
   def index
-   
+
     @walks = Walk.all
 
 
-    @walks = policy_scope(Walk).order(created_at: :desc)
+    #@walks = policy_scope(Walk).order(created_at: :desc)
 
   end
 
