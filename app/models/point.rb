@@ -1,5 +1,5 @@
 class Point < ApplicationRecord
   belongs_to :walk
-  #reverse_geocoded_by :longitude, :latitude
-  #after_validation :reverse_geocode
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
 end
