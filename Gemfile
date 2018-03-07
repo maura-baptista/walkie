@@ -11,8 +11,6 @@ gem 'redis'
 gem "geocoder"
 gem 'omniauth-facebook'
 
-
-
 gem 'cloudinary'
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3'

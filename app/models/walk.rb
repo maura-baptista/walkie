@@ -7,6 +7,10 @@ class Walk < ApplicationRecord
   has_many :likes
   has_many :user_walks
   has_many :users, through: :user_walks
+  has_many :walk_attachments
+  accepts_nested_attributes_for :walk_attachments
+
+
 
   # validates :name, presence: true
   # validates :category, presence: true

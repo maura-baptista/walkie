@@ -1,0 +1,17 @@
+<%= form_for(@walk, :html => { :multipart => true }) do |f| %>
+   <div class="field">
+     <%= f.label :title %><br>
+     <%= f.text_field :title %>
+   </div>
+
+   <%= f.fields_for :walk_attachments do |p| %>
+     <div class="field">
+       <%= p.label :photo %><br>
+       <%= p.file_field :photo, :multiple => true, name: "walk_attachments[photo][]" %>
+     </div>
+   <% end %>
+
+   <div class="actions">
+     <%= f.submit %>
+   </div>
+<% end %>
