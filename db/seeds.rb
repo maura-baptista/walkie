@@ -8,7 +8,7 @@
 puts "destroying all data"
 Walk.destroy_all
 User.destroy_all
-Category.destroy.all
+Category.destroy_all
 puts "creating"
 
 
@@ -170,3 +170,64 @@ Review.create!({
   walk: Walk.first,
   user: User.all.sample
   })
+
+
+
+Point.create!({
+  name: "Marvila Library",
+  latitude: 38.740388,
+  longitude: -9.109299,
+  description: "Marvila Library is a good starting point of the graffitti walk",
+  order: 1,
+  walk: Walk.first
+  })
+Point.create!({
+  name: "Rua Alberto Jose Pessoa",
+  latitude: 38.741509,
+  longitude: -9.108027,
+  description: "The street has many graffitti murals",
+  order: 2,
+  walk: Walk.first
+  })
+Point.create!({
+  name: "Rua Alberto Lapa",
+  latitude: 38.605469,
+  longitude: -9.164683,
+  description: "The second main street full of street art murals",
+  order: 3,
+  walk: Walk.first
+  })
+Point.create!({
+  name: "Bairro da Quinta do Chale",
+  latitude: 38.743362,
+  longitude: -9.107827,
+  description: "The coolest street murals are hidden away on these streets",
+  order: 4,
+  walk: Walk.first
+  })
+Point.create!({
+  name: "Rua do Patrocinio",
+  latitude: -23.193244,
+  longitude: -46.877030,
+  description: "More amazing art murals here",
+  order: 5,
+  walk: Walk.first
+  })
+Point.create!({
+  name: "Dois Corvos",
+  latitude: 38.738008,
+  longitude: -9.105526,
+  description: "Enjoy some cool graffiti whilst trying out some amazing beers in this Craft Beer Brewery",
+  order: 6,
+  walk: Walk.first
+  })
+Point.create!({
+  name: "Fabrica do Braca de Prata",
+  latitude: 38.743791,
+  longitude: -9.101242,
+  description: "The last stop on the tour, a place full of many cool different spaces, a library, alternative craft shops and lively at night with concerts",
+  order: 7,
+  walk: Walk.first
+  })
+
+p "finished seeding"
