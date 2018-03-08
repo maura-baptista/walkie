@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
 
+  get 'users/profile'
+
   get 'points/index'
 
   get 'points/new'
