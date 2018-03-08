@@ -63,7 +63,7 @@ walk2 = Walk.create!({
   duration: 45,
   user: User.all.sample
   })
-walk2.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520501673/vhils-obey-giant-mural-collaboration-lisbon-portugal-1.jpg")
+walk2.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520503024/22684875.jpg")
 walk2.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520501662/vhils-1.jpg")
 walk2.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520501800/vhills_alcantera-770x429.jpg")
 

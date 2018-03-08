@@ -11,17 +11,18 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
     <div class="item active">
-      <img <%=link_to image_tag( @walk.walk_attachments.first.photo)%> alt="Los Angeles">
+
+      <img <%=link_to image_tag(@walk_attachments.first.photo)%> alt="Los Angeles">
     </div>
+    <% @walk_attachments.drop(1).each do |pictures| %>
 
     <div class="item">
-      <img <%=link_to image_tag( @walk.walk_attachments.last.photo)%> alt="Chicago">
+      <img <%=link_to image_tag(pictures.photo)%>>
     </div>
+       <% end %>
 
-    <div class="item">
-      <img <%=link_to image_tag( @walk.walk_attachments.last.photo)%> alt="New York">
-    </div>
   </div>
+
 
   <!-- Left and right controls -->
   <a class="left carousel-control" href="#myCarousel" data-slide="prev">
