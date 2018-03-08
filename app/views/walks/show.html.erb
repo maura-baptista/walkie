@@ -18,7 +18,7 @@
        <h6>&nbsp&nbsp<%= @walk.duration %>&nbsp&nbsp&nbsp<i class="far fa-clock"></i>&nbsp&nbsp&nbsp<%= @walk.location%></h6>
        <hr>
        <p>
-        <h4><%= @walk.description %></h4>
+        <p><%= @walk.description %></p>
         <br>
       </p>
     </div>
@@ -61,17 +61,12 @@
     <div class="message-body">
       "<%= review.content %>"
     </div>
-<<<<<<< HEAD
   </div>
   <% end %>
 </div>
-=======
     <div id='map' style='width: 400px; height: 300px;'></div>
   <script>
     var points = <%= raw @walk.points.to_json %>;
->>>>>>> e3d50b927d3394cf022b4c62a3f2330fa330f50b
-
-
 
 <div id='map' style='width: 400px; height: 300px;'></div>
 <script>
@@ -85,7 +80,6 @@
     });
     // Add zoom and rotation controls to the map.
     map.addControl(new mapboxgl.NavigationControl());
-<<<<<<< HEAD
     map.on('load', function () {
       map.addLayer({
         "id": "route",
@@ -116,7 +110,6 @@
                         "line-width": 8
                       }
                     });
-=======
 
     var coordinates = [];
     var features = [];
@@ -213,7 +206,6 @@
     // Change it back to a pointer when it leaves.
     map.on('mouseleave', 'places', function () {
         map.getCanvas().style.cursor = '';
->>>>>>> e3d50b927d3394cf022b4c62a3f2330fa330f50b
     });
   </script>
 
