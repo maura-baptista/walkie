@@ -142,10 +142,12 @@ body {
   font-size:18px;
   line-height: 2.1;
   align-content: center;
-  padding-top: 8px;
   cursor:pointer;
-  width: 30px !important;
-  height: 30px;
+  width: 35px !important;
+  height: 35px;
+  border: none;
+  padding: 4px 8px !important;
+
 
 }
 
@@ -155,5 +157,6 @@ body {
  width: 55px !important;
   height: 55px !important;
   align-content: center;
+  border: none;
 
 }

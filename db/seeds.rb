@@ -43,7 +43,7 @@ walk = Walk.create!({
   name: "Marvila Street Art Walk",
   location: "Lisbon",
   address: "Marvila",
-  description: "pare ribs ham boudin ham hock, pork loin drumstick ball tip pork capicola buffalo tail ground round short ribs t-bone filet mignon. Tenderloin shank sausage beef bresaola filet mignon pastrami cow. Jowl ground round short ribs capicola jerky. Meatball bresaola tail, meatloaf cupim pork chop pork belly boudin kielbasa pork loin capicola venison chicken leberkas brisket. Drumstick t-bone filet mignon beef ribs kevin pastrami. Short loin venison salami jowl meatball.
+  description: "These days, cities are covered in good graffiti and bad graffiti, and Lisbon is one that has more than its fair share of the good variety. The themes are multifaceted, covering the country’s history, pop culture, and imaginative abstracts.
   ",
   category: Category.first ,
   duration: 45,
