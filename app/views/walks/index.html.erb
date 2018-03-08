@@ -1,6 +1,21 @@
 <h1>My Walks:</h1>
+
+<center><h2> search bar</h2><center>
+<center><h4> Our walks</h4><center>
+<div class="navbar-wagon-item">
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style = "margin-left: 285px;">
+    Sort by
+  </button>
+    <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+      <li><%= link_to "ascending", walks_path(sort: :asc)  %></li>
+      <li><%= link_to "descending", walks_path(sort: :desc)  %></li>
+    </ul>
+  </div>
+</div>
+
 <div>
-  <% @Walks.each do |walk| %>
+  <% @walks.each do |walk| %>
     <%= render walk %>
   <% end %>
   <div class="d-inline categories">

@@ -46,7 +46,7 @@ walk = Walk.create!({
   description: "pare ribs ham boudin ham hock, pork loin drumstick ball tip pork capicola buffalo tail ground round short ribs t-bone filet mignon. Tenderloin shank sausage beef bresaola filet mignon pastrami cow. Jowl ground round short ribs capicola jerky. Meatball bresaola tail, meatloaf cupim pork chop pork belly boudin kielbasa pork loin capicola venison chicken leberkas brisket. Drumstick t-bone filet mignon beef ribs kevin pastrami. Short loin venison salami jowl meatball.
   ",
   category: Category.first ,
-  duration: 45,
+  duration: 35,
   user: User.all.sample
   })
 walk.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446746/street-art-kobra.jpg")
@@ -60,7 +60,7 @@ walk2 = Walk.create!({
   description: "pare ribs ham boudin ham hock, pork loin drumstick ball tip pork capicola buffalo tail ground round short ribs t-bone filet mignon. Tenderloin shank sausage beef bresaola filet mignon pastrami cow. Jowl ground round short ribs capicola jerky. Meatball bresaola tail, meatloaf cupim pork chop pork belly boudin kielbasa pork loin capicola venison chicken leberkas brisket. Drumstick t-bone filet mignon beef ribs kevin pastrami. Short loin venison salami jowl meatball.
   ",
   category: Category.first ,
-  duration: 45,
+  duration: 25,
   user: User.all.sample
   })
 walk2.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520501673/vhils-obey-giant-mural-collaboration-lisbon-portugal-1.jpg")
@@ -88,7 +88,7 @@ walk4 = Walk.create!({
   description: "pare ribs ham boudin ham hock, pork loin drumstick ball tip pork capicola buffalo tail ground round short ribs t-bone filet mignon. Tenderloin shank sausage beef bresaola filet mignon pastrami cow. Jowl ground round short ribs capicola jerky. Meatball bresaola tail, meatloaf cupim pork chop pork belly boudin kielbasa pork loin capicola venison chicken leberkas brisket. Drumstick t-bone filet mignon beef ribs kevin pastrami. Short loin venison salami jowl meatball.
   ",
   category: Category.all.sample,
-  duration: 45,
+  duration: 15,
   user: User.all.sample
   })
 walk4.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520335705/hugo-sousa-383214-unsplash.jpg")
@@ -103,7 +103,7 @@ walk5 = Walk.create!({
   description: "pare ribs ham boudin ham hock, pork loin drumstick ball tip pork capicola buffalo tail ground round short ribs t-bone filet mignon. Tenderloin shank sausage beef bresaola filet mignon pastrami cow. Jowl ground round short ribs capicola jerky. Meatball bresaola tail, meatloaf cupim pork chop pork belly boudin kielbasa pork loin capicola venison chicken leberkas brisket. Drumstick t-bone filet mignon beef ribs kevin pastrami. Short loin venison salami jowl meatball.
   ",
   category: Category.all.sample,
-  duration: 45,
+  duration: 22,
   user: User.all.sample
   })
 walk5.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520335697/z-klein-326375-unsplash.jpg")
@@ -118,7 +118,7 @@ walk6 = Walk.create!({
   description: "pare ribs ham boudin ham hock, pork loin drumstick ball tip pork capicola buffalo tail ground round short ribs t-bone filet mignon. Tenderloin shank sausage beef bresaola filet mignon pastrami cow. Jowl ground round short ribs capicola jerky. Meatball bresaola tail, meatloaf cupim pork chop pork belly boudin kielbasa pork loin capicola venison chicken leberkas brisket. Drumstick t-bone filet mignon beef ribs kevin pastrami. Short loin venison salami jowl meatball.
   ",
   category: Category.all.sample,
-  duration: 45,
+  duration: 27,
   user: User.all.sample
   })
 walk6.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520457690/maarten-van-den-heuvel-63257-unsplash.jpg")

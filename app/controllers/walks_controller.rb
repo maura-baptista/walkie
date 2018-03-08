@@ -3,11 +3,14 @@ class WalksController < ApplicationController
   skip_before_action :authenticate_user!, only: [:show]
 
 
-
-
-
   def index
-    @walks = Walk.all
+    if params[:sort] == 'desc'
+      sort = 'desc'
+    else
+      sort = 'asc'
+    end
+
+    @walks = Walk.all.order("duration #{sort}")
   end
 
   def show
@@ -63,6 +66,10 @@ class WalksController < ApplicationController
     redirect_to walks_path
   end
 
+  def order
+
+  end
+
 
 
   private
@@ -76,6 +83,7 @@ class WalksController < ApplicationController
    def walk_params
     params.require(:walk).permit(:name, :category, :location, :duration, :description,  walk_attachments_attributes: [:id, walk_id, :photo])
   end
+
 end
 
 
