@@ -18,7 +18,49 @@ User.create!({
   last_name: "Monteiro",
   email: "joemonteiro@verizon.net",
   password: "123456",
+  photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520520397/20258116_104215333594155_8026645643865689250_n.jpg"
   })
+
+User.create!({
+  first_name: "Francisco",
+  last_name: "Barreto",
+  email: "barrrr@sweetpeachyboy.net",
+  password: "123456",
+  photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520518949/26733717_471026946626212_2213751371031631593_n.jpg"
+  })
+
+User.create!({
+  first_name: "Maria",
+  last_name: "Castro",
+  email: "maria@verizon.net",
+  password: "123456",
+  photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520519876/14572838_10209041836381309_6064047794073558588_n.jpg"
+  })
+
+User.create!({
+  first_name: "Cisco",
+  last_name: "Azeveado",
+  email: "cisco@verizon.net",
+  password: "123456",
+  photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520519907/1004408_10201404428340492_323452453_n.jpg"
+  })
+
+User.create!({
+  first_name: "Heroku",
+  last_name: "Master",
+  email: "heroku@verizon.net",
+  password: "123456",
+  photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520520004/10397836_10203119119130715_7638003944117998507_n.jpg"
+  })
+
+User.create!({
+  first_name: "Manel",
+  last_name: "Manel",
+  email: "manelo@verizon.net",
+  password: "123456",
+  photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520519728/11253888_10207694698942379_8476170414381940837_n.jpg"
+  })
+
 
 Category.create!({
   name: "Alternative Walks",
@@ -182,6 +224,62 @@ Review.create!({
   user: User.all.sample
   })
 
+Review.create!({
+  content: "OMG! Walkie, you changed my life!",
+  walk: Walk.all.sample,
+  user: User.all.sample
+  })
+
+Review.create!({
+  content: "I found 20 euros on the street on this walk!",
+  walk: Walk.all.sample,
+  user: User.all.sample
+  })
+Review.create!({
+  content: "What a walk! The best weekend!",
+  walk: Walk.all.sample,
+  user: User.all.sample
+  })
+Review.create!({
+  content: "What a walk! The best weekend!",
+  walk: Walk.all.sample,
+  user: User.all.sample
+  })
+Review.create!({
+  content: "An unforgettabe experience",
+  walk: Walk.all.sample,
+  user: User.all.sample
+  })
+Review.create!({
+  content: "What a walk! The best weekend!",
+  walk: Walk.all.sample,
+  user: User.all.sample
+  })
+Review.create!({
+  content: "I didn't even know this part of the city existed!",
+  walk: Walk.all.sample,
+  user: User.all.sample
+  })
+Review.create!({
+  content: "What a walk! The best weekend!",
+  walk: Walk.all.sample,
+  user: User.all.sample
+  })
+Review.create!({
+  content: "An unforgettabe experience",
+  walk: Walk.all.sample,
+  user: User.all.sample
+  })
+Review.create!({
+  content: "What a walk! The best weekend!",
+  walk: Walk.all.sample,
+  user: User.all.sample
+  })
+Review.create!({
+  content: "I didn't even know this part of the city existed!",
+  walk: Walk.all.sample,
+  user: User.all.sample
+  })
 
 
 Point.create!({
