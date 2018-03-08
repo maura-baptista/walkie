@@ -15,7 +15,6 @@
   background-color: white;
   background-position: center;
   position: relative;
-  font-family: 'Open Sans', sans-serif;
   justify-content: space-around;
   border-radius: 2px;
   box-shadow: 0 2px 2px rgba(0,0,0,0.1);
@@ -47,22 +46,22 @@
 
 .card-walk {
   font-weight: bold;
+  font-size: 15px;
 }
 
 .card-name {
   font-weight: bold;
+    font-size: 12px;
+
 }
 
 .card-location {
   font-weight: lighter;
+  font-size: 12px;
 }
 
 .card-rating-reviews {
-  font-size: 15px;
-}
-
-.card-average-rating {
-  color: #F9690E;
+  font-size: 10px;
 }
 
 .wishlist-rounded svg {
