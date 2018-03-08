@@ -3,13 +3,11 @@
 }
 
 .card-wrapper {
-  padding-top: 20px;
-  padding-left: 7.5px !important;
-  padding-right: 7.5px !important;
   &:hover, &:active, &:focus {
     outline: none;
   }
 }
+
 
 .cards-container {
   height: 330px;
@@ -20,8 +18,9 @@
   font-family: 'Open Sans', sans-serif;
   justify-content: space-around;
   border-radius: 2px;
-  padding-bottom: 20px;
-  box-shadow: 0 2px 2px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 2px rgba(0,0,0,0.1);
+  padding: 0 0 20px 0;
+  max-width: 100vw;
 }
 
 .card-link {
@@ -66,6 +65,10 @@
   color: #F9690E;
 }
 
+.wishlist-rounded svg {
+  stroke: white !important;
+}
+
 @media (max-width: 1023px) {
   .card-average-rating {
     color: #545454;;
@@ -95,26 +98,6 @@
   z-index:2;
 }
 
-// Stars CSS
-.star-icon {
-    position: relative;
-}
-
-.star-icon.full:before {
-    content: '\2605'; /* Full star in UTF8 */
-    position: absolute;
-    left: 0;
-    text-shadow: 0 0 2px #F9690E;
- }
-
-.star-icon.half:before {
-    content: '\2605'; /* Full star in UTF8 */
-    position: absolute;
-    left: 0;
-    width: 50%;
-    overflow: hidden;
-    text-shadow: 0 0 2px #F9690E;;
-}
 
 // Wishlist Badge CSS
 .wishlist-rounded {
@@ -133,7 +116,7 @@
   padding: 10px;
   border-radius: 50%;
   background: transparent;
-  border: 1px solid #fff;
+  border: 1px solid white;
 }
 
 .wishlist-rounded-white {
@@ -160,6 +143,7 @@
 
 .wishlist-icon.empty {
   fill: none;
+  color: white;
   stroke: #484848;
   &:hover {
     fill: #f0787c;
@@ -167,47 +151,6 @@
   }
 }
 
-// share Badge CSS
-.share-rounded {
-  width: 44px;
-  height: 44px;
-  padding: 10px;
-  border-radius: 50%;
-  position: absolute;
-  bottom: -20px;
-  right: 80px;
-}
-
-.share-rounded-border {
-  width: 44px;
-  height: 44px;
-  padding: 10px;
-  border-radius: 50%;
-  background: transparent;
-  border: 1px solid #fff;
-}
-
-.share-rounded-white {
-  background: #fff;
-}
-
-.share-header {
-  position: relative;
-  float: left;
-}
-
-.share-icon {
-  display: block;
-  width: 80px;
-  height: 80px;
-  margin: auto;
-  z-index: 20;
-  position: relative;
-  cursor: pointer;
-  &:hover, &:active, &:focus {
-    outline: none !important;
-  }
-}
 
 // buttons css
 
