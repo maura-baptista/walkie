@@ -133,10 +133,27 @@ body {
 }
 
  .buttons {
-  position: absolute;
-  left: 0;
-  top: 59.5%;
-  width: 100%;
-  text-align: center;
   font-size: 18px;
-  }
+  margin-top: -22px;
+  position: absolute;
+}
+
+.normal-button {
+  font-size:18px;
+  line-height: 2.1;
+  align-content: center;
+  padding-top: 8px;
+  cursor:pointer;
+  width: 30px !important;
+  height: 30px;
+
+}
+
+.go-button {
+  font-size: 20px;
+  cursor:pointer;
+ width: 55px !important;
+  height: 55px !important;
+  align-content: center;
+
+}
