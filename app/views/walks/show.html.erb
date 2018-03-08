@@ -67,8 +67,24 @@
     map.addControl(new mapboxgl.NavigationControl());
 
     var coordinates = [];
+    var features = [];
     points.forEach((point) => {
       coordinates.push([point.longitude, point.latitude]);
+
+      var feature = {
+                      "type": "Feature",
+                      "properties": {
+                          "description": point.description,
+                          "icon": "bicycle"
+                      },
+                      "geometry": {
+                          "type": "Point",
+                          "coordinates": [point.longitude, point.latitude]
+                      }
+                  }
+
+      features.push(feature);
+
     });
 
     map.on('load', function () {
@@ -86,18 +102,6 @@
                     "geometry": {
                         "type": "LineString",
                         "coordinates": coordinates
-                        // [
-                        //   [-9.109299, 38.740388],
-                        //   [-9.108027, 38.741509]
-                        //     // for each points print [longitude,latitude]
-                        //     // points.forEach((point) => {
-                        //     //   var coordinates = [point.longitude, point.latitude]
-                        //     //   console.log(coordinates)
-                        //     // });
-                        //     // for (var point in points) {
-                        //     //   [point.longitude, point.latitude]
-                        //     // }
-                        // ]
                     }
                 }
             },
@@ -107,26 +111,58 @@
             },
             "paint": {
                 "line-color": "#D17BC9",
-                "line-width": 8
+                "line-width": 5
             }
         });
+
+
+        map.addLayer({
+          "id": "places",
+          "type": "symbol",
+          "source": {
+              "type": "geojson",
+              "data": {
+                  "type": "FeatureCollection",
+                  "features": features
+
+
+              }
+          },
+                "layout": {
+                  "icon-image": "{icon}-15",
+                  "icon-allow-overlap": true
+                }
+      });
     });
 
-    // code from the next step will go here
-    // map.on('click', function(e) {
-    //   var features = map.queryRenderedFeatures(e.point, {
-    //     layers: ['{layer_name}'] // replace this with the name of the layer
-    //   });
-    //   if (!features.length) {
-    //     return;
-    //   }
-    //   var feature = features[0];
-    //   var popup = new mapboxgl.Popup({ offset: [0, -15] })
-    //   .setLngLat(feature.geometry.coordinates)
-    //   .setHTML('<h3>' + feature.properties.title + '</h3><p>' + feature.properties.description + '</p>')
-    //   .setLngLat(feature.geometry.coordinates)
-    //   .addTo(map);
-    // });
+    map.on('click', 'places', function (e) {
+        var coordinates = e.features[0].geometry.coordinates.slice();
+        var description = e.features[0].properties.description;
+
+
+        // Ensure that if the map is zoomed out such that multiple
+        // copies of the feature are visible, the popup appears
+        // over the copy being pointed to.
+        while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+            coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+        }
+
+        new mapboxgl.Popup()
+            .setLngLat(coordinates)
+            .setHTML(description)
+            .addTo(map);
+    });
+
+     // Change the cursor to a pointer when the mouse is over the places layer.
+    map.on('mouseenter', 'places', function () {
+        map.getCanvas().style.cursor = 'pointer';
+    });
+
+    // Change it back to a pointer when it leaves.
+    map.on('mouseleave', 'places', function () {
+        map.getCanvas().style.cursor = '';
+    });
+
   </script>
   </div>
 
