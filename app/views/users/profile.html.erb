@@ -1,0 +1,37 @@
+<br>
+<div class="container">
+  <h4><strong>Welcome <%= current_user.first_name + " " + current_user.last_name %>!</strong></h4>
+
+  <div class="profile-background">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-xs-8">
+          <h6><strong><%= current_user.first_name + " " + current_user.last_name %></strong></h6>
+
+          <h6><strong>Your email</strong>: <%= current_user.email %></h6>
+        </div>
+
+
+        <div class="col-xs-4">
+          <div class="profile-avatar", style="background-image: url(<%= image_path "maura.jpg" %>);">
+
+
+            </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
