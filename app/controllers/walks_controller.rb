@@ -1,9 +1,11 @@
 class WalksController < ApplicationController
+
   before_action :set_walk, only: [:show, :edit, :update, :destroy]
   skip_before_action :authenticate_user!, only: [:show]
 
 
   def index
+
     if params[:sort] == 'desc'
       sort = 'desc'
     else
@@ -11,10 +13,14 @@ class WalksController < ApplicationController
     end
 
     @walks = Walk.all.order("duration #{sort}")
+
   end
+
+
 
   def show
     @reviews = @walk.reviews
+
     @walk_attachments = @walk.walk_attachments.all
 
   end
