@@ -88,7 +88,7 @@ walk = Walk.create!({
   description: "These days, cities are covered in good graffiti and bad graffiti, and Lisbon is one that has more than its fair share of the good variety. The themes are multifaceted, covering the country’s history, pop culture, and imaginative abstracts.
   ",
   category: Category.first ,
-  duration: 45,
+  duration: 35,
   user: User.all.sample
   })
 walk.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446746/street-art-kobra.jpg")
@@ -102,7 +102,7 @@ walk2 = Walk.create!({
   description: "Vhils’s art is poetic, complex, and ambitious. He penetrates through countless layers of posters, dirt, and plaster to set free the poetic images hidden beneath urban spaces. This is all done by drilling away old plaster relief forms.
   ",
   category: Category.first ,
-  duration: 45,
+  duration: 25,
   user: User.all.sample
   })
 walk2.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520503024/22684875.jpg")
@@ -133,6 +133,7 @@ walk4 = Walk.create!({
   ",
   category: Category.last,
   duration: 30,
+
   user: User.all.sample
   })
 walk4.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520335705/hugo-sousa-383214-unsplash.jpg")
@@ -150,6 +151,8 @@ The old port district of Alcântara got a face-lift in the 1990s, and since then
   ",
   category: Category.last,
   duration: 45,
+  category: Category.all.sample,
+  duration: 22,
   user: User.all.sample
   })
 walk5.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520335697/z-klein-326375-unsplash.jpg")
@@ -164,7 +167,7 @@ walk6 = Walk.create!({
   description: "pare ribs ham boudin ham hock, pork loin drumstick ball tip pork capicola buffalo tail ground round short ribs t-bone filet mignon. Tenderloin shank sausage beef bresaola filet mignon pastrami cow. Jowl ground round short ribs capicola jerky. Meatball bresaola tail, meatloaf cupim pork chop pork belly boudin kielbasa pork loin capicola venison chicken leberkas brisket. Drumstick t-bone filet mignon beef ribs kevin pastrami. Short loin venison salami jowl meatball.
   ",
   category: Category.all.sample,
-  duration: 45,
+  duration: 27,
   user: User.all.sample
   })
 walk6.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520457690/maarten-van-den-heuvel-63257-unsplash.jpg")
@@ -303,9 +306,9 @@ Point.create!({
   walk: Walk.first
   })
 Point.create!({
-  name: "Rua Alberto Lapa",
-  latitude: 38.605469,
-  longitude: -9.164683,
+  name: "Rua Eduarda Lapa",
+  latitude: 38.7415465,
+  longitude: -9.10863,
   description: "The second main street full of street art murals",
   order: 3,
   walk: Walk.first
@@ -320,8 +323,8 @@ Point.create!({
   })
 Point.create!({
   name: "Rua do Patrocinio",
-  latitude: -23.193244,
-  longitude: -46.877030,
+  latitude: 38.743538,
+  longitude: -9.107635,
   description: "More amazing art murals here",
   order: 5,
   walk: Walk.first

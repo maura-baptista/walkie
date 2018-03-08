@@ -61,9 +61,15 @@
     <div class="message-body">
       "<%= review.content %>"
     </div>
+<<<<<<< HEAD
   </div>
   <% end %>
 </div>
+=======
+    <div id='map' style='width: 400px; height: 300px;'></div>
+  <script>
+    var points = <%= raw @walk.points.to_json %>;
+>>>>>>> e3d50b927d3394cf022b4c62a3f2330fa330f50b
 
 
 
@@ -79,6 +85,7 @@
     });
     // Add zoom and rotation controls to the map.
     map.addControl(new mapboxgl.NavigationControl());
+<<<<<<< HEAD
     map.on('load', function () {
       map.addLayer({
         "id": "route",
@@ -109,6 +116,104 @@
                         "line-width": 8
                       }
                     });
+=======
+
+    var coordinates = [];
+    var features = [];
+    points.forEach((point) => {
+      coordinates.push([point.longitude, point.latitude]);
+
+      var feature = {
+                      "type": "Feature",
+                      "properties": {
+                          "description": point.description,
+                          "icon": "bicycle"
+                      },
+                      "geometry": {
+                          "type": "Point",
+                          "coordinates": [point.longitude, point.latitude]
+                      }
+                  }
+
+      features.push(feature);
+
+    });
+
+    map.on('load', function () {
+
+
+
+        map.addLayer({
+            "id": "route",
+            "type": "line",
+            "source": {
+                "type": "geojson",
+                "data": {
+                    "type": "Feature",
+                    "properties": {},
+                    "geometry": {
+                        "type": "LineString",
+                        "coordinates": coordinates
+                    }
+                }
+            },
+            "layout": {
+                "line-join": "round",
+                "line-cap": "round"
+            },
+            "paint": {
+                "line-color": "#D17BC9",
+                "line-width": 5
+            }
+        });
+
+
+        map.addLayer({
+          "id": "places",
+          "type": "symbol",
+          "source": {
+              "type": "geojson",
+              "data": {
+                  "type": "FeatureCollection",
+                  "features": features
+
+
+              }
+          },
+                "layout": {
+                  "icon-image": "{icon}-15",
+                  "icon-allow-overlap": true
+                }
+      });
+    });
+
+    map.on('click', 'places', function (e) {
+        var coordinates = e.features[0].geometry.coordinates.slice();
+        var description = e.features[0].properties.description;
+
+
+        // Ensure that if the map is zoomed out such that multiple
+        // copies of the feature are visible, the popup appears
+        // over the copy being pointed to.
+        while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+            coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+        }
+
+        new mapboxgl.Popup()
+            .setLngLat(coordinates)
+            .setHTML(description)
+            .addTo(map);
+    });
+
+     // Change the cursor to a pointer when the mouse is over the places layer.
+    map.on('mouseenter', 'places', function () {
+        map.getCanvas().style.cursor = 'pointer';
+    });
+
+    // Change it back to a pointer when it leaves.
+    map.on('mouseleave', 'places', function () {
+        map.getCanvas().style.cursor = '';
+>>>>>>> e3d50b927d3394cf022b4c62a3f2330fa330f50b
     });
   </script>
 
