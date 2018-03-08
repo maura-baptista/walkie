@@ -299,9 +299,9 @@ Point.create!({
   walk: Walk.first
   })
 Point.create!({
-  name: "Rua Alberto Lapa",
-  latitude: 38.605469,
-  longitude: -9.164683,
+  name: "Rua Eduarda Lapa",
+  latitude: 38.7415465,
+  longitude: -9.10863,
   description: "The second main street full of street art murals",
   order: 3,
   walk: Walk.first
@@ -316,8 +316,8 @@ Point.create!({
   })
 Point.create!({
   name: "Rua do Patrocinio",
-  latitude: -23.193244,
-  longitude: -46.877030,
+  latitude: 38.743538,
+  longitude: -9.107635,
   description: "More amazing art murals here",
   order: 5,
   walk: Walk.first
