@@ -46,84 +46,6 @@ body {
 }
 
 
-//======= timeline for centering
-.timeline {
-  width:100%;
-  max-width:60rem;
-  margin-right:auto;
-  margin-left:auto;
-  padding-right:2rem!important;;
-  padding-bottom:4rem;
-  padding-left:2rem !important;
-  background-image:linear-gradient(lighten($dark, 60%), lighten($dark, 60%));
-  background-size:2px 100%;
-  background-position:50% 1rem;
-  background-repeat:no-repeat;
-
-  @include tablet {background-position:2rem 0;}
-}
-
-
-// every single month
-.timeline .item {
-  position:relative;
-  display:block;
-  width:50%;
-  float:left;
-  clear:both;
-  margin-top:-1rem;
-
-  @include tablet {
-    width:100%;
-    float:none;
-    margin-top:0;
-    margin-bottom:3rem;
-  }
-
-  // the circle on the timeline
-  &:before {
-    content:'';
-    position:absolute;
-    top:0.3rem;
-    width:1rem;
-    height:1rem;
-    border:2px solid lighten($dark, 60%);
-    border-radius:50%;
-    background-color:lighten($dark, 90%);
-  }
-  // change background-color when hovered
-  &:hover:before {background-color:lighten($dark, 60%);}
-}
-
-// the first month should not be lifted up
-.timeline .item:first-child {margin-top:0;}
-
-// every "odd" moth will be floated to the right
-.timeline .item:nth-child(odd) {
-  float:right;
-  padding-left:2rem;
-  &:before {left:-0.5rem;}
-}
-
-.timeline .item:nth-child(even) {
-  padding-right:2rem;
-  @include tablet {padding-right:0;padding-left:2rem;}
-
-  &:before {
-    right:-0.5rem;
-    @include tablet {left:-0.5rem;}
-  }
-}
-
-.timeline .item h2 {
-  display:block;
-  margin-bottom:1rem;
-}
-
-.timeline .item:nth-child(even) h2 {
-  text-align:right;
-  @include tablet {text-align:left;}
-}
 
 
 .center {
@@ -293,7 +215,7 @@ h3 {
     }
 
     i.jp {
-      background-image: url('http://www.vasilis-tsirimokos.com/codepen/japan-small.jpg');
+      background-image: url('http://res.cloudinary.com/geebabygee/image/upload/v1520446746/street-art-kobra.jpg');
     }
     i.vt {
       background-image: url('http://www.vasilis-tsirimokos.com/codepen/vietnam-small.jpg');

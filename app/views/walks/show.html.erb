@@ -1,90 +1,81 @@
 <%= render 'shared/carousel' %>
 
-  <div class="buttons">
+<div class="buttons">
   <span class="normal-button btn btn-default btn-circle far fa-heart go-rounded-white text-center"></span>
   <span class="normal-button btn btn-default btn-circle fas fa-share-alt go-rounded-white text-center" onclick=""></span>
   <span class="go-button btn btn-default btn-circle go-rounded-white text-center" style="margin-left: 30vw ;" onclick="">GO</span>
-  </div>
+</div>
 <div class="container">
-
 
   <div class="row">
     <div class="col-xs-12">
-<br>
-<br>
+      <br>
+      <br>
       <div class="d-inline categories">
-       <h4><%= @walk.category.name%></h4>
-
-        <h2><strong> <%=@walk.name %></strong></h2>
-        <br>
-
-    <h6>&nbsp&nbsp<%= @walk.duration %>&nbsp&nbsp&nbsp<i class="far fa-clock"></i>&nbsp&nbsp&nbsp<%= @walk.location%></h6>
-        <hr>
-      <p>
+        <h4><%= @walk.category.name%></h4>
+       <h2><strong> <%=@walk.name %></strong></h2>
+       <br>
+       <h6>&nbsp&nbsp<%= @walk.duration %>&nbsp&nbsp&nbsp<i class="far fa-clock"></i>&nbsp&nbsp&nbsp<%= @walk.location%></h6>
+       <hr>
+       <p>
         <h4><%= @walk.description %></h4>
         <br>
       </p>
-</div>
-</div>
-</div>
-
-
-
-
-  <section class="timeline">
-      <div class="container">
-        <% @walk.points.each_with_index do |point, index| %>
-          <div class="row">
-              <a href="http://asia.vasilis-tsirimokos.com/japan.html">
-                  <div class="country-block col-sm-6 <%= 'reverse col-sm-push-6' if index.even? %>">
-                      <i class="jp"></i>
-                      <%= point.order %>.<%= point.name %>
-                  </div>
-              </a>
-              <div class="date-block col-sm-6 <%= 'reverse col-sm-pull-6' if index.even? %>">
-                  <div>
-                     <div><%= point.description %>.</div>
-                  </div>
-              </div>
-          </div>
-        <% end %>
-
-          <div class="row">
-              <a href="http://asia.vasilis-tsirimokos.com/vietnam.html">
-                  <div class="country-block reverse col-sm-6 col-sm-push-6">
-                      <i class="vt"></i>
-                      Vietnam
-                  </div>
-              </a>
-              <div class="date-block reverse col-sm-6 col-sm-pull-6">
-                  <div>28 April - 20 May</div>
-              </div>
-          </div>
-      </div>
-  </section>
-
-
-
-
-
-
-      <div>
-        <h3>Reviews</h3>
-
-        <% @reviews.each  do |review| %>
-        <div class="message">
-          <%= image_tag review.user.photo, class: "avatar-large" %>
-          <div class="message-body">
-            "<%= review.content %>"
-          </div>
-        </div>
-        <% end %>
-      </div>
     </div>
+  </div>
+</div>
+
+
+
+
+
+
+<section class="timeline">
+  <div class="container">
+    <% @walk.points.each_with_index do |point, index| %>
+    <div class="row">
+      <a href="http://asia.vasilis-tsirimokos.com/japan.html">
+        <div class="country-block col-sm-6 <%= 'reverse col-sm-push-6' if index.even? %>">
+          <i class="jp"></i>
+          <%= point.order %>.<%= point.name %>
+        </div>
+      </a>
+      <div class="date-block col-sm-6 <%= 'reverse col-sm-pull-6' if index.even? %>">
+        <div>
+         <div><%= point.description %>.</div>
+       </div>
+     </div>
+   </div>
+   <% end %>
+ </section>
+
+
+
+
+ <div>
+  <h3>Reviews</h3>
+
+  <% @reviews.each  do |review| %>
+  <div class="message">
+    <%= image_tag review.user.photo, class: "avatar-large" %>
+    <div class="message-body">
+      "<%= review.content %>"
+    </div>
+<<<<<<< HEAD
+  </div>
+  <% end %>
+</div>
+=======
     <div id='map' style='width: 400px; height: 300px;'></div>
   <script>
     var points = <%= raw @walk.points.to_json %>;
+>>>>>>> e3d50b927d3394cf022b4c62a3f2330fa330f50b
 
+
+
+<div id='map' style='width: 400px; height: 300px;'></div>
+<script>
+  points = <%= raw @walk.points.to_json %>;
     mapboxgl.accessToken = 'pk.eyJ1IjoiZnJhbmNpc2NvYmFycmV0byIsImEiOiJjamVoMWRjMjMwbWh6MnFuczF6dGd6bmFoIn0.S5h45dvXuYQ3xoN-d504KA'; // replace this with your access token
     var map = new mapboxgl.Map({
       container: 'map',
@@ -92,10 +83,40 @@
       center: [points[0].longitude, points[0].latitude],
       zoom: 13
     });
-
-
     // Add zoom and rotation controls to the map.
     map.addControl(new mapboxgl.NavigationControl());
+<<<<<<< HEAD
+    map.on('load', function () {
+      map.addLayer({
+        "id": "route",
+        "type": "line",
+        "source": {
+          "type": "geojson",
+          "data": {
+            "type": "Feature",
+            "properties": {},
+            "geometry": {
+              "type": "LineString",
+              "coordinates": [
+                            // for each points print [longitude,latitude]
+                            points.forEach((point) => {
+                              let coordinates = [point.longitude, point.latitude]
+                              console.log(coordinates)
+                            });
+                            ]
+                          }
+                        }
+                      },
+                      "layout": {
+                        "line-join": "round",
+                        "line-cap": "round"
+                      },
+                      "paint": {
+                        "line-color": "#888",
+                        "line-width": 8
+                      }
+                    });
+=======
 
     var coordinates = [];
     var features = [];
@@ -192,10 +213,10 @@
     // Change it back to a pointer when it leaves.
     map.on('mouseleave', 'places', function () {
         map.getCanvas().style.cursor = '';
+>>>>>>> e3d50b927d3394cf022b4c62a3f2330fa330f50b
     });
-
   </script>
-  </div>
+
 
 
 
