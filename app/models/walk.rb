@@ -11,7 +11,6 @@ class Walk < ApplicationRecord
   accepts_nested_attributes_for :walk_attachments
 
 
-
   # validates :name, presence: true
   # validates :category, presence: true
   # validates :location, presence: true
@@ -21,6 +20,5 @@ class Walk < ApplicationRecord
 
   scope :seaside, -> { joins(:category).where(categories: {name: "Seaside Walks"})}
   scope :green_walks, -> { joins(:category).where(categories: {name: "green_walks"}) }
-
 
 end
