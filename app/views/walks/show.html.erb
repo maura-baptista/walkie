@@ -52,7 +52,7 @@
     </div>
     <div id='map' style='width: 400px; height: 300px;'></div>
   <script>
-    points = <%= raw @walk.points.to_json %>;
+    var points = <%= raw @walk.points.to_json %>;
 
     mapboxgl.accessToken = 'pk.eyJ1IjoiZnJhbmNpc2NvYmFycmV0byIsImEiOiJjamVoMWRjMjMwbWh6MnFuczF6dGd6bmFoIn0.S5h45dvXuYQ3xoN-d504KA'; // replace this with your access token
     var map = new mapboxgl.Map({
@@ -66,7 +66,14 @@
     // Add zoom and rotation controls to the map.
     map.addControl(new mapboxgl.NavigationControl());
 
+    var coordinates = [];
+    points.forEach((point) => {
+      coordinates.push([point.longitude, point.latitude]);
+    });
+
     map.on('load', function () {
+
+
 
         map.addLayer({
             "id": "route",
@@ -78,13 +85,19 @@
                     "properties": {},
                     "geometry": {
                         "type": "LineString",
-                        "coordinates": [
-                            // for each points print [longitude,latitude]
-                            points.forEach((point) => {
-                              let coordinates = [point.longitude, point.latitude]
-                              console.log(coordinates)
-                            });
-                        ]
+                        "coordinates": coordinates
+                        // [
+                        //   [-9.109299, 38.740388],
+                        //   [-9.108027, 38.741509]
+                        //     // for each points print [longitude,latitude]
+                        //     // points.forEach((point) => {
+                        //     //   var coordinates = [point.longitude, point.latitude]
+                        //     //   console.log(coordinates)
+                        //     // });
+                        //     // for (var point in points) {
+                        //     //   [point.longitude, point.latitude]
+                        //     // }
+                        // ]
                     }
                 }
             },
@@ -93,7 +106,7 @@
                 "line-cap": "round"
             },
             "paint": {
-                "line-color": "#888",
+                "line-color": "#D17BC9",
                 "line-width": 8
             }
         });
