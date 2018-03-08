@@ -1,9 +1,21 @@
-<h2>Available walks to this category:</h2>
+<div class="container">
+<h4>Available walks to this category:</h4>
 
-
-<h4><%= @category.name %></h4>
-
+<h6><%= @category.name %></h6>
+</div>
+<div class="navbar-wagon-item">
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style = "margin-left: 285px;">
+    Sort by
+  </button>
+    <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+      <li><%= link_to "ascending", categories_path(sort: :asc)  %></li>
+      <li><%= link_to "descending", categories_path(sort: :desc)  %></li>
+    </ul>
+  </div>
+</div>
 <% @walks.each do |walk| %>
+<%= render  @walks %>
 
-   <p><%= walk.name %></p>
 <% end %>
+
