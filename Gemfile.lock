@@ -83,11 +83,8 @@ GEM
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
-
     json (1.8.6)
-
     jwt (1.5.6)
-
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -240,11 +237,8 @@ DEPENDENCIES
   geocoder
   jbuilder (~> 2.0)
   listen (~> 3.0.5)
-
   mapbox-sdk
-
   omniauth-facebook
-
   pg (~> 0.21)
   pry-byebug
   pry-rails
