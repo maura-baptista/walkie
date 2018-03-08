@@ -2,8 +2,8 @@
 
   <div class="buttons">
   <span class="normal-button btn btn-default btn-circle far fa-heart go-rounded-white text-center"></span>
-  <span class="normal-button btn btn-default btn-circle fas fa-share-alt go-rounded-white text-center" onclick=""></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-  <span class="go-button btn btn-default btn-circle go-rounded-white text-center" onclick="">GO</span>
+  <span class="normal-button btn btn-default btn-circle fas fa-share-alt go-rounded-white text-center" onclick=""></span>
+  <span class="go-button btn btn-default btn-circle go-rounded-white text-center" style="margin-left: 30vw ;" onclick="">GO</span>
   </div>
 <div class="container">
 
@@ -24,22 +24,50 @@
         <h4><%= @walk.description %></h4>
         <br>
       </p>
+</div>
+</div>
+</div>
 
-    </div>
 
-    <div class="fullwidth">
-     <div class="timeline group">
-       <% @walk.points.each do |point| %>
-       <div class="item">
-         <h4><%= point.order %>.</h4>
-         <h4><%= point.name %>.</h4>
-         <h4><%= point.description %>.</h4>
-       </div>
-       <% end %>
-     </div>
-   </div>
 
-    <div>
+
+  <section class="timeline">
+      <div class="container">
+        <% @walk.points.each_with_index do |point, index| %>
+          <div class="row">
+              <a href="http://asia.vasilis-tsirimokos.com/japan.html">
+                  <div class="country-block col-sm-6 <%= 'reverse col-sm-push-6' if index.even? %>">
+                      <i class="jp"></i>
+                      <%= point.order %>.<%= point.name %>
+                  </div>
+              </a>
+              <div class="date-block col-sm-6 <%= 'reverse col-sm-pull-6' if index.even? %>">
+                  <div>
+                     <div><%= point.description %>.</div>
+                  </div>
+              </div>
+          </div>
+        <% end %>
+
+          <div class="row">
+              <a href="http://asia.vasilis-tsirimokos.com/vietnam.html">
+                  <div class="country-block reverse col-sm-6 col-sm-push-6">
+                      <i class="vt"></i>
+                      Vietnam
+                  </div>
+              </a>
+              <div class="date-block reverse col-sm-6 col-sm-pull-6">
+                  <div>28 April - 20 May</div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+
+
+
+
+
       <div>
         <h3>Reviews</h3>
 
@@ -169,4 +197,29 @@
   </script>
   </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="white-stripe arrow">
+ <div class="container">
+  <h3>Destinations</h3>
+ </div>
+</section>
 
