@@ -1,7 +1,7 @@
 <div class="card-margin col-xs-12 col-sm-6 col-lg-4">
 
 <div class="cards-container card-wrapper padded-top">
-  <div class="card-image" style="background-image: url('<%= walk.photo %>')">
+  <div class="card-image" style="background-image: url('<%= walk.walk_attachments.first.photo %>')">
       <div class="wishlist-rounded wishlist-rounded-white text-center">
         <a href="#">
           <!-- Inline SVG -->
@@ -13,7 +13,6 @@
         </a>
       </div>
     </div>
-
 
   <!-- Card Bottom Row -->
     <div class="card-details">
@@ -30,15 +29,8 @@
   <%= link_to walk_path(walk), anchor: "#reviews" do %>
   <div class="card-rating-reviews">
     <div class="card-row">
-      <span class="card-average-rating">
-        <span class="star-icon full">☆</span>
-        <span class="star-icon full">☆</span>
-        <span class="star-icon full">☆</span>
-        <span class="star-icon full">☆</span>
-        <span class="star-icon">☆</span>
-      </span>
       <span class="card-reviews-count">
-        &middot; <%= walk.reviews.length %>
+        <%= walk.reviews.length %>
       Reviews</span>
     </div>
   </div>

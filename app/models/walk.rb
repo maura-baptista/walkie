@@ -1,11 +1,16 @@
 class Walk < ApplicationRecord
   belongs_to :user
   belongs_to :category
+
   has_many :points, dependent: :destroy
   has_many :reviews, dependent: :destroy
   has_many :likes
   has_many :user_walks
   has_many :users, through: :user_walks
+  has_many :walk_attachments
+  accepts_nested_attributes_for :walk_attachments
+
+
 
   # validates :name, presence: true
   # validates :category, presence: true

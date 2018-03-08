@@ -10,7 +10,7 @@ gem 'rails', '5.1.5'
 gem 'redis'
 gem "geocoder"
 gem 'mapbox-sdk'
-
+gem 'omniauth-facebook'
 
 
 gem 'cloudinary'

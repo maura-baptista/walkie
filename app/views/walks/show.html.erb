@@ -1,67 +1,44 @@
 <%= render 'shared/jumbotron' %>
+  <div class="buttons">
+  <span class="btn btn-default btn-circle fas fa-camera go-rounded-white text-center" style="font-size:24px;line-height: 2.1; align-content: center; padding-top: 8px;"></span>
+  <span class="btn btn-default btn-circle fa fa-share-alt go-rounded-white text-center" style="font-size:24px; cursor:pointer;" onclick=""></span>
+  <span class="btn btn-default btn-circle go-rounded-white text-center" style="cursor:pointer; padding-bottom: 10px; padding-top: 8px;" onclick="">GO</span>
+  </div>
 <div class="container">
+
   <div class="row">
     <div class="col-xs-12">
-      <div class="d-inline categories">
 
+      <div class="d-inline categories">
        <h3><%= @walk.category.name%></h3>
        <h3>
-        <strong> <%=@walk.name %></strong>
+        <h2><strong> <%=@walk.name %></strong></h2>
       </h3>
-      <hr>
-      <%= @walk.duration %>
-      <i class="far fa-clock"></i>
-
-      <%= @walk.location%>
+      <%= @walk.category%> @walk.duration %>
+      <i class="far fa-clock"></i>&nbsp&nbsp&nbsp<h5> <%= @walk.location%></h5>
       <hr>
       <p>
-        <%= @walk.description %>
+        <h4><%= @walk.description %></h4>
         <br>
       </p>
 
     </div>
 
     <div class="fullwidth">
-
-      <div class="timeline group">
-
-        <div class="item">
-          <h4>Point of Interest 1</h4>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
-        </div>
-
-        <div class="item">
-          <h4>Point of Interest 2</h4>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes.</p>
-        </div>
-
-        <div class="item">
-          <h4>Point of Interest 3 </h4>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
-        </div>
-
-        <div class="item">
-          <h4>Point of Interest 4 </h4>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
-        </div>
-
-        <div class="item">
-          <h4> Point of Interest 5</h4>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
-        </div>
-
-        <div class="item">
-          <h4>Point of Interest</h4>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. </p>
-        </div>
-
-      </div>
-
-    </div>
+     <div class="timeline group">
+       <% @walk.points.each do |point| %>
+       <div class="item">
+         <h4><%= point.order %>.</h4>
+         <h4><%= point.name %>.</h4>
+         <h4><%= point.description %>.</h4>
+       </div>
+       <% end %>
+     </div>
+   </div>
 
     <div>
       <div>
-        <h3><strong>Reviews</strong></h3>
+        <h3>Reviews</h3>
 
         <% @reviews.each  do |review| %>
         <div class="message">

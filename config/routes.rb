@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
 
+  get 'users/profile'
+
   get 'points/index'
 
   get 'points/new'
@@ -31,7 +33,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-resources :categories, only: [ :index, :show]
+ resources :categories, only: [ :index, :show]
 
   resources :walks, only: [ :index, :show, :new, :create, :edit, :update ] do
     resources :user_walks, only: [ :index, :create ]
