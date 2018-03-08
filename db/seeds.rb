@@ -21,6 +21,9 @@ User.create!({
   })
 
 Category.create!({
+  name: "Alternative Walks",
+  })
+Category.create!({
   name: "Green Walks",
   })
 Category.create!({
@@ -28,9 +31,6 @@ Category.create!({
   })
 Category.create!({
   name: "Seaside Walks",
-  })
-Category.create!({
-  name: "Alternative Walks",
   })
 Category.create!({
   name: "Family Walks",
@@ -45,7 +45,7 @@ walk = Walk.create!({
   address: "Marvila",
   description: "pare ribs ham boudin ham hock, pork loin drumstick ball tip pork capicola buffalo tail ground round short ribs t-bone filet mignon. Tenderloin shank sausage beef bresaola filet mignon pastrami cow. Jowl ground round short ribs capicola jerky. Meatball bresaola tail, meatloaf cupim pork chop pork belly boudin kielbasa pork loin capicola venison chicken leberkas brisket. Drumstick t-bone filet mignon beef ribs kevin pastrami. Short loin venison salami jowl meatball.
   ",
-  category: Category.all.sample ,
+  category: Category.first ,
   duration: 45,
   user: User.all.sample
   })
@@ -54,32 +54,32 @@ walk.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image
 walk.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
 
 walk2 = Walk.create!({
-  name: "Sé de Lisboa",
+  name: "Vhils Walk",
   location: "Lisbon",
-  address: "Largo da Sé, 1100-585 Lisboa",
+  address: "Graca",
   description: "pare ribs ham boudin ham hock, pork loin drumstick ball tip pork capicola buffalo tail ground round short ribs t-bone filet mignon. Tenderloin shank sausage beef bresaola filet mignon pastrami cow. Jowl ground round short ribs capicola jerky. Meatball bresaola tail, meatloaf cupim pork chop pork belly boudin kielbasa pork loin capicola venison chicken leberkas brisket. Drumstick t-bone filet mignon beef ribs kevin pastrami. Short loin venison salami jowl meatball.
   ",
-  category: Category.all.sample,
+  category: Category.first ,
   duration: 45,
   user: User.all.sample
   })
-walk2.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520459963/mikael-cho-214358-unsplash.jpg")
-walk2.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
-walk2.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
+walk2.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520501673/vhils-obey-giant-mural-collaboration-lisbon-portugal-1.jpg")
+walk2.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520501662/vhils-1.jpg")
+walk2.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520501800/vhills_alcantera-770x429.jpg")
 
 walk3 = Walk.create!({
-  name: "Church of Nossa Senhora da Conceição Velha",
+  name: "Bordallo II and Trash Art Walk",
   location: "Lisbon",
-  address: "Rua da Alfândega 108, 1100-016 Lisboa",
+  address: "Lisbon",
   description: "pare ribs ham boudin ham hock, pork loin drumstick ball tip pork capicola buffalo tail ground round short ribs t-bone filet mignon. Tenderloin shank sausage beef bresaola filet mignon pastrami cow. Jowl ground round short ribs capicola jerky. Meatball bresaola tail, meatloaf cupim pork chop pork belly boudin kielbasa pork loin capicola venison chicken leberkas brisket. Drumstick t-bone filet mignon beef ribs kevin pastrami. Short loin venison salami jowl meatball.
   ",
-  category: Category.all.sample,
+  category: Category.first ,
   duration: 45,
   user: User.all.sample
   })
-walk3.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520458109/ben-white-137375-unsplash.jpg")
-walk3.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
-walk3.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
+walk3.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520501925/bordalo-1.jpg")
+walk3.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520501920/bordalo-4.jpg")
+walk3.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520501923/bordalo-2.jpg")
 
 walk4 = Walk.create!({
   name: "Praça do Comércio",
