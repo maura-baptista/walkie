@@ -99,7 +99,7 @@ walk2 = Walk.create!({
   name: "Vhils Walk",
   location: "Lisbon",
   address: "Graca",
-  description: "pare ribs ham boudin ham hock, pork loin drumstick ball tip pork capicola buffalo tail ground round short ribs t-bone filet mignon. Tenderloin shank sausage beef bresaola filet mignon pastrami cow. Jowl ground round short ribs capicola jerky. Meatball bresaola tail, meatloaf cupim pork chop pork belly boudin kielbasa pork loin capicola venison chicken leberkas brisket. Drumstick t-bone filet mignon beef ribs kevin pastrami. Short loin venison salami jowl meatball.
+  description: "Vhils’s art is poetic, complex, and ambitious. He penetrates through countless layers of posters, dirt, and plaster to set free the poetic images hidden beneath urban spaces. This is all done by drilling away old plaster relief forms.
   ",
   category: Category.first ,
   duration: 45,
@@ -113,7 +113,9 @@ walk3 = Walk.create!({
   name: "Bordallo II and Trash Art Walk",
   location: "Lisbon",
   address: "Lisbon",
-  description: "pare ribs ham boudin ham hock, pork loin drumstick ball tip pork capicola buffalo tail ground round short ribs t-bone filet mignon. Tenderloin shank sausage beef bresaola filet mignon pastrami cow. Jowl ground round short ribs capicola jerky. Meatball bresaola tail, meatloaf cupim pork chop pork belly boudin kielbasa pork loin capicola venison chicken leberkas brisket. Drumstick t-bone filet mignon beef ribs kevin pastrami. Short loin venison salami jowl meatball.
+  description: "Bordalo belongs to a generation that is extremely consumerist, materialist and greedy. With the production of things at its highest, the production of waste and unused objects is also at its highest. Waste is quoted because of its abstract definition: one man's trash is another man's treasure. He creates, recreates, assembles and develops ideas with end-of-life material and tries to relate it to sustainability, ecological and social awareness.
+
+
   ",
   category: Category.first ,
   duration: 45,
@@ -124,13 +126,13 @@ walk3.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/imag
 walk3.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520501923/bordalo-2.jpg")
 
 walk4 = Walk.create!({
-  name: "Praça do Comércio",
+  name: "Old city tales",
   location: "Lisbon",
-  address: "Praça do Comércio, 1100-148 Lisboa",
-  description: "pare ribs ham boudin ham hock, pork loin drumstick ball tip pork capicola buffalo tail ground round short ribs t-bone filet mignon. Tenderloin shank sausage beef bresaola filet mignon pastrami cow. Jowl ground round short ribs capicola jerky. Meatball bresaola tail, meatloaf cupim pork chop pork belly boudin kielbasa pork loin capicola venison chicken leberkas brisket. Drumstick t-bone filet mignon beef ribs kevin pastrami. Short loin venison salami jowl meatball.
+  address: "Alfama",
+  description: "Cobbled lanes, centuries-old houses, hole-in-the-wall restaurants and famous landmarks await you on this 2.5-hour walking tour of Lisbon’s enigmatic Alfama neighborhood. Explore the hilly district with a professional guide and revel in the village atmosphere as you wander down Alfama’s steep streets.
   ",
-  category: Category.all.sample,
-  duration: 45,
+  category: Category.last,
+  duration: 30,
   user: User.all.sample
   })
 walk4.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520335705/hugo-sousa-383214-unsplash.jpg")
@@ -139,12 +141,14 @@ walk4.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/imag
 
 
 walk5 = Walk.create!({
-  name: "Arco do Castelo",
+  name: "Alcantara delights",
   location: "Lisbon",
-  address: "R. de Santa Cruz do Castelo 10, 1100-078 Lisboa",
-  description: "pare ribs ham boudin ham hock, pork loin drumstick ball tip pork capicola buffalo tail ground round short ribs t-bone filet mignon. Tenderloin shank sausage beef bresaola filet mignon pastrami cow. Jowl ground round short ribs capicola jerky. Meatball bresaola tail, meatloaf cupim pork chop pork belly boudin kielbasa pork loin capicola venison chicken leberkas brisket. Drumstick t-bone filet mignon beef ribs kevin pastrami. Short loin venison salami jowl meatball.
+  address: "Alcantara",
+  description: "
+The old port district of Alcântara got a face-lift in the 1990s, and since then it has been a nightlife hub, as well as a great place to relax by the river on warm days. The inauguration in 2008 of the Museu do Oriente was a regeneration landmark, and the colorful LX Factory has transformed a derelict industrial site into a creative hub of coworking spaces, café-bars, and boutiques, while the revamped docks are now home to smart bars and restaurants.
+
   ",
-  category: Category.all.sample,
+  category: Category.last,
   duration: 45,
   user: User.all.sample
   })
