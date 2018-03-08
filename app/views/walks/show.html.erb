@@ -1,22 +1,25 @@
-<%= render 'shared/jumbotron' %>
+<%= render 'shared/carousel' %>
+
   <div class="buttons">
-  <span class="btn btn-default btn-circle fas fa-camera go-rounded-white text-center" style="font-size:24px;line-height: 2.1; align-content: center; padding-top: 8px;"></span>
-  <span class="btn btn-default btn-circle fa fa-share-alt go-rounded-white text-center" style="font-size:24px; cursor:pointer;" onclick=""></span>
-  <span class="btn btn-default btn-circle go-rounded-white text-center" style="cursor:pointer; padding-bottom: 10px; padding-top: 8px;" onclick="">GO</span>
+  <span class="normal-button btn btn-default btn-circle far fa-heart go-rounded-white text-center"></span>
+  <span class="normal-button btn btn-default btn-circle fas fa-share-alt go-rounded-white text-center" onclick=""></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  <span class="go-button btn btn-default btn-circle go-rounded-white text-center" onclick="">GO</span>
   </div>
 <div class="container">
 
+
   <div class="row">
     <div class="col-xs-12">
-
+<br>
+<br>
       <div class="d-inline categories">
-       <h3><%= @walk.category.name%></h3>
-       <h3>
+       <h4><%= @walk.category.name%></h4>
+
         <h2><strong> <%=@walk.name %></strong></h2>
-      </h3>
-      <%= @walk.category%> @walk.duration %>
-      <i class="far fa-clock"></i>&nbsp&nbsp&nbsp<h5> <%= @walk.location%></h5>
-      <hr>
+        <br>
+
+    <h6>&nbsp&nbsp<%= @walk.duration %>&nbsp&nbsp&nbsp<i class="far fa-clock"></i>&nbsp&nbsp&nbsp<%= @walk.location%></h6>
+        <hr>
       <p>
         <h4><%= @walk.description %></h4>
         <br>
@@ -42,7 +45,7 @@
 
         <% @reviews.each  do |review| %>
         <div class="message">
-          <img class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/joemonteiro">
+          <%= image_tag review.user.photo, class: "avatar-large" %>
           <div class="message-body">
             "<%= review.content %>"
           </div>

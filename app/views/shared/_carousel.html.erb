@@ -1,27 +1,26 @@
-
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
-  <ol class="carousel-indicators">
+  <!-- <ol class="carousel-indicators">
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
     <li data-target="#myCarousel" data-slide-to="1"></li>
     <li data-target="#myCarousel" data-slide-to="2"></li>
-  </ol>
+  </ol> -->
 
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
     <div class="item active">
-      <img <%=link_to image_tag( @walk.walk_attachments.first.photo)%> alt="Los Angeles">
+
+      <%= image_tag(@walk_attachments.first.photo)%>
     </div>
+    <% @walk_attachments.drop(1).each do |pictures| %>
 
     <div class="item">
-      <img <%=link_to image_tag( @walk.walk_attachments.last.photo)%> alt="Chicago">
+      <%= image_tag(pictures.photo)%>
     </div>
-
-    <div class="item">
-      <img <%=link_to image_tag( @walk.walk_attachments.last.photo)%> alt="New York">
-    </div>
+    <% end %>
   </div>
+
 
   <!-- Left and right controls -->
   <a class="left carousel-control" href="#myCarousel" data-slide="prev">

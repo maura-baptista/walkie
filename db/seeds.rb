@@ -18,7 +18,49 @@ User.create!({
   last_name: "Monteiro",
   email: "joemonteiro@verizon.net",
   password: "123456",
+  photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520520397/20258116_104215333594155_8026645643865689250_n.jpg"
   })
+
+User.create!({
+  first_name: "Francisco",
+  last_name: "Barreto",
+  email: "barrrr@sweetpeachyboy.net",
+  password: "123456",
+  photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520518949/26733717_471026946626212_2213751371031631593_n.jpg"
+  })
+
+User.create!({
+  first_name: "Maria",
+  last_name: "Castro",
+  email: "maria@verizon.net",
+  password: "123456",
+  photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520519876/14572838_10209041836381309_6064047794073558588_n.jpg"
+  })
+
+User.create!({
+  first_name: "Cisco",
+  last_name: "Azeveado",
+  email: "cisco@verizon.net",
+  password: "123456",
+  photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520519907/1004408_10201404428340492_323452453_n.jpg"
+  })
+
+User.create!({
+  first_name: "Heroku",
+  last_name: "Master",
+  email: "heroku@verizon.net",
+  password: "123456",
+  photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520520004/10397836_10203119119130715_7638003944117998507_n.jpg"
+  })
+
+User.create!({
+  first_name: "Manel",
+  last_name: "Manel",
+  email: "manelo@verizon.net",
+  password: "123456",
+  photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520519728/11253888_10207694698942379_8476170414381940837_n.jpg"
+  })
+
 
 Category.create!({
   name: "Alternative Walks",
@@ -43,7 +85,7 @@ walk = Walk.create!({
   name: "Marvila Street Art Walk",
   location: "Lisbon",
   address: "Marvila",
-  description: "pare ribs ham boudin ham hock, pork loin drumstick ball tip pork capicola buffalo tail ground round short ribs t-bone filet mignon. Tenderloin shank sausage beef bresaola filet mignon pastrami cow. Jowl ground round short ribs capicola jerky. Meatball bresaola tail, meatloaf cupim pork chop pork belly boudin kielbasa pork loin capicola venison chicken leberkas brisket. Drumstick t-bone filet mignon beef ribs kevin pastrami. Short loin venison salami jowl meatball.
+  description: "These days, cities are covered in good graffiti and bad graffiti, and Lisbon is one that has more than its fair share of the good variety. The themes are multifaceted, covering the country’s history, pop culture, and imaginative abstracts.
   ",
   category: Category.first ,
   duration: 45,
@@ -63,7 +105,7 @@ walk2 = Walk.create!({
   duration: 45,
   user: User.all.sample
   })
-walk2.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520501673/vhils-obey-giant-mural-collaboration-lisbon-portugal-1.jpg")
+walk2.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520503024/22684875.jpg")
 walk2.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520501662/vhils-1.jpg")
 walk2.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520501800/vhills_alcantera-770x429.jpg")
 
@@ -182,6 +224,62 @@ Review.create!({
   user: User.all.sample
   })
 
+Review.create!({
+  content: "OMG! Walkie, you changed my life!",
+  walk: Walk.all.sample,
+  user: User.all.sample
+  })
+
+Review.create!({
+  content: "I found 20 euros on the street on this walk!",
+  walk: Walk.all.sample,
+  user: User.all.sample
+  })
+Review.create!({
+  content: "What a walk! The best weekend!",
+  walk: Walk.all.sample,
+  user: User.all.sample
+  })
+Review.create!({
+  content: "What a walk! The best weekend!",
+  walk: Walk.all.sample,
+  user: User.all.sample
+  })
+Review.create!({
+  content: "An unforgettabe experience",
+  walk: Walk.all.sample,
+  user: User.all.sample
+  })
+Review.create!({
+  content: "What a walk! The best weekend!",
+  walk: Walk.all.sample,
+  user: User.all.sample
+  })
+Review.create!({
+  content: "I didn't even know this part of the city existed!",
+  walk: Walk.all.sample,
+  user: User.all.sample
+  })
+Review.create!({
+  content: "What a walk! The best weekend!",
+  walk: Walk.all.sample,
+  user: User.all.sample
+  })
+Review.create!({
+  content: "An unforgettabe experience",
+  walk: Walk.all.sample,
+  user: User.all.sample
+  })
+Review.create!({
+  content: "What a walk! The best weekend!",
+  walk: Walk.all.sample,
+  user: User.all.sample
+  })
+Review.create!({
+  content: "I didn't even know this part of the city existed!",
+  walk: Walk.all.sample,
+  user: User.all.sample
+  })
 
 
 Point.create!({
