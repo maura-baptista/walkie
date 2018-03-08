@@ -24,6 +24,11 @@
         <h4><%= @walk.description %></h4>
         <br>
       </p>
+</div>
+</div>
+</div>
+
+
 
 
   <section class="timeline">
@@ -33,7 +38,7 @@
               <a href="http://asia.vasilis-tsirimokos.com/japan.html">
                   <div class="country-block col-sm-6 <%= 'reverse col-sm-push-6' if index.even? %>">
                       <i class="jp"></i>
-                      <%= point.order %>. <%= point.name %>
+                      <%= point.order %>.<%= point.name %>
                   </div>
               </a>
               <div class="date-block col-sm-6 <%= 'reverse col-sm-pull-6' if index.even? %>">
@@ -59,26 +64,10 @@
   </section>
 
 
-  <div class="row">
-    <div class="col-xs-12">
-<br>
-<br>
-      <div class="d-inline categories">
-       <h4><%= @walk.category.name%></h4>
 
-        <h2><strong> <%=@walk.name %></strong></h2>
-        <br>
 
-    <h6>&nbsp&nbsp<%= @walk.duration %>&nbsp&nbsp&nbsp<i class="far fa-clock"></i>&nbsp&nbsp&nbsp<%= @walk.location%></h6>
-        <hr>
-      <p>
-        <h4><%= @walk.description %></h4>
-        <br>
-      </p>
 
-    </div>
 
-    <div>
       <div>
         <h3>Reviews</h3>
 
