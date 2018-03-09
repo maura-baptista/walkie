@@ -71,7 +71,7 @@ position: absolute;
 
 .timeline__item {
   display: flex;
-  margin-top: 50px;
+  margin-top: 25px;
 }
 
 .timeline-item__line {
@@ -94,7 +94,7 @@ position: absolute;
 .timeline-item__details {
   flex: 1 0;
   box-shadow: 2px 2px 1px $gray-lighter;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
 }
 
 .timeline-item__image {
@@ -111,4 +111,8 @@ position: absolute;
   p {
     margin: 0;
   }
+}
+
+h3  {
+  color: $gray-lighter;
 }
