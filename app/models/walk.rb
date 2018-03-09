@@ -10,6 +10,9 @@ class Walk < ApplicationRecord
   has_many :walk_attachments
   accepts_nested_attributes_for :walk_attachments
 
+  def participants
+    users
+  end
 
   # validates :name, presence: true
   # validates :category, presence: true

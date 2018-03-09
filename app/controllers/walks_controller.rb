@@ -2,7 +2,7 @@ class WalksController < ApplicationController
 
   before_action :set_walk, only: [:show, :edit, :update, :destroy]
   skip_before_action :authenticate_user!, only: [:show]
-
+  helper_method :sort_direction
 
   def index
 
@@ -27,7 +27,8 @@ class WalksController < ApplicationController
 
   def new
     @walk = Walk.new
-   @walk_attachment = walk.walk_attachments.build
+    @point = Point.new
+   # @walk_attachment = walk.walk_attachments.build
   end
 
   def create
@@ -52,7 +53,7 @@ class WalksController < ApplicationController
   end
 
   def edit
-    authorize @walk
+    #authorize @walk
   end
 
 
@@ -86,8 +87,12 @@ class WalksController < ApplicationController
     # authorize @walk
   end
 
-   def walk_params
+  def walk_params
     params.require(:walk).permit(:name, :category, :location, :duration, :description,  walk_attachments_attributes: [:id, walk_id, :photo])
+  end
+
+  def sort_direction
+      %w[asc desc].include?(params[:direction]) ? params[:direction] : 'asc'
   end
 
 end

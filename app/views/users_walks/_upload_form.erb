@@ -1,0 +1,24 @@
+ <br>
+ <br>
+<div class="form_title">
+  <center><h1 class="upload-title"->Add a walk</h1><center>
+</div>
+<div class="row walk_form">
+  <h4>Add walk details</h4>
+  <%= simple_form_for @walk do |f| %>
+    <%= f.input :name, placeholder:"Bairro Alto's trail"%>
+    <%= f.input :category, placeholder:"Cultural" %>
+    <%= f.input :location, placeholder:"Lisbon" %>
+    <%= f.input :duration, placeholder:"45min" %>
+    <%= f.input :description, placeholder:"very interesting walk to get to know on of Lisbon's main neighborhood, in the city center" %>
+    <%= f.submit "Add details", class: "btn btn-primary btn-block" %>
+  <% end %>
+
+
+</div>
+<!-- <center><%= link_to 'Back', categories_path %><center> -->
+
+
+
+
+
