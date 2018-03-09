@@ -212,7 +212,7 @@ Review.create!({
 
 Review.create!({
   content: "What a walk! The best weekend with Walkie!",
-  walk: Walk.first,
+  walk: Walk.all.sample,
   user: User.all.sample
   })
 

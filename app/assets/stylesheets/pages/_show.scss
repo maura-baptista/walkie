@@ -59,9 +59,15 @@
 }
 
 .timeline__end {
-
+position: absolute;
+  bottom: -12.5px;
+  left: 60px;
 }
 
+.timeline__end-line {
+  width: 50px;
+  border-bottom: 3px solid $gray-lighter;
+}
 
 .timeline__item {
   display: flex;
@@ -88,6 +94,7 @@
 .timeline-item__details {
   flex: 1 0;
   box-shadow: 2px 2px 1px $gray-lighter;
+  margin-bottom: 40px;
 }
 
 .timeline-item__image {
