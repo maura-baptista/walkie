@@ -18,7 +18,7 @@
        <h6>&nbsp&nbsp<%= @walk.duration %>&nbsp&nbsp&nbsp<i class="far fa-clock"></i>&nbsp&nbsp&nbsp<%= @walk.location%></h6>
        <hr>
        <p>
-        <h4><%= @walk.description %></h4>
+        <p><%= @walk.description %></p>
         <br>
       </p>
     </div>
@@ -30,24 +30,35 @@
 
 
 
-<section class="timeline">
-  <div class="container">
-    <% @walk.points.each_with_index do |point, index| %>
-    <div class="row">
-      <a href="http://asia.vasilis-tsirimokos.com/japan.html">
-        <div class="country-block col-sm-6 <%= 'reverse col-sm-push-6' if index.even? %>">
-          <i class="jp"></i>
-          <%= point.order %>.<%= point.name %>
+
+
+<div class="timeline">
+  <div class="timeline__container container">
+    <div class="timeline__start-line"></div>
+    <div class="timeline__start">
+      <h4>points of interest</h4>
+    </div>
+    <% @walk.points.each do |point| %>
+    <div class="timeline__item">
+      <div class="timeline-item__line">
+        <div class="timeline-item__line--circle"></div>
+      </div>
+      <div class="timeline-item__details">
+        <div class="timeline-item__image" style="background-image: url('<%= image_path point.photo %>')">
         </div>
-      </a>
-      <div class="date-block col-sm-6 <%= 'reverse col-sm-pull-6' if index.even? %>">
-        <div>
-         <div><%= point.description %>.</div>
-       </div>
-     </div>
-   </div>
-   <% end %>
- </section>
+        <div class="timeline-item__legend">
+          <p><%= point.order %>.<%=point.name %></p>
+          <div><%= point.description %>.</div>
+        </div>
+      </div>
+    </div>
+    <% end %>
+    <div class="timeline__end-line"></div>
+    <div class="timeline__end">
+      <h4>end</h4>
+    </div>
+  </div>
+</div>
 
 
 
@@ -61,17 +72,12 @@
     <div class="message-body">
       "<%= review.content %>"
     </div>
-<<<<<<< HEAD
   </div>
   <% end %>
 </div>
-=======
     <div id='map' style='width: 400px; height: 300px;'></div>
   <script>
     var points = <%= raw @walk.points.to_json %>;
->>>>>>> e3d50b927d3394cf022b4c62a3f2330fa330f50b
-
-
 
 <div id='map' style='width: 400px; height: 300px;'></div>
 <script>
@@ -85,7 +91,6 @@
     });
     // Add zoom and rotation controls to the map.
     map.addControl(new mapboxgl.NavigationControl());
-<<<<<<< HEAD
     map.on('load', function () {
       map.addLayer({
         "id": "route",
@@ -116,7 +121,6 @@
                         "line-width": 8
                       }
                     });
-=======
 
     var coordinates = [];
     var features = [];
@@ -213,7 +217,6 @@
     // Change it back to a pointer when it leaves.
     map.on('mouseleave', 'places', function () {
         map.getCanvas().style.cursor = '';
->>>>>>> e3d50b927d3394cf022b4c62a3f2330fa330f50b
     });
   </script>
 
