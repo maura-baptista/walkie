@@ -9,12 +9,9 @@
 <div id="myNav" class="overlay">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <div class="overlay-content">
-    <%= link_to "Historical" , "categories/2" %>
-    <%= link_to "Green" , "categories/1" %>
-    <%= link_to "Seaside" ,  "categories/3" %>
-    <%= link_to "Alternative" , "categories/4" %>
-    <%= link_to "Family" , "categories/5" %>
-    <%= link_to "Cultural" , "categories/6" %>
+    <% Category.all.each do |category| %>
+    <%= link_to category.name , category_path(category) %>
+    <% end %>
   </div>
 </div>
 

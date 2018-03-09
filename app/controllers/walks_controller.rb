@@ -1,19 +1,18 @@
 class WalksController < ApplicationController
 
-  Mapbox.access_token = 'pk.eyJ1IjoiZnJhbmNpc2NvYmFycmV0byIsImEiOiJjamVoMWRjMjMwbWh6MnFuczF6dGd6bmFoIn0.S5h45dvXuYQ3xoN-d504KA'
-
   before_action :set_walk, only: [:show, :edit, :update, :destroy]
   skip_before_action :authenticate_user!, only: [:show]
 
 
   def index
 
-    @walks = Walk.all
+    if params[:sort] == 'desc'
+      sort = 'desc'
+    else
+      sort = 'asc'
+    end
 
-
-    #@walks = policy_scope(Walk).order(created_at: :desc)
-
-
+    @walks = Walk.all.order("duration #{sort}")
 
   end
 
@@ -74,6 +73,10 @@ class WalksController < ApplicationController
     redirect_to walks_path
   end
 
+  def order
+
+  end
+
 
 
   private
@@ -87,12 +90,6 @@ class WalksController < ApplicationController
    def walk_params
     params.require(:walk).permit(:name, :category, :location, :duration, :description,  walk_attachments_attributes: [:id, walk_id, :photo])
   end
-
-
-
-
-
-
 
 end
 

@@ -24,5 +24,4 @@ class Walk < ApplicationRecord
   scope :seaside, -> { joins(:category).where(categories: {name: "Seaside Walks"})}
   scope :green_walks, -> { joins(:category).where(categories: {name: "green_walks"}) }
 
-
 end

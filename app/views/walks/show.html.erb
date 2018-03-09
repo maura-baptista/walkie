@@ -1,59 +1,81 @@
-<%= render 'shared/jumbotron' %>
-  <div class="buttons">
-  <span class="btn btn-default btn-circle fas fa-camera go-rounded-white text-center" style="font-size:24px;line-height: 2.1; align-content: center; padding-top: 8px;"></span>
-  <span class="btn btn-default btn-circle fa fa-share-alt go-rounded-white text-center" style="font-size:24px; cursor:pointer;" onclick=""></span>
-  <span class="btn btn-default btn-circle go-rounded-white text-center" style="cursor:pointer; padding-bottom: 10px; padding-top: 8px;" onclick="">GO</span>
-  </div>
+<%= render 'shared/carousel' %>
+
+<div class="buttons">
+  <span class="normal-button btn btn-default btn-circle far fa-heart go-rounded-white text-center"></span>
+  <span class="normal-button btn btn-default btn-circle fas fa-share-alt go-rounded-white text-center" onclick=""></span>
+  <span class="go-button btn btn-default btn-circle go-rounded-white text-center" style="margin-left: 30vw ;" onclick="">GO</span>
+</div>
 <div class="container">
 
   <div class="row">
     <div class="col-xs-12">
-
+      <br>
+      <br>
       <div class="d-inline categories">
-       <h3><%= @walk.category.name%></h3>
-       <h3>
-        <h2><strong> <%=@walk.name %></strong></h2>
-      </h3>
-      <%= @walk.category%> @walk.duration %>
-      <i class="far fa-clock"></i>&nbsp&nbsp&nbsp<h5> <%= @walk.location%></h5>
-      <hr>
-      <p>
+        <h4><%= @walk.category.name%></h4>
+       <h2><strong> <%=@walk.name %></strong></h2>
+       <br>
+       <h6>&nbsp&nbsp<%= @walk.duration %>&nbsp&nbsp&nbsp<i class="far fa-clock"></i>&nbsp&nbsp&nbsp<%= @walk.location%></h6>
+       <hr>
+       <p>
         <h4><%= @walk.description %></h4>
         <br>
       </p>
-
     </div>
+  </div>
+</div>
 
-    <div class="fullwidth">
-     <div class="timeline group">
-       <% @walk.points.each do |point| %>
-       <div class="item">
-         <h4><%= point.order %>.</h4>
-         <h4><%= point.name %>.</h4>
-         <h4><%= point.description %>.</h4>
+
+
+
+
+
+<section class="timeline">
+  <div class="container">
+    <% @walk.points.each_with_index do |point, index| %>
+    <div class="row">
+      <a href="http://asia.vasilis-tsirimokos.com/japan.html">
+        <div class="country-block col-sm-6 <%= 'reverse col-sm-push-6' if index.even? %>">
+          <i class="jp"></i>
+          <%= point.order %>.<%= point.name %>
+        </div>
+      </a>
+      <div class="date-block col-sm-6 <%= 'reverse col-sm-pull-6' if index.even? %>">
+        <div>
+         <div><%= point.description %>.</div>
        </div>
-       <% end %>
      </div>
    </div>
+   <% end %>
+ </section>
 
-    <div>
-      <div>
-        <h3>Reviews</h3>
 
-        <% @reviews.each  do |review| %>
-        <div class="message">
-          <img class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/joemonteiro">
-          <div class="message-body">
-            "<%= review.content %>"
-          </div>
-        </div>
-        <% end %>
-      </div>
+
+
+ <div>
+  <h3>Reviews</h3>
+
+  <% @reviews.each  do |review| %>
+  <div class="message">
+    <%= image_tag review.user.photo, class: "avatar-large" %>
+    <div class="message-body">
+      "<%= review.content %>"
     </div>
+<<<<<<< HEAD
+  </div>
+  <% end %>
+</div>
+=======
     <div id='map' style='width: 400px; height: 300px;'></div>
   <script>
     var points = <%= raw @walk.points.to_json %>;
+>>>>>>> e3d50b927d3394cf022b4c62a3f2330fa330f50b
 
+
+
+<div id='map' style='width: 400px; height: 300px;'></div>
+<script>
+  points = <%= raw @walk.points.to_json %>;
     mapboxgl.accessToken = 'pk.eyJ1IjoiZnJhbmNpc2NvYmFycmV0byIsImEiOiJjamVoMWRjMjMwbWh6MnFuczF6dGd6bmFoIn0.S5h45dvXuYQ3xoN-d504KA'; // replace this with your access token
     var map = new mapboxgl.Map({
       container: 'map',
@@ -61,14 +83,60 @@
       center: [points[0].longitude, points[0].latitude],
       zoom: 13
     });
-
-
     // Add zoom and rotation controls to the map.
     map.addControl(new mapboxgl.NavigationControl());
+<<<<<<< HEAD
+    map.on('load', function () {
+      map.addLayer({
+        "id": "route",
+        "type": "line",
+        "source": {
+          "type": "geojson",
+          "data": {
+            "type": "Feature",
+            "properties": {},
+            "geometry": {
+              "type": "LineString",
+              "coordinates": [
+                            // for each points print [longitude,latitude]
+                            points.forEach((point) => {
+                              let coordinates = [point.longitude, point.latitude]
+                              console.log(coordinates)
+                            });
+                            ]
+                          }
+                        }
+                      },
+                      "layout": {
+                        "line-join": "round",
+                        "line-cap": "round"
+                      },
+                      "paint": {
+                        "line-color": "#888",
+                        "line-width": 8
+                      }
+                    });
+=======
 
     var coordinates = [];
+    var features = [];
     points.forEach((point) => {
       coordinates.push([point.longitude, point.latitude]);
+
+      var feature = {
+                      "type": "Feature",
+                      "properties": {
+                          "description": point.description,
+                          "icon": "bicycle"
+                      },
+                      "geometry": {
+                          "type": "Point",
+                          "coordinates": [point.longitude, point.latitude]
+                      }
+                  }
+
+      features.push(feature);
+
     });
 
     map.on('load', function () {
@@ -86,18 +154,6 @@
                     "geometry": {
                         "type": "LineString",
                         "coordinates": coordinates
-                        // [
-                        //   [-9.109299, 38.740388],
-                        //   [-9.108027, 38.741509]
-                        //     // for each points print [longitude,latitude]
-                        //     // points.forEach((point) => {
-                        //     //   var coordinates = [point.longitude, point.latitude]
-                        //     //   console.log(coordinates)
-                        //     // });
-                        //     // for (var point in points) {
-                        //     //   [point.longitude, point.latitude]
-                        //     // }
-                        // ]
                     }
                 }
             },
@@ -107,27 +163,84 @@
             },
             "paint": {
                 "line-color": "#D17BC9",
-                "line-width": 8
+                "line-width": 5
             }
         });
+
+
+        map.addLayer({
+          "id": "places",
+          "type": "symbol",
+          "source": {
+              "type": "geojson",
+              "data": {
+                  "type": "FeatureCollection",
+                  "features": features
+
+
+              }
+          },
+                "layout": {
+                  "icon-image": "{icon}-15",
+                  "icon-allow-overlap": true
+                }
+      });
     });
 
-    // code from the next step will go here
-    // map.on('click', function(e) {
-    //   var features = map.queryRenderedFeatures(e.point, {
-    //     layers: ['{layer_name}'] // replace this with the name of the layer
-    //   });
-    //   if (!features.length) {
-    //     return;
-    //   }
-    //   var feature = features[0];
-    //   var popup = new mapboxgl.Popup({ offset: [0, -15] })
-    //   .setLngLat(feature.geometry.coordinates)
-    //   .setHTML('<h3>' + feature.properties.title + '</h3><p>' + feature.properties.description + '</p>')
-    //   .setLngLat(feature.geometry.coordinates)
-    //   .addTo(map);
-    // });
-  </script>
-  </div>
+    map.on('click', 'places', function (e) {
+        var coordinates = e.features[0].geometry.coordinates.slice();
+        var description = e.features[0].properties.description;
 
+
+        // Ensure that if the map is zoomed out such that multiple
+        // copies of the feature are visible, the popup appears
+        // over the copy being pointed to.
+        while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+            coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+        }
+
+        new mapboxgl.Popup()
+            .setLngLat(coordinates)
+            .setHTML(description)
+            .addTo(map);
+    });
+
+     // Change the cursor to a pointer when the mouse is over the places layer.
+    map.on('mouseenter', 'places', function () {
+        map.getCanvas().style.cursor = 'pointer';
+    });
+
+    // Change it back to a pointer when it leaves.
+    map.on('mouseleave', 'places', function () {
+        map.getCanvas().style.cursor = '';
+>>>>>>> e3d50b927d3394cf022b4c62a3f2330fa330f50b
+    });
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="white-stripe arrow">
+ <div class="container">
+  <h3>Destinations</h3>
+ </div>
+</section>
 
