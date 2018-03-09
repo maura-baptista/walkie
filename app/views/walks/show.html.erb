@@ -30,23 +30,6 @@
 
 
 
-<section class="timeline">
-  <div class="container">
-    <% @walk.points.each_with_index do |point, index| %>
-    <div class="row">
-        <div class="country-block col-sm-6 <%= 'reverse col-sm-push-6' if index.even? %>">
-          <i style="background-image: url('<%= image_path("clouds.png") %>')"></i>
-          <%= point.order %>.<%= point.name %>
-        </div>
-      </a>
-      <div class="date-block col-sm-6 <%= 'reverse col-sm-pull-6' if index.even? %>">
-        <div>
-         <div><%= point.description %>.</div>
-       </div>
-     </div>
-   </div>
-   <% end %>
- </section>
 
 
 <div class="timeline">
@@ -55,17 +38,17 @@
     <div class="timeline__start">
       <h4>points of interest</h4>
     </div>
-    <% 10.times do %>
+    <% @walk.points.each do |point| %>
     <div class="timeline__item">
       <div class="timeline-item__line">
         <div class="timeline-item__line--circle"></div>
       </div>
       <div class="timeline-item__details">
-        <div class="timeline-item__image" style="background-image: url('<%= image_path("home.jpg") %>');">
-
+        <div class="timeline-item__image" style="background-image: url('<%= image_path point.photo %>')">
         </div>
         <div class="timeline-item__legend">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem nulla velit eveniet, vel cumque? Perspic</p>
+          <p><%= point.order %>.<%=point.name %></p>
+          <div><%= point.description %>.</div>
         </div>
       </div>
     </div>

@@ -271,7 +271,8 @@ Point.create!({
   longitude: -9.109299,
   description: "Marvila Library is a good starting point of the graffitti walk",
   order: 1,
-  walk: Walk.first
+  walk: Walk.first,
+photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520600631/street-art-zesar-behamonte.jpg"
   })
 Point.create!({
   name: "Rua Alberto Jose Pessoa",
@@ -279,7 +280,8 @@ Point.create!({
   longitude: -9.108027,
   description: "The street has many graffitti murals",
   order: 2,
-  walk: Walk.first
+  walk: Walk.first,
+photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520600629/street-art-god-mess.jpg"
   })
 Point.create!({
   name: "Rua Eduarda Lapa",
@@ -287,7 +289,8 @@ Point.create!({
   longitude: -9.10863,
   description: "The second main street full of street art murals",
   order: 3,
-  walk: Walk.first
+  walk: Walk.first,
+photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520600627/street-art-miguel-brum_1.jpg"
   })
 Point.create!({
   name: "Bairro da Quinta do Chale",
@@ -295,7 +298,8 @@ Point.create!({
   longitude: -9.107827,
   description: "The coolest street murals are hidden away on these streets",
   order: 4,
-  walk: Walk.first
+  walk: Walk.first,
+photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520600728/968733d3cd63d5a52d22ffc9c042273b_1.jpg"
   })
 Point.create!({
   name: "Rua do Patrocinio",
@@ -303,7 +307,8 @@ Point.create!({
   longitude: -9.107635,
   description: "More amazing art murals here",
   order: 5,
-  walk: Walk.first
+  walk: Walk.first,
+photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520600620/f377c498a1.jpg"
   })
 Point.create!({
   name: "Dois Corvos",
@@ -311,7 +316,8 @@ Point.create!({
   longitude: -9.105526,
   description: "Enjoy some cool graffiti whilst trying out some amazing beers in this Craft Beer Brewery",
   order: 6,
-  walk: Walk.first
+  walk: Walk.first,
+ photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520600624/street-art-the-caver.jpg"
   })
 Point.create!({
   name: "Fabrica do Braca de Prata",
@@ -319,7 +325,8 @@ Point.create!({
   longitude: -9.101242,
   description: "The last stop on the tour, a place full of many cool different spaces, a library, alternative craft shops and lively at night with concerts",
   order: 7,
-  walk: Walk.first
+  walk: Walk.first,
+photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446746/street-art-kobra.jpg"
   })
 
 p "finished seeding"
