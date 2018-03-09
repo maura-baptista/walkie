@@ -18,7 +18,7 @@
        <h6>&nbsp&nbsp<%= @walk.duration %>&nbsp&nbsp&nbsp<i class="far fa-clock"></i>&nbsp&nbsp&nbsp<%= @walk.location%></h6>
        <hr>
        <p>
-        <h4><%= @walk.description %></h4>
+        <p><%= @walk.description %></p>
         <br>
       </p>
     </div>
@@ -30,30 +30,43 @@
 
 
 
-<section class="timeline">
-  <div class="container">
-    <% @walk.points.each_with_index do |point, index| %>
-    <div class="row">
-      <a href="http://asia.vasilis-tsirimokos.com/japan.html">
-        <div class="country-block col-sm-6 <%= 'reverse col-sm-push-6' if index.even? %>">
-          <i class="jp"></i>
-          <%= point.order %>.<%= point.name %>
+
+
+<div class="timeline">
+  <div class="timeline__container container">
+    <div class="timeline__start-line"></div>
+    <div class="timeline__start">
+      <h4>Points of interest</h4>
+    </div>
+    <% @walk.points.each do |point| %>
+    <div class="timeline__item">
+      <div class="timeline-item__line">
+        <div class="timeline-item__line--circle"></div>
+      </div>
+      <div class="timeline-item__details">
+        <div class="timeline-item__image" style="background-image: url('<%= image_path point.photo %>')">
         </div>
-      </a>
-      <div class="date-block col-sm-6 <%= 'reverse col-sm-pull-6' if index.even? %>">
-        <div>
-         <div><%= point.description %>.</div>
-       </div>
-     </div>
-   </div>
-   <% end %>
- </section>
+        <div class="timeline-item__legend">
+          <p><%= point.order %>.<%=point.name %></p>
+          <div><%= point.description %>.</div>
+        </div>
+      </div>
+    </div>
+    <% end %>
+    <div class="timeline__end-line"></div>
+    <div class="timeline__end">
+      <h4>End</h4>
+    </div>
+  </div>
+</div>
 
 
 
+<br>
+<br>
 
  <div>
-  <h3>Reviews</h3>
+  <h4>Reviews</h4>
 
   <% @reviews.each  do |review| %>
   <div class="message">
@@ -61,17 +74,12 @@
     <div class="message-body">
       "<%= review.content %>"
     </div>
-<<<<<<< HEAD
   </div>
   <% end %>
 </div>
-=======
     <div id='map' style='width: 400px; height: 300px;'></div>
   <script>
     var points = <%= raw @walk.points.to_json %>;
->>>>>>> e3d50b927d3394cf022b4c62a3f2330fa330f50b
-
-
 
 <div id='map' style='width: 400px; height: 300px;'></div>
 <script>
@@ -85,7 +93,6 @@
     });
     // Add zoom and rotation controls to the map.
     map.addControl(new mapboxgl.NavigationControl());
-<<<<<<< HEAD
     map.on('load', function () {
       map.addLayer({
         "id": "route",
@@ -116,7 +123,6 @@
                         "line-width": 8
                       }
                     });
-=======
 
     var coordinates = [];
     var features = [];
@@ -139,33 +145,100 @@
 
     });
 
+
+  function getRoute() {
+    var start = [points[0].longitude, points[0].latitude];
+    var end = [points[6].longitude, points[6].latitude];
+
+
+     console.log("coord: ", coordinates)
+
+     var directionsRequest1 =
+     'https://api.mapbox.com/directions/v5/mapbox/cycling/'
+     + coordinates[0][0] + ',' + coordinates[0][1] + ';'
+     + coordinates[1][0] + ',' + coordinates[1][1] + ';'
+     + coordinates[2][0] + ',' + coordinates[2][1] + ';'
+     + coordinates[3][0] + ',' + coordinates[3][1] + ';'
+     + coordinates[4][0] + ',' + coordinates[4][1] + ';'
+     + coordinates[5][0] + ',' + coordinates[5][1] + ';'
+     + coordinates[6][0] + ',' + coordinates[6][1]
+     + '?geometries=geojson&access_token=' + mapboxgl.accessToken;
+
+
+  console.log(directionsRequest1)
+
+
+
+    var directionsRequest = 'https://api.mapbox.com/directions/v5/mapbox/cycling/' + start[0] + ',' + start[1] + ';' + end[0] + ',' + end[1] + '?geometries=geojson&access_token=' + mapboxgl.accessToken;
+
+
+    $.ajax({
+      method: 'GET',
+      url: directionsRequest1,
+    }).done(function(data) {
+      var route = data.routes[0].geometry
+
+      console.log("Route: ", route)
+
+      console.log("Waypoints:", data.waypoints)
+
+
+      // console.log(route[1].location)
+      var test =  []
+      test.push([data.waypoints[0].location, data.waypoints[1].location])
+
+       console.log("HEY!!!", test)
+
+
+
+      map.addLayer({
+        id: 'route',
+        type: 'line',
+        source: {
+          type: 'geojson',
+          data: {
+            type: 'Feature',
+            geometry: route
+          }
+        },
+        paint: {
+          'line-width': 3,
+          'line-color': "#D17BC9"
+        }
+      });
+      // this is where the code from the next step will go
+    });
+  }
+
     map.on('load', function () {
 
+      getRoute();
+
+        // map.addLayer({
+        //     "id": "route",
+        //     "type": "line",
+        //     "source": {
+        //         "type": "geojson",
+        //         "data": {
+        //             "type": "Feature",
+        //             "properties": {},
+        //             "geometry": {
+        //                 "type": "LineString",
+        //                 "coordinates": coordinates
+        //             }
+        //         }
+        //     },
+        //     "layout": {
+        //         "line-join": "round",
+        //         "line-cap": "round"
+        //     },
+        //     "paint": {
+        //         "line-color": "#D17BC9",
+        //         "line-width": 5
+        //     }
+        // });
 
 
-        map.addLayer({
-            "id": "route",
-            "type": "line",
-            "source": {
-                "type": "geojson",
-                "data": {
-                    "type": "Feature",
-                    "properties": {},
-                    "geometry": {
-                        "type": "LineString",
-                        "coordinates": coordinates
-                    }
-                }
-            },
-            "layout": {
-                "line-join": "round",
-                "line-cap": "round"
-            },
-            "paint": {
-                "line-color": "#D17BC9",
-                "line-width": 5
-            }
-        });
 
 
         map.addLayer({
@@ -213,7 +286,6 @@
     // Change it back to a pointer when it leaves.
     map.on('mouseleave', 'places', function () {
         map.getCanvas().style.cursor = '';
->>>>>>> e3d50b927d3394cf022b4c62a3f2330fa330f50b
     });
   </script>
 

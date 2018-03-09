@@ -10,7 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180308142022) do
+
+ActiveRecord::Schema.define(version: 20180309132253) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,6 +41,7 @@ ActiveRecord::Schema.define(version: 20180308142022) do
     t.datetime "updated_at", null: false
     t.bigint "walk_id"
     t.string "address"
+    t.string "photo"
     t.index ["walk_id"], name: "index_points_on_walk_id"
   end
 
@@ -92,14 +94,15 @@ ActiveRecord::Schema.define(version: 20180308142022) do
 
   create_table "walks", force: :cascade do |t|
     t.string "name"
+    t.string "category"
     t.string "location"
-    t.string "duration"
     t.string "description"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "address"
     t.bigint "category_id"
+    t.integer "duration"
     t.index ["category_id"], name: "index_walks_on_category_id"
     t.index ["user_id"], name: "index_walks_on_user_id"
   end
