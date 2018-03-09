@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   has_many :likes
-  has_many :walks
+  has_many :user_walks
+  has_many :walks, through: :user_walks
 
 
 
