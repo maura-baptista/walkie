@@ -77,13 +77,10 @@
   </div>
   <% end %>
 </div>
-    <div id='map' style='width: 400px; height: 300px;'></div>
+     <div id='map' style='width: 400px; height: 300px;'></div>
   <script>
     var points = <%= raw @walk.points.to_json %>;
 
-<div id='map' style='width: 400px; height: 300px;'></div>
-<script>
-  points = <%= raw @walk.points.to_json %>;
     mapboxgl.accessToken = 'pk.eyJ1IjoiZnJhbmNpc2NvYmFycmV0byIsImEiOiJjamVoMWRjMjMwbWh6MnFuczF6dGd6bmFoIn0.S5h45dvXuYQ3xoN-d504KA'; // replace this with your access token
     var map = new mapboxgl.Map({
       container: 'map',
@@ -91,38 +88,10 @@
       center: [points[0].longitude, points[0].latitude],
       zoom: 13
     });
+
+
     // Add zoom and rotation controls to the map.
     map.addControl(new mapboxgl.NavigationControl());
-    map.on('load', function () {
-      map.addLayer({
-        "id": "route",
-        "type": "line",
-        "source": {
-          "type": "geojson",
-          "data": {
-            "type": "Feature",
-            "properties": {},
-            "geometry": {
-              "type": "LineString",
-              "coordinates": [
-                            // for each points print [longitude,latitude]
-                            points.forEach((point) => {
-                              let coordinates = [point.longitude, point.latitude]
-                              console.log(coordinates)
-                            });
-                            ]
-                          }
-                        }
-                      },
-                      "layout": {
-                        "line-join": "round",
-                        "line-cap": "round"
-                      },
-                      "paint": {
-                        "line-color": "#888",
-                        "line-width": 8
-                      }
-                    });
 
     var coordinates = [];
     var features = [];
@@ -287,7 +256,10 @@
     map.on('mouseleave', 'places', function () {
         map.getCanvas().style.cursor = '';
     });
+
   </script>
+  </div>
+
 
 
 
