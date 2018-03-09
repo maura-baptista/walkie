@@ -18,7 +18,7 @@ class WalksController < ApplicationController
   end
 
 
- 
+
   def show
     @reviews = @walk.reviews
 
@@ -28,7 +28,8 @@ class WalksController < ApplicationController
 
   def new
     @walk = Walk.new
-   @walk_attachment = walk.walk_attachments.build
+    @point = Point.new
+   # @walk_attachment = walk.walk_attachments.build
   end
 
   def create
@@ -53,7 +54,7 @@ class WalksController < ApplicationController
   end
 
   def edit
-    authorize @walk
+    #authorize @walk
   end
 
 
