@@ -178,7 +178,7 @@ walk7 = Walk.create!({
   address: "Montasanto",
   description: "The Panoramico is a restaurant on a miradouro – which is a lookout – that was constructed almost 50 years ago. At some point, they probably didn’t have any money left, because they stopped the constructions and since then, it has been abandoned. Over the years, it fell into ruin and was more or less forgotten.
   ",
-  category: Category.fourth,
+  category: Category.first,
   duration: 30,
   user: User.all.sample
   })
