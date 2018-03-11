@@ -1,16 +1,17 @@
-<center><h4> Our walks</h4><center>
-  <div class="navbar-wagon-item">
-  <div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style = "margin-left: 285px;">
-    Sort by
-  </button>
-    <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+<div class="container">
+  <br>
+  <span class="dropdown dropdown-menu-right"><h4>All Walks</h4>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    <button class="btn btn-default btn-xs dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style = “margin-left: 285px;“>
+      Sort by time:
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu dropdown-menu-right dropdown-color" aria-labelledby="dropdownMenu1">
       <li><%= link_to "ascending", categories_path(sort: :asc)  %></li>
       <li><%= link_to "descending", categories_path(sort: :desc)  %></li>
     </ul>
   </div>
-</div>
-
+</span>
+<br>
 <%= render  @walks %>
 
 

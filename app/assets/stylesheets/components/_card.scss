@@ -56,7 +56,6 @@
 }
 
 .card-location {
-  font-weight: lighter;
   font-size: 12px;
 }
 
@@ -85,6 +84,8 @@
   background-position: center center;
   &:hover, &:active, &:focus {
     outline: none;
+  opacity: 0.5;
+    filter: alpha(opacity=50);
 
 }
 }
