@@ -93,7 +93,6 @@ ActiveRecord::Schema.define(version: 20180309132253) do
 
   create_table "walks", force: :cascade do |t|
     t.string "name"
-    t.string "category"
     t.string "location"
     t.string "description"
     t.bigint "user_id"
