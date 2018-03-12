@@ -34,22 +34,21 @@ class WalksController < ApplicationController
   def create
     @walk = Walk.new(walk_params)
     @walk.user = current_user
-    # #authorize @walk
-    # if @walk.save
-    #   redirect_to walk_path(@walk)
-    # else
-    #   render :new
-    # end
-   respond_to do |format|
-     if @walk.save
-       params[:walk_attachments]['photo'].each do |a|
-          walk_attachment = @walk.walk_attachments.create!(:photo => a)
-       end
-       format.html { redirect_to @walk, notice: 'Walk was successfully created.' }
-     else
-       format.html { render action: 'new' }
-     end
-   end
+    if @walk.save
+      redirect_to new_point_path
+    else
+      render :new
+    end
+    #  respond_to do |format|
+    #    if @walk.save
+    #      params[:walk_attachments]['photo'].each do |a|
+    #         walk_attachment = @walk.walk_attachments.create!(:photo => a)
+    #      end
+    #      format.html { redirect_to @walk, notice: 'Walk was successfully created.' }
+    #    else
+    #      format.html { render action: 'new' }
+    #    end
+    #  end
   end
 
   def edit
@@ -88,7 +87,8 @@ class WalksController < ApplicationController
   end
 
    def walk_params
-    params.require(:walk).permit(:name, :category, :location, :duration, :description,  walk_attachments_attributes: [:id, walk_id, :photo])
+    # params.require(:walk).permit(:name, :category, :location, :duration, :description,  walk_attachments_attributes: [:id, walk_id, :photo])
+     params.require(:walk).permit(:name, :category, :location, :duration, :description, :photo)
   end
 
 end

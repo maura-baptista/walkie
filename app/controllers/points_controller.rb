@@ -1,4 +1,12 @@
 class PointsController < ApplicationController
+
+  def form_point
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
+
   def index
 
   end
