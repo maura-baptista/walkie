@@ -91,9 +91,9 @@ walk = Walk.create!({
   duration: 35,
   user: User.all.sample
   })
-walk.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446746/street-art-kobra.jpg")
-walk.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
-walk.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
+walk.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446746/street-art-kobra.jpg")
+walk.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
+walk.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
 
 
 walk7 = Walk.create!({
@@ -126,8 +126,6 @@ walk2.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/imag
 walk2.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520859822/muraisobeylisboa_07.jpg")
 walk2.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520501800/vhills_alcantera-770x429.jpg")
 
-
-
 walk5 = Walk.create!({
   name: "Alcantara Secrets",
   location: "Lisbon",
@@ -147,8 +145,6 @@ walk5.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/imag
 
 
 
-
-
 walk6 = Walk.create!({
   name: "Along the Tejo",
   location: "Lisbon",
@@ -164,25 +160,19 @@ walk6.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/imag
 walk6.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
 
 
-
-
-
-
 walk3 = Walk.create!({
   name: "Bordallo II and Trash Art Walk",
   location: "Lisbon",
   address: "Lisbon",
   description: "Bordalo belongs to a generation that is extremely consumerist, materialist and greedy. With the production of things at its highest, the production of waste and unused objects is also at its highest. Waste is quoted because of its abstract definition: one man's trash is another man's treasure. He creates, recreates, assembles and develops ideas with end-of-life material and tries to relate it to sustainability, ecological and social awareness.
-
-
   ",
   category: Category.first ,
   duration: 45,
   user: User.all.sample
   })
-walk3.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520501925/bordalo-1.jpg")
-walk3.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520501920/bordalo-4.jpg")
-walk3.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520501923/bordalo-2.jpg")
+walk3.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520501925/bordalo-1.jpg")
+walk3.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520501920/bordalo-4.jpg")
+walk3.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520501923/bordalo-2.jpg")
 
 
 
@@ -203,7 +193,36 @@ walk4.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/imag
 
 
 
+walk5 = Walk.create!({
+  name: "Alcantara delights",
+  location: "Lisbon",
+  address: "Alcantara",
+  description: "
+The old port district of Alcântara got a face-lift in the 1990s, and since then it has been a nightlife hub, as well as a great place to relax by the river on warm days. The inauguration in 2008 of the Museu do Oriente was a regeneration landmark, and the colorful LX Factory has transformed a derelict industrial site into a creative hub of coworking spaces, café-bars, and boutiques, while the revamped docks are now home to smart bars and restaurants.
 
+  ",
+  duration: 45,
+  category: Category.last,
+  user: User.all.sample
+  })
+walk5.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520547187/lx_orig.jpg")
+walk5.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
+walk5.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
+
+
+walk6 = Walk.create!({
+  name: "Along the Tejo",
+  location: "Lisbon",
+  address: "Tejo coast",
+  description: "Lisbon owes its existence to the river which has shaped the city’s destiny and given it its unique character. According to legend, the city was founded by Ulysses (the Roman name for Odysseus) in one of his adventurous journeys.
+  ",
+  category: Category.fourth,
+  duration: 30,
+  user: User.all.sample
+  })
+walk6.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520546003/stock-photo-bridge-bike-lisbon-underbridge-baa0314c-5e4f-4cfa-9783-ec1cabecb713.jpg")
+walk6.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
+walk6.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
 
 walk8 = Walk.create!({
   name: "Montasanto Trail",
@@ -219,6 +238,7 @@ It's very nice to have such a vast Nature just next to Lisbon.
 walk8.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520860583/forest-07.jpg")
 walk8.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
 walk8.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
+
 
 walk9 = Walk.create!({
   name: "Sintra Secrets",

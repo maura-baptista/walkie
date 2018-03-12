@@ -1,19 +1,11 @@
 Rails.application.routes.draw do
 
 
+  get "form_point" => "points#new_form_point", as: :form_point
+
+
   get 'users/profile'
 
-  get 'points/index'
-
-  get 'points/new'
-
-  get 'points/create'
-
-  get 'points/edit'
-
-  get 'points/update'
-
-  get 'points/destroy'
 
   get 'reviews/index'
 
@@ -32,10 +24,14 @@ Rails.application.routes.draw do
 
   devise_for :users
   root to: 'pages#home'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
- resources :categories, only: [ :index, :show]
+
+
+  resources :categories, only: [ :index, :show]
 
   resources :walks, only: [ :index, :show, :new, :create, :edit, :update ] do
+    resources :points, only: [:new, :create]
     resources :user_walks, only: [ :index, :create, :new ]
   end
 end
