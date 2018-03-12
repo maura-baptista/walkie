@@ -36,7 +36,6 @@ Rails.application.routes.draw do
  resources :categories, only: [ :index, :show]
 
   resources :walks, only: [ :index, :show, :new, :create, :edit, :update ] do
-
     resources :user_walks, only: [ :index, :create, :new ]
   end
 end
