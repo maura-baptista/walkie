@@ -11,7 +11,7 @@
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content" style='width: 100%; height: 95vh;'>
-        <div id='map' style=' height: 500px;'></div>
+        <div id='map' style=' height: 95vh;'></div>
         <div id='instructions'></div>
     </div>
   </div>
@@ -137,11 +137,9 @@
 
 
   function getRoute() {
+
     var start = [points[0].longitude, points[0].latitude];
     var end = [points[6].longitude, points[6].latitude];
-
-
-     console.log("coord: ", coordinates)
 
      var directionsRequest1 =
      'https://api.mapbox.com/directions/v5/mapbox/cycling/'
@@ -155,30 +153,18 @@
      + '?geometries=geojson&access_token=' + mapboxgl.accessToken;
 
 
-  console.log(directionsRequest1)
-
-
-
     var directionsRequest = 'https://api.mapbox.com/directions/v5/mapbox/cycling/' + start[0] + ',' + start[1] + ';' + end[0] + ',' + end[1] + '?geometries=geojson&access_token=' + mapboxgl.accessToken;
-
 
     $.ajax({
       method: 'GET',
       url: directionsRequest1,
     }).done(function(data) {
       var route = data.routes[0].geometry
-
-      console.log("Route: ", route)
-
-      console.log("Waypoints:", data.waypoints)
-
-
-      // console.log(route[1].location)
-      var test =  []
-      test.push([data.waypoints[0].location, data.waypoints[1].location])
-
-       console.log("HEY!!!", test)
-
+      var instructions = document.getElementById('instructions');
+      var steps = data.routes[0].legs[0].steps;
+      steps.forEach(function(step) {
+        instructions.insertAdjacentHTML('beforeend', '<p>' + step.maneuver.instruction + '</p>');
+      });
 
 
       map.addLayer({
@@ -197,6 +183,34 @@
         }
       });
       // this is where the code from the next step will go
+      map.addLayer({
+      id: 'start',
+      type: 'circle',
+      source: {
+        type: 'geojson',
+        data: {
+          type: 'Feature',
+          geometry: {
+            type: 'Point',
+            coordinates: start
+          }
+        }
+      }
+    });
+    map.addLayer({
+      id: 'end',
+      type: 'circle',
+      source: {
+        type: 'geojson',
+        data: {
+          type: 'Feature',
+          geometry: {
+            type: 'Point',
+            coordinates: end
+          }
+        }
+      }
+    });
     });
 
 
@@ -252,6 +266,35 @@ map.on('load', function () {
                   "icon-allow-overlap": true
                 }
       });
+
+        map.addLayer({
+          id: 'start',
+          type: 'circle',
+          source: {
+            type: 'geojson',
+            data: {
+              type: 'Feature',
+              geometry: {
+                type: 'Point',
+                coordinates: start
+              }
+            }
+          }
+        });
+        map.addLayer({
+          id: 'end',
+          type: 'circle',
+          source: {
+            type: 'geojson',
+            data: {
+              type: 'Feature',
+              geometry: {
+                type: 'Point',
+                coordinates: end
+              }
+            }
+          }
+        });
     });
 
     map.on('click', 'places', function (e) {
@@ -283,6 +326,7 @@ map.on('load', function () {
     });
 
     map.addControl(new mapboxgl.FullscreenControl());
+
 
 
   </script>
