@@ -1,26 +1,28 @@
- <br>
- <br>
-<div class="form_title">
-  <center><h1 class="upload-title"->Add a walk</h1><center>
-</div>
-<div class="row walk_form">
-  <h4>Add walk details</h4>
-  <%= simple_form_for @walk do |f| %>
-    <%= f.input :name, placeholder:"Bairro Alto's trail"%>
-    <%= f.input :category, placeholder:"Cultural", collection: Category.all %>
-    <%= f.input :location, placeholder:"Lisbon" %>
-    <%= f.input :duration, placeholder:"45min", collection: [15, 30, 45, 60, 75, 90] %>
-    <%= f.input :description, placeholder:"very interesting walk to get to know on of Lisbon's main neighborhood, in the city center" %>
-    <%= f.simple_fields_for :walk_attachments, WalkAttachment.new do |w| %>
-    <%= w.input :photo, as: :file, input_html:{ multiple: true, name:"walk_attachments[photo][]" } %>
+
+
+
+  <div class="form_title">
+    <center><h2 class="upload-title"> <i class="fas fa-map-marker" style= "font-size:32px; color: white;"></i>
+
+    Add a walk </h2><center>
+  </div>
+  <div class="row walk_form">
+    <em><h4>Add walk details:</h4></em>
+    <%= simple_form_for @walk do |f| %>
+      <%= f.input :name, placeholder:"Bairro Alto's trail"%>
+      <%= f.input :category, placeholder:"Cultural", collection: Category.all %>
+      <%= f.input :location, placeholder:"Lisbon" %>
+      <%= f.input :duration, placeholder:"45min", collection: [15, 30, 45, 60, 75, 90] %>
+      <%= f.input :description, placeholder:"very interesting walk to get to know on of Lisbon's main neighborhood, in the city center" %>
+      <%= f.simple_fields_for :walk_attachments, WalkAttachment.new do |w| %>
+      <%= w.input :photo, as: :file, input_html:{ multiple: true, name:"walk_attachments[photo][]" } %>
+      <% end %>
+      <%= f.submit "Add walk ", class: "btn btn-primary btn-block" %>
+
     <% end %>
-    <%= f.submit "Add walk ", class: "btn btn-primary btn-block" %>
 
+  </div>
 
-  <% end %>
-
-
-</div>
 <!-- <center><%= link_to 'Back', categories_path %><center> -->
 
 

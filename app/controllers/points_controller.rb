@@ -1,11 +1,5 @@
 class PointsController < ApplicationController
 
-  def form_point
-    respond_to do |format|
-      format.html
-      format.js
-    end
-  end
 
   def index
 
@@ -20,7 +14,6 @@ class PointsController < ApplicationController
     @walk = Walk.find(params[:walk_id])
     @point = Point.new(point_params)
     @point.walk = @walk
-    byebug
     #@point.user à= current_user
     #authorize @walk
     if @point.save
@@ -44,7 +37,7 @@ class PointsController < ApplicationController
 
   private
    def point_params
-    params.require(:point).permit(:name, :order, :address, :description)
+    params.require(:point).permit(:name, :order, :address, :description, :photo)
   end
 
 end

@@ -12,10 +12,9 @@
   <% end %>
   <span class="normal-button btn btn-default btn-circle material-icons go-rounded-white text-center" style="padding:4px 8px 4px 5px;" onclick="">share</span>
   <span class="go-button btn btn-default btn-circle go-rounded-white text-center" style="margin-left: 30vw ;" data-target="#myModal" data-toggle="modal">GO</span>
-  <!-- Button trigger modal -->
 
 
-<!-- Modal -->
+<!-- Map Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content" style='width: 100%; height: 95vh;'>
@@ -26,11 +25,15 @@
 </div>
 
 </div>
+
+<%= render "points/form_modal"  %>
+
 <div class="container">
 
   <div class="row">
     <div class="col-xs-12">
       <br>
+
       <br>
       <div class="d-inline categories">
         <h6><%= @walk.category.name%></h6>
@@ -41,6 +44,17 @@
 <hr>
        <br>
         <p>&nbsp&nbsp<%= @walk.description %></p>
+        <h4><%= @walk.category.name%></h4>
+       <h2><strong> <%=@walk.name %></strong></h2>
+       <% if @walk.user == current_user %>
+        <button class="btn btn-oblong btn-primary text-center" data-target="#modal-window" data-toggle="modal"> + points of interest</button>
+
+       <% end %>
+
+       <h6>&nbsp&nbsp<%= @walk.duration %>&nbsp&nbsp&nbsp<i class="far fa-clock"></i>&nbsp&nbsp&nbsp<%= @walk.location%></h6>
+       <hr>
+      left
+        <p><%= @walk.description %></p>
         <br>
 
     </div>
@@ -106,7 +120,7 @@
 
   <script>
     var points = <%= raw @walk.points.to_json %>;
-
+    var coordinates_url = '';
     mapboxgl.accessToken = 'pk.eyJ1IjoiZnJhbmNpc2NvYmFycmV0byIsImEiOiJjamVoMWRjMjMwbWh6MnFuczF6dGd6bmFoIn0.S5h45dvXuYQ3xoN-d504KA'; // replace this with your access token
     var map = new mapboxgl.Map({
       container: 'map',
@@ -121,7 +135,7 @@
 
     var coordinates = [];
     var features = [];
-    points.forEach((point) => {
+    points.forEach((point, index) => {
       coordinates.push([point.longitude, point.latitude]);
 
       var feature = {
@@ -138,6 +152,10 @@
 
       features.push(feature);
 
+      coordinates_url = coordinates_url + point.longitude + ',' + point.latitude;
+      if(index + 1 < points.length) {
+        coordinates_url = coordinates_url + ';';
+      }
     });
 
 
@@ -147,15 +165,8 @@
     var end = [points[6].longitude, points[6].latitude];
 
      var directionsRequest1 =
-     'https://api.mapbox.com/directions/v5/mapbox/cycling/'
-     + coordinates[0][0] + ',' + coordinates[0][1] + ';'
-     + coordinates[1][0] + ',' + coordinates[1][1] + ';'
-     + coordinates[2][0] + ',' + coordinates[2][1] + ';'
-     + coordinates[3][0] + ',' + coordinates[3][1] + ';'
-     + coordinates[4][0] + ',' + coordinates[4][1] + ';'
-     + coordinates[5][0] + ',' + coordinates[5][1] + ';'
-     + coordinates[6][0] + ',' + coordinates[6][1]
-     + '?geometries=geojson&access_token=' + mapboxgl.accessToken;
+     'https://api.mapbox.com/directions/v5/mapbox/walking/'
+     + coordinates_url + '?geometries=geojson&steps=true&access_token=' + mapboxgl.accessToken;
 
 
     var directionsRequest = 'https://api.mapbox.com/directions/v5/mapbox/cycling/' + start[0] + ',' + start[1] + ';' + end[0] + ',' + end[1] + '?geometries=geojson&access_token=' + mapboxgl.accessToken;
@@ -164,11 +175,16 @@
       method: 'GET',
       url: directionsRequest1,
     }).done(function(data) {
-      var route = data.routes[0].geometry
+      var route = data.routes[0].geometry;
       var instructions = document.getElementById('instructions');
-      var steps = data.routes[0].legs[0].steps;
-      steps.forEach(function(step) {
-        instructions.insertAdjacentHTML('beforeend', '<p>' + step.maneuver.instruction + '</p>');
+      console.log(data);
+      var legs = data.routes[0].legs;
+      legs.forEach(function(leg) {
+        var steps = leg.steps;
+
+        steps.forEach(function(step) {
+          instructions.insertAdjacentHTML('beforeend', '<p>' + step.maneuver.instruction + '</p>');
+        });
       });
 
 
@@ -221,6 +237,10 @@
 
   }
 
+//   map.on('load', function() {
+//   getRoute();
+// });
+
 map.on('load', function () {
 
       getRoute();
@@ -272,35 +292,9 @@ map.on('load', function () {
                 }
       });
 
-        map.addLayer({
-          id: 'start',
-          type: 'circle',
-          source: {
-            type: 'geojson',
-            data: {
-              type: 'Feature',
-              geometry: {
-                type: 'Point',
-                coordinates: start
-              }
-            }
-          }
-        });
-        map.addLayer({
-          id: 'end',
-          type: 'circle',
-          source: {
-            type: 'geojson',
-            data: {
-              type: 'Feature',
-              geometry: {
-                type: 'Point',
-                coordinates: end
-              }
-            }
-          }
-        });
-    });
+
+          });
+
 
     map.on('click', 'places', function (e) {
         var coordinates = e.features[0].geometry.coordinates.slice();
@@ -364,19 +358,6 @@ map.on('load', function () {
 
 
 </style>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
