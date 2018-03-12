@@ -9,9 +9,15 @@ class Walk < ApplicationRecord
   has_many :users, through: :user_walks
   has_many :walk_attachments
   accepts_nested_attributes_for :walk_attachments
+  # has_many :photos, through: :walk_attachmens
+
 
   def participants
     users
+  end
+
+  def photos
+    WalkAttachment.where(walk: self)
   end
 
   # validates :name, presence: true
