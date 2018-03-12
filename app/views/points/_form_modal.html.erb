@@ -1,0 +1,45 @@
+
+
+<div id="modal-window" class="modal fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+  <div class="modal-header">
+     <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color: white; font-size: 35px;">x</button>
+
+   </div>
+   <div class="modal-body">
+     <br>
+     <br>
+    <div class="form_title">
+      <center><h2 class="upload-title"-> <i class="fas fa-map-marker" style= "font-size:40px; color: white;"></i>&nbsp&nbspAdd points of interest</h2><center>
+    </div>
+
+    <div class="row walk_form">
+      <em><h4>Points of interest:</h4></em>
+      <% i = 0 %>
+     <%= simple_form_for [@walk, @point] do |f| %>
+
+       <%= f.input :order, placeholder: (i += 1).to_s%>
+       <%= f.input :name, placeholder:"Sao Roque church" %>
+       <%= f.input :address, placeholder:"Rua da Prata 7, Lisboa" %>
+       <%= f.input :description, placeholder:"One of the first Jesuit churches built anywhere in the world, the Church of Saint Roch is a curious proposition. Even while its exterior reflects the austerity, its interior is among Lisbon’s most lavishly decorated spaces, in keeping with the onetime wealth and power of the Jesuit order" %>
+       <%= f.input :photo %>
+       <%= f.input :photo_cache, as: :hidden %>
+
+
+      <%= f.submit "Add point of interest", class: "btn btn-primary btn-block" %>
+     <% end %>
+    </div>
+
+
+   </div>
+   <div class="modal-footer">
+     <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+
+   </div>
+
+</div>
+
+
+
+
+

@@ -22,6 +22,7 @@ class WalksController < ApplicationController
     @reviews = @walk.reviews
 
     @walk_attachments = @walk.walk_attachments.all
+    @point = Point.new
 
   end
 
@@ -41,7 +42,7 @@ class WalksController < ApplicationController
       params[:walk_attachments]['photo'].each do |p|
         @walk_attachment = @walk.walk_attachments.create!(photo: p)
       end
-      redirect_to new_walk_point_path(@walk)
+      redirect_to walk_path(@walk)
     else
       render :new
     end
