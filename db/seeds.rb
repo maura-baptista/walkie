@@ -192,16 +192,16 @@ walk4 = Walk.create!({
   user: User.all.sample
   })
 
-walk4.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520335705/hugo-sousa-383214-unsplash.jpg")
+walk4.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520865497/lisbon-alfama.jpg")
 walk4.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
 walk4.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
 
 
 
 walk5 = Walk.create!({
-  name: "Alcantara delights",
+  name: "Pesoa's Lisbon",
   location: "Lisbon",
-  address: "Alcantara",
+  address: "Praca da Comercio",
   description: "
 The old port district of Alcântara got a face-lift in the 1990s, and since then it has been a nightlife hub, as well as a great place to relax by the river on warm days. The inauguration in 2008 of the Museu do Oriente was a regeneration landmark, and the colorful LX Factory has transformed a derelict industrial site into a creative hub of coworking spaces, café-bars, and boutiques, while the revamped docks are now home to smart bars and restaurants.
 
@@ -210,24 +210,12 @@ The old port district of Alcântara got a face-lift in the 1990s, and since then
   category: Category.last,
   user: User.all.sample
   })
-walk5.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520547187/lx_orig.jpg")
+walk5.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520869431/1221521665_d6c8fd78e0.jpg")
 walk5.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
 walk5.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
 
 
-walk6 = Walk.create!({
-  name: "Along the Tejo",
-  location: "Lisbon",
-  address: "Tejo coast",
-  description: "Lisbon owes its existence to the river which has shaped the city’s destiny and given it its unique character. According to legend, the city was founded by Ulysses (the Roman name for Odysseus) in one of his adventurous journeys.
-  ",
-  category: Category.fourth,
-  duration: 30,
-  user: User.all.sample
-  })
-walk6.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520546003/stock-photo-bridge-bike-lisbon-underbridge-baa0314c-5e4f-4cfa-9783-ec1cabecb713.jpg")
-walk6.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
-walk6.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
+
 
 walk8 = Walk.create!({
   name: "Montasanto Trail",
