@@ -30,9 +30,9 @@
       <div class="d-inline categories">
         <h4><%= @walk.category.name%></h4>
        <h2><strong> <%=@walk.name %></strong></h2>
-        <button class="btn btn-oblong btn-primary text-center" data-target="#modal-window" data-toggle="modal" id="point-bnt">Add points of interest</button>
+        <button class="btn btn-oblong btn-primary text-center" data-target="#modal-window" data-toggle="modal">Add points of interest</button>
 
-       <h6>&nbsp;&nbsp;<%= @walk.duration %>&nbsp;&nbsp&nbsp<i class="far fa-clock"></i>&nbsp&nbsp&nbsp<%= @walk.location%></h6>
+       <h6>&nbsp&nbsp<%= @walk.duration %>&nbsp&nbsp&nbsp<i class="far fa-clock"></i>&nbsp&nbsp&nbsp<%= @walk.location%></h6>
        <hr>
       left
         <p><%= @walk.description %></p>
@@ -382,12 +382,3 @@ map.on('load', function () {
  </div>
 </section>
 
-<!-- points-of-interests button -->
-
-<script>
-$(document).ready(function(){
-    $("#point-btn").click(function(){
-        $("#modal-window").modal({backdrop: true});
-    });
-});
-</script>
