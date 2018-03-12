@@ -91,9 +91,9 @@ walk = Walk.create!({
   duration: 35,
   user: User.all.sample
   })
-walk.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446746/street-art-kobra.jpg")
-walk.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
-walk.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
+walk.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446746/street-art-kobra.jpg")
+walk.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
+walk.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
 
 walk2 = Walk.create!({
   name: "Vhils Walk",
@@ -105,9 +105,9 @@ walk2 = Walk.create!({
   duration: 25,
   user: User.all.sample
   })
-walk2.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520503024/22684875.jpg")
-walk2.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520501662/vhils-1.jpg")
-walk2.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520501800/vhills_alcantera-770x429.jpg")
+walk2.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520503024/22684875.jpg")
+walk2.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520501662/vhils-1.jpg")
+walk2.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520501800/vhills_alcantera-770x429.jpg")
 
 walk3 = Walk.create!({
   name: "Bordallo II and Trash Art Walk",
@@ -121,9 +121,9 @@ walk3 = Walk.create!({
   duration: 45,
   user: User.all.sample
   })
-walk3.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520501925/bordalo-1.jpg")
-walk3.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520501920/bordalo-4.jpg")
-walk3.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520501923/bordalo-2.jpg")
+walk3.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520501925/bordalo-1.jpg")
+walk3.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520501920/bordalo-4.jpg")
+walk3.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520501923/bordalo-2.jpg")
 
 walk4 = Walk.create!({
   name: "Old city tales",
@@ -136,9 +136,9 @@ walk4 = Walk.create!({
 
   user: User.all.sample
   })
-walk4.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520335705/hugo-sousa-383214-unsplash.jpg")
-walk4.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
-walk4.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
+walk4.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520335705/hugo-sousa-383214-unsplash.jpg")
+walk4.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
+walk4.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
 
 
 walk5 = Walk.create!({
@@ -153,9 +153,9 @@ The old port district of Alcântara got a face-lift in the 1990s, and since then
   category: Category.last,
   user: User.all.sample
   })
-walk5.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520547187/lx_orig.jpg")
-walk5.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
-walk5.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
+walk5.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520547187/lx_orig.jpg")
+walk5.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
+walk5.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
 
 
 walk6 = Walk.create!({
@@ -168,9 +168,9 @@ walk6 = Walk.create!({
   duration: 30,
   user: User.all.sample
   })
-walk6.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520546003/stock-photo-bridge-bike-lisbon-underbridge-baa0314c-5e4f-4cfa-9783-ec1cabecb713.jpg")
-walk6.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
-walk6.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
+walk6.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520546003/stock-photo-bridge-bike-lisbon-underbridge-baa0314c-5e4f-4cfa-9783-ec1cabecb713.jpg")
+walk6.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
+walk6.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
 
 walk7 = Walk.create!({
   name: "Forgotten Delights",
@@ -182,9 +182,9 @@ walk7 = Walk.create!({
   duration: 30,
   user: User.all.sample
   })
-walk7.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520546847/maxresdefault.jpg")
-walk7.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
-walk7.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
+walk7.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520546847/maxresdefault.jpg")
+walk7.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
+walk7.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
 
 
 walk8 = Walk.create!({
@@ -198,9 +198,9 @@ It's very nice to have such a vast Nature just next to Lisbon.
   duration: 50,
   user: User.all.sample
   })
-walk8.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520547392/woods-landscape-road-loyalsock-state-forest-163703.jpg")
-walk8.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
-walk8.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
+walk8.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520547392/woods-landscape-road-loyalsock-state-forest-163703.jpg")
+walk8.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
+walk8.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
 
 
 
