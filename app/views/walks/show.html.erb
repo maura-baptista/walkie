@@ -37,28 +37,22 @@
       <br>
       <div class="d-inline categories">
         <h6><%= @walk.category.name%></h6>
-       <h4 style="color: #161616 !important;"><strong> <%=@walk.name %></strong></h4>
-       <br>
-       <p class="tagline">&nbsp;<%= @walk.duration %>&nbsp;&nbsp;&nbsp;<i class="far fa-clock icon"></i>&nbsp;&nbsp;&nbsp;<%= @walk.location%>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= @walk.likes.length %>&nbsp;Likes</p>
-
-<hr>
-       <br>
-        <p>&nbsp&nbsp<%= @walk.description %></p>
-        <h4><%= @walk.category.name%></h4>
-       <h2><strong> <%=@walk.name %></strong></h2>
-       <% if @walk.user == current_user %>
-        <button class="btn btn-oblong btn-primary text-center" data-target="#modal-window" data-toggle="modal"> + points of interest</button>
-
-       <% end %>
-
-       <h6>&nbsp&nbsp<%= @walk.duration %>&nbsp&nbsp&nbsp<i class="far fa-clock"></i>&nbsp&nbsp&nbsp<%= @walk.location%></h6>
-       <hr>
-        <p><%= @walk.description %></p>
+        <h4 style="color: #161616 !important;"><strong> <%=@walk.name %></strong></h4>
         <br>
+        <p class="tagline">&nbsp;<%= @walk.duration %>&nbsp;&nbsp;&nbsp;<i class="far fa-clock icon"></i>&nbsp;&nbsp;&nbsp;<%= @walk.location%>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= @walk.likes.length %>&nbsp;Likes</p>
+        <hr>
+        <br>
+        <p><%= @walk.description %></p>
 
+        <% if @walk.user == current_user %>
+        <button class="btn btn-oblong btn-primary text-center" data-target="#modal-window" data-toggle="modal"> + points of interest</button>
+        <% end %>
+
+        <br>
+<br>
+      </div>
     </div>
   </div>
-</div>
 
 
 
