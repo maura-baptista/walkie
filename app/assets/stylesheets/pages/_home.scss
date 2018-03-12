@@ -63,15 +63,20 @@ h4 {
 
 
 .get-started {
-  border-radius: 20%;
+  border-radius: 8px;
   font-size: 10px;
-   background-color: Transparent;
+   background-color: transparent;
    color: white;
    font-weight: bold;
-   border-width: 2px;
+   border: 2px solid white;
    font-family: Raleway !important;
+   -webkit-transition: background-color 300ms;
+
 }
 
-.get-started a:hover {
-      color: #df58c7;
+.get-started:hover {
+      background-color: #D17BC9;
+      color: white;
+      border-color: transparent;
+
 }

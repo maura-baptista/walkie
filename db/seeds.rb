@@ -95,6 +95,67 @@ walk.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geeba
 walk.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
 walk.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
 
+
+walk7 = Walk.create!({
+  name: "Forgotten Delights",
+  location: "Lisbon",
+  address: "Montasanto",
+  description: "The Panoramico is a restaurant on a miradouro – which is a lookout – that was constructed almost 50 years ago. At some point, they probably didn’t have any money left, because they stopped the constructions and since then, it has been abandoned. Over the years, it fell into ruin and was more or less forgotten.
+  ",
+  category: Category.first,
+  duration: 30,
+  user: User.all.sample
+  })
+walk7.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520860244/13.jpg")
+walk7.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
+walk7.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
+
+walk6 = Walk.create!({
+  name: "Along the Tejo",
+  location: "Lisbon",
+  address: "Tejo coast",
+  description: "Lisbon owes its existence to the river which has shaped the city’s destiny and given it its unique character. According to legend, the city was founded by Ulysses (the Roman name for Odysseus) in one of his adventurous journeys.
+  ",
+  category: Category.fourth,
+  duration: 30,
+  user: User.all.sample
+  })
+walk6.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520335852/jason-briscoe-104295-unsplash.jpg")
+walk6.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
+walk6.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
+
+
+walk5 = Walk.create!({
+  name: "Alcantara Secrets",
+  location: "Lisbon",
+  address: "Alcantara",
+  description: "
+The old port district of Alcântara got a face-lift in the 1990s, and since then it has been a nightlife hub, as well as a great place to relax by the river on warm days. The inauguration in 2008 of the Museu do Oriente was a regeneration landmark, and the colorful LX Factory has transformed a derelict industrial site into a creative hub of coworking spaces, café-bars, and boutiques, while the revamped docks are now home to smart bars and restaurants.
+
+  ",
+  duration: 45,
+  category: Category.last,
+  user: User.all.sample
+  })
+walk5.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520859998/LXFactoryPost.jpg")
+walk5.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
+walk5.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
+
+
+walk3 = Walk.create!({
+  name: "Bordallo II and Trash Art Walk",
+  location: "Lisbon",
+  address: "Lisbon",
+  description: "Bordalo belongs to a generation that is extremely consumerist, materialist and greedy. With the production of things at its highest, the production of waste and unused objects is also at its highest. Waste is quoted because of its abstract definition: one man's trash is another man's treasure. He creates, recreates, assembles and develops ideas with end-of-life material and tries to relate it to sustainability, ecological and social awareness.
+  ",
+  category: Category.first ,
+  duration: 45,
+  user: User.all.sample
+  })
+walk3.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520501925/bordalo-1.jpg")
+walk3.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520501920/bordalo-4.jpg")
+walk3.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520501923/bordalo-2.jpg")
+
 walk2 = Walk.create!({
   name: "Vhils Walk",
   location: "Lisbon",
@@ -105,25 +166,11 @@ walk2 = Walk.create!({
   duration: 25,
   user: User.all.sample
   })
-walk2.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520503024/22684875.jpg")
-walk2.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520501662/vhils-1.jpg")
-walk2.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520501800/vhills_alcantera-770x429.jpg")
-
-walk3 = Walk.create!({
-  name: "Bordallo II and Trash Art Walk",
-  location: "Lisbon",
-  address: "Lisbon",
-  description: "Bordalo belongs to a generation that is extremely consumerist, materialist and greedy. With the production of things at its highest, the production of waste and unused objects is also at its highest. Waste is quoted because of its abstract definition: one man's trash is another man's treasure. He creates, recreates, assembles and develops ideas with end-of-life material and tries to relate it to sustainability, ecological and social awareness.
+walk2.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520859822/muraisobeylisboa_07.jpg")
+walk2.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520501662/vhils-1.jpg")
+walk2.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520501800/vhills_alcantera-770x429.jpg")
 
 
-  ",
-  category: Category.first ,
-  duration: 45,
-  user: User.all.sample
-  })
-walk3.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520501925/bordalo-1.jpg")
-walk3.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520501920/bordalo-4.jpg")
-walk3.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520501923/bordalo-2.jpg")
 
 walk4 = Walk.create!({
   name: "Old city tales",
@@ -139,6 +186,7 @@ walk4 = Walk.create!({
 walk4.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520335705/hugo-sousa-383214-unsplash.jpg")
 walk4.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
 walk4.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
+
 
 
 walk5 = Walk.create!({
@@ -172,21 +220,6 @@ walk6.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geeb
 walk6.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
 walk6.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
 
-walk7 = Walk.create!({
-  name: "Forgotten Delights",
-  location: "Lisbon",
-  address: "Montasanto",
-  description: "The Panoramico is a restaurant on a miradouro – which is a lookout – that was constructed almost 50 years ago. At some point, they probably didn’t have any money left, because they stopped the constructions and since then, it has been abandoned. Over the years, it fell into ruin and was more or less forgotten.
-  ",
-  category: Category.first,
-  duration: 30,
-  user: User.all.sample
-  })
-walk7.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520546847/maxresdefault.jpg")
-walk7.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
-walk7.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
-
-
 walk8 = Walk.create!({
   name: "Montasanto Trail",
   location: "Lisbon",
@@ -198,9 +231,26 @@ It's very nice to have such a vast Nature just next to Lisbon.
   duration: 50,
   user: User.all.sample
   })
-walk8.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520547392/woods-landscape-road-loyalsock-state-forest-163703.jpg")
-walk8.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
-walk8.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
+walk8.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520860583/forest-07.jpg")
+walk8.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
+walk8.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
+
+
+walk9 = Walk.create!({
+  name: "Sintra Secrets",
+  location: "Lisbon",
+  address: "Montasanto",
+  description: "A lot of trails around the park that will dive you into a very healthy forest with a lot of panoramic views to Lisbon as well as Sintra and the big scale of Monsanto.
+It's very nice to have such a vast Nature just next to Lisbon.
+  ",
+  category: Category.second,
+  duration: 50,
+  user: User.all.sample
+  })
+walk9.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520852708/91256761.jpg")
+walk9.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
+walk9.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
+
 
 
 
