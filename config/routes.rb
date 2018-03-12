@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
 
+  get 'likes/new'
+
+  get 'likes/create'
+
   get "form_point" => "points#new_form_point", as: :form_point
 
 
@@ -33,6 +37,9 @@ Rails.application.routes.draw do
   resources :walks, only: [ :index, :show, :new, :create, :edit, :update ] do
     resources :points, only: [:new, :create]
     resources :user_walks, only: [ :index, :create, :new ]
+    member do
+      get "like", to: "likes#create"
+    end
   end
 end
 
