@@ -13,26 +13,21 @@ class PointsController < ApplicationController
 
   def new
     @point = Point.new
+    @walk = Walk.find(params[:walk_id])
   end
 
   def create
-    @point = Point.new(walk_params)
-    @point.user = current_user
+    @walk = Walk.find(params[:walk_id])
+    @point = Point.new(point_params)
+    @point.walk = @walk
+    byebug
+    #@point.user à= current_user
     #authorize @walk
-    if @walk.save
+    if @point.save
       redirect_to walk_path(@walk)
     else
       render :new
     end
-    # respond_to do |format|
-    #  if @walk.save
-    #    params[:walk_attachments]['photo'].each do |a|
-    #       walk_attachment = @walk.walk_attachments.create!(:photo => a)
-    #    end
-    #    format.html { redirect_to @walk, notice: 'Walk was successfully created.' }
-    #  else
-    #    format.html { render action: 'new' }
-    # end
   end
 
 
@@ -46,4 +41,10 @@ class PointsController < ApplicationController
 
   def destroy
   end
+
+  private
+   def point_params
+    params.require(:point).permit(:name, :order, :address, :description)
+  end
+
 end

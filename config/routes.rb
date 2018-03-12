@@ -27,11 +27,11 @@ Rails.application.routes.draw do
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  resources :points
+
   resources :categories, only: [ :index, :show]
 
   resources :walks, only: [ :index, :show, :new, :create, :edit, :update ] do
-
+    resources :points, only: [:new, :create]
     resources :user_walks, only: [ :index, :create, :new ]
   end
 end
