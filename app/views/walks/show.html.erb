@@ -25,15 +25,16 @@
       <br>
       <br>
       <div class="d-inline categories">
-        <h4><%= @walk.category.name%></h4>
-       <h2><strong> <%=@walk.name %></strong></h2>
+        <h6><%= @walk.category.name%></h6>
+       <h4 style="color: #161616 !important;"><strong> <%=@walk.name %></strong></h4>
        <br>
-       <h6>&nbsp&nbsp<%= @walk.duration %>&nbsp&nbsp&nbsp<i class="far fa-clock"></i>&nbsp&nbsp&nbsp<%= @walk.location%></h6>
-       <hr>
-       <p>
-        <p><%= @walk.description %></p>
+       <p class="tagline">&nbsp<%= @walk.duration %>&nbsp&nbsp&nbsp<i class="far fa-clock icon"></i>&nbsp&nbsp&nbsp<%= @walk.location%></p>
+<hr>
+       <br>
+
+        <p>&nbsp&nbsp<%= @walk.description %></p>
         <br>
-      </p>
+
     </div>
   </div>
 </div>

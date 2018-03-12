@@ -82,10 +82,10 @@ Category.create!({
   })
 
 walk = Walk.create!({
-  name: "Marvila Street Art Walk",
+  name: "Marvila Street Art Delights",
   location: "Lisbon",
   address: "Marvila",
-  description: "These days, cities are covered in good graffiti and bad graffiti, and Lisbon is one that has more than its fair share of the good variety. The themes are multifaceted, covering the country’s history, pop culture, and imaginative abstracts.
+  description: "At some point in the last years, Lisbon's graffiti artists upped their collective game. Now, pieces that once would've been cited as vandalism and whitewashed are worshiped as modern day masterpieces. Check out the work of some of Lisbon's most famous street artists on this walk.The themes are multifaceted, covering the country’s history, pop culture, and imaginative abstracts.
   ",
   category: Category.first ,
   duration: 35,
@@ -97,7 +97,7 @@ walk.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geeba
 
 
 walk7 = Walk.create!({
-  name: "Forgotten Delights",
+  name: "Forgotten Beauties",
   location: "Lisbon",
   address: "Montasanto",
   description: "The Panoramico is a restaurant on a miradouro – which is a lookout – that was constructed almost 50 years ago. At some point, they probably didn’t have any money left, because they stopped the constructions and since then, it has been abandoned. Over the years, it fell into ruin and was more or less forgotten.
@@ -113,7 +113,7 @@ walk7.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geeb
 
 
 walk2 = Walk.create!({
-  name: "Vhils Walk",
+  name: "Around town with Vhils",
   location: "Lisbon",
   address: "Graca",
   description: "Vhils’s art is poetic, complex, and ambitious. He penetrates through countless layers of posters, dirt, and plaster to set free the poetic images hidden beneath urban spaces. This is all done by drilling away old plaster relief forms.
@@ -127,7 +127,7 @@ walk2.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geeb
 walk2.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520501800/vhills_alcantera-770x429.jpg")
 
 walk5 = Walk.create!({
-  name: "Alcantara Secrets",
+  name: "Hidden Alcantara",
   location: "Lisbon",
   address: "Alcantara",
   description: "
@@ -141,10 +141,6 @@ The old port district of Alcântara got a face-lift in the 1990s, and since then
 walk5.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520859998/LXFactoryPost.jpg")
 walk5.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
 walk5.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
-
-
-
-
 
 
 

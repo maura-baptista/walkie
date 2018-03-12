@@ -38,7 +38,7 @@
 
 .timeline__container {
   border-left: 3px solid $gray-lighter;
-  padding-left: 0;
+  padding-left: 7px;
   position: relative;
   h4 {
     margin: 0;
@@ -56,6 +56,7 @@
 .timeline__start-line {
   width: 50px;
   border-top: 3px solid $gray-lighter;
+  margin-left: -8px;
 }
 
 .timeline__end {
@@ -67,6 +68,8 @@ position: absolute;
 .timeline__end-line {
   width: 50px;
   border-bottom: 3px solid $gray-lighter;
+    margin-left: -8px;
+
 }
 
 .timeline__item {
@@ -115,4 +118,12 @@ position: absolute;
 
 h4  {
   color: $gray-lighter;
+}
+
+.icon {
+  font-size: 15px !important;
+}
+
+.tagline {
+  font-size: 12px;
 }
