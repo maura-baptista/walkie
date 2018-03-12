@@ -2,7 +2,7 @@ class WalksController < ApplicationController
 
   before_action :set_walk, only: [:show, :edit, :update, :destroy]
   skip_before_action :authenticate_user!, only: [:show]
-
+  helper_method :sort_direction
 
   def index
 
@@ -85,6 +85,11 @@ class WalksController < ApplicationController
    def walk_params
     # params.require(:walk).permit(:name, :category, :location, :duration, :description,  walk_attachments_attributes: [:id, walk_id, :photo])
      params.require(:walk).permit(:name, :location, :duration, :description, walk_attachments_attributes: [:id, :walk_id, :photo])
+
+  end
+
+  def sort_direction
+      %w[asc desc].include?(params[:direction]) ? params[:direction] : 'asc'
   end
 
 end

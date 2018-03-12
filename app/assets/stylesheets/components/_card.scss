@@ -56,7 +56,6 @@
 }
 
 .card-location {
-  font-weight: lighter;
   font-size: 12px;
 }
 
@@ -79,12 +78,16 @@
   position: relative;
   height: 72%;
   width: 100%;
+  background: rgba(84, 84, 84, 0.6);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   &:hover, &:active, &:focus {
     outline: none;
-  }
+  opacity: 0.5;
+    filter: alpha(opacity=50);
+
+}
 }
 
 .card-row {

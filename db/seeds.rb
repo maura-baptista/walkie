@@ -42,7 +42,7 @@ User.create!({
   last_name: "Azeveado",
   email: "cisco@verizon.net",
   password: "123456",
-  photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520519907/1004408_10201404428340492_323452453_n.jpg"
+  photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520546130/29540270.jpg"
   })
 
 User.create!({
@@ -50,7 +50,7 @@ User.create!({
   last_name: "Master",
   email: "heroku@verizon.net",
   password: "123456",
-  photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520520004/10397836_10203119119130715_7638003944117998507_n.jpg"
+  photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520546128/20076484.jpg"
   })
 
 User.create!({
@@ -149,85 +149,70 @@ walk5 = Walk.create!({
 The old port district of Alcântara got a face-lift in the 1990s, and since then it has been a nightlife hub, as well as a great place to relax by the river on warm days. The inauguration in 2008 of the Museu do Oriente was a regeneration landmark, and the colorful LX Factory has transformed a derelict industrial site into a creative hub of coworking spaces, café-bars, and boutiques, while the revamped docks are now home to smart bars and restaurants.
 
   ",
-  category: Category.last,
   duration: 45,
-  category: Category.all.sample,
-  duration: 22,
+  category: Category.last,
   user: User.all.sample
   })
-walk5.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520335697/z-klein-326375-unsplash.jpg")
+walk5.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520547187/lx_orig.jpg")
 walk5.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
 walk5.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
 
 
 walk6 = Walk.create!({
-  name: "Castelo de São Jorge",
+  name: "Along the Tejo",
   location: "Lisbon",
-  address: "R. do Espírito Santo, 1100-129 Lisboa",
-  description: "pare ribs ham boudin ham hock, pork loin drumstick ball tip pork capicola buffalo tail ground round short ribs t-bone filet mignon. Tenderloin shank sausage beef bresaola filet mignon pastrami cow. Jowl ground round short ribs capicola jerky. Meatball bresaola tail, meatloaf cupim pork chop pork belly boudin kielbasa pork loin capicola venison chicken leberkas brisket. Drumstick t-bone filet mignon beef ribs kevin pastrami. Short loin venison salami jowl meatball.
+  address: "Tejo coast",
+  description: "Lisbon owes its existence to the river which has shaped the city’s destiny and given it its unique character. According to legend, the city was founded by Ulysses (the Roman name for Odysseus) in one of his adventurous journeys.
   ",
-  category: Category.all.sample,
-  duration: 27,
+  category: Category.fourth,
+  duration: 30,
   user: User.all.sample
   })
-walk6.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520457690/maarten-van-den-heuvel-63257-unsplash.jpg")
+walk6.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520546003/stock-photo-bridge-bike-lisbon-underbridge-baa0314c-5e4f-4cfa-9783-ec1cabecb713.jpg")
 walk6.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
 walk6.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
 
+walk7 = Walk.create!({
+  name: "Forgotten Delights",
+  location: "Lisbon",
+  address: "Montasanto",
+  description: "The Panoramico is a restaurant on a miradouro – which is a lookout – that was constructed almost 50 years ago. At some point, they probably didn’t have any money left, because they stopped the constructions and since then, it has been abandoned. Over the years, it fell into ruin and was more or less forgotten.
+  ",
+  category: Category.first,
+  duration: 30,
+  user: User.all.sample
+  })
+walk7.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520546847/maxresdefault.jpg")
+walk7.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
+walk7.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
 
-# Walk.create!({
-#   name: "Padrão dos Descobrimentos",
-#   location: "Lisbon",
-#   address: "Av. Brasília, 1400-038 Lisboa",
-#   description: "pare ribs ham boudin ham hock, pork loin drumstick ball tip pork capicola buffalo tail ground round short ribs t-bone filet mignon. Tenderloin shank sausage beef bresaola filet mignon pastrami cow. Jowl ground round short ribs capicola jerky. Meatball bresaola tail, meatloaf cupim pork chop pork belly boudin kielbasa pork loin capicola venison chicken leberkas brisket. Drumstick t-bone filet mignon beef ribs kevin pastrami. Short loin venison salami jowl meatball.
-#   ",
-#   category: Category.all.sample,
-#   duration: 45,
-#   user: User.all.sample
-#   })
 
-# Walk.create!({
-#   name: "Jerónimos Monastery",
-#   location: "Lisbon",
-#   address: "Praça do Império 1400-206 Lisboa, 1400-206 Lisboa",
-#   description: "pare ribs ham boudin ham hock, pork loin drumstick ball tip pork capicola buffalo tail ground round short ribs t-bone filet mignon. Tenderloin shank sausage beef bresaola filet mignon pastrami cow. Jowl ground round short ribs capicola jerky. Meatball bresaola tail, meatloaf cupim pork chop pork belly boudin kielbasa pork loin capicola venison chicken leberkas brisket. Drumstick t-bone filet mignon beef ribs kevin pastrami. Short loin venison salami jowl meatball.
-#   ",
-#   category: Category.all.sample,
-#   duration: 45,
-#   user: User.all.sample
-#   })
+walk8 = Walk.create!({
+  name: "Montasanto Trail",
+  location: "Lisbon",
+  address: "Montasanto",
+  description: "A lot of trails around the park that will dive you into a very healthy forest with a lot of panoramic views to Lisbon as well as Sintra and the big scale of Monsanto.
+It's very nice to have such a vast Nature just next to Lisbon.
+  ",
+  category: Category.second,
+  duration: 50,
+  user: User.all.sample
+  })
+walk8.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520547392/woods-landscape-road-loyalsock-state-forest-163703.jpg")
+walk8.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
+walk8.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
 
-# Walk.create!({
-#   name: "Palácio Nacional da Ajuda",
-#   location: "Lisbon",
-#   address: "Largo Ajuda 1349-021, Lisboa",
-#   description: "pare ribs ham boudin ham hock, pork loin drumstick ball tip pork capicola buffalo tail ground round short ribs t-bone filet mignon. Tenderloin shank sausage beef bresaola filet mignon pastrami cow. Jowl ground round short ribs capicola jerky. Meatball bresaola tail, meatloaf cupim pork chop pork belly boudin kielbasa pork loin capicola venison chicken leberkas brisket. Drumstick t-bone filet mignon beef ribs kevin pastrami. Short loin venison salami jowl meatball.
-#   ",
-#   category: Category.all.sample,
-#   duration: 45,
-#   user: User.all.sample
-#   })
 
-# Walk.create!({
-#   name: "Jardim Botânico d'Ajuda",
-#   location: "Lisbon",
-#   address: "Calçada Ajuda, 1300-011 Lisboa",
-#   description: "pare ribs ham boudin ham hock, pork loin drumstick ball tip pork capicola buffalo tail ground round short ribs t-bone filet mignon. Tenderloin shank sausage beef bresaola filet mignon pastrami cow. Jowl ground round short ribs capicola jerky. Meatball bresaola tail, meatloaf cupim pork chop pork belly boudin kielbasa pork loin capicola venison chicken leberkas brisket. Drumstick t-bone filet mignon beef ribs kevin pastrami. Short loin venison salami jowl meatball.
-#   ",
-#   category: Category.all.sample,
-#   duration: 120,
-#   user: User.all.sample
-#   })
 
 Review.create!({
-  content: "Amazing place! You guys rock!!!",
-  walk: Walk.first,
+  content: "Amazing place! I saw so many cool things !",
+  walk: Walk.all.sample,
   user: User.all.sample
   })
 
 Review.create!({
-  content: "What a walk! The best weekend!",
-  walk: Walk.first,
+  content: "What a walk! The best weekend with Walkie!",
+  walk: Walk.all.sample,
   user: User.all.sample
   })
 
@@ -239,27 +224,18 @@ Review.create!({
 
 Review.create!({
   content: "I found 20 euros on the street on this walk!",
-  walk: Walk.all.sample,
+  walk: Walk.first,
   user: User.all.sample
   })
-Review.create!({
-  content: "What a walk! The best weekend!",
-  walk: Walk.all.sample,
-  user: User.all.sample
-  })
-Review.create!({
-  content: "What a walk! The best weekend!",
-  walk: Walk.all.sample,
-  user: User.all.sample
-  })
+
 Review.create!({
   content: "An unforgettabe experience",
   walk: Walk.all.sample,
   user: User.all.sample
   })
 Review.create!({
-  content: "What a walk! The best weekend!",
-  walk: Walk.all.sample,
+  content: "Nice map guys, didn't get lost at all!",
+  walk: Walk.first,
   user: User.all.sample
   })
 Review.create!({
@@ -268,23 +244,23 @@ Review.create!({
   user: User.all.sample
   })
 Review.create!({
-  content: "What a walk! The best weekend!",
+  content: "I'll certainly come back for more walks",
   walk: Walk.all.sample,
   user: User.all.sample
   })
 Review.create!({
-  content: "An unforgettabe experience",
+  content: "Wow wow wow, you left me speechless!",
   walk: Walk.all.sample,
   user: User.all.sample
   })
 Review.create!({
-  content: "What a walk! The best weekend!",
-  walk: Walk.all.sample,
+  content: "Understood the meaning of life whilst on this walk",
+  walk: Walk.first,
   user: User.all.sample
   })
 Review.create!({
-  content: "I didn't even know this part of the city existed!",
-  walk: Walk.all.sample,
+  content: "The Walkie crew must really know how to make apps. Amazing",
+  walk: Walk.first,
   user: User.all.sample
   })
 
@@ -295,7 +271,8 @@ Point.create!({
   longitude: -9.109299,
   description: "Marvila Library is a good starting point of the graffitti walk",
   order: 1,
-  walk: Walk.first
+  walk: Walk.first,
+photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520600631/street-art-zesar-behamonte.jpg"
   })
 Point.create!({
   name: "Rua Alberto Jose Pessoa",
@@ -303,7 +280,8 @@ Point.create!({
   longitude: -9.108027,
   description: "The street has many graffitti murals",
   order: 2,
-  walk: Walk.first
+  walk: Walk.first,
+photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520600629/street-art-god-mess.jpg"
   })
 Point.create!({
   name: "Rua Eduarda Lapa",
@@ -311,7 +289,8 @@ Point.create!({
   longitude: -9.10863,
   description: "The second main street full of street art murals",
   order: 3,
-  walk: Walk.first
+  walk: Walk.first,
+photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520600627/street-art-miguel-brum_1.jpg"
   })
 Point.create!({
   name: "Bairro da Quinta do Chale",
@@ -319,7 +298,8 @@ Point.create!({
   longitude: -9.107827,
   description: "The coolest street murals are hidden away on these streets",
   order: 4,
-  walk: Walk.first
+  walk: Walk.first,
+photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520600728/968733d3cd63d5a52d22ffc9c042273b_1.jpg"
   })
 Point.create!({
   name: "Rua do Patrocinio",
@@ -327,7 +307,8 @@ Point.create!({
   longitude: -9.107635,
   description: "More amazing art murals here",
   order: 5,
-  walk: Walk.first
+  walk: Walk.first,
+photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520600620/f377c498a1.jpg"
   })
 Point.create!({
   name: "Dois Corvos",
@@ -335,7 +316,8 @@ Point.create!({
   longitude: -9.105526,
   description: "Enjoy some cool graffiti whilst trying out some amazing beers in this Craft Beer Brewery",
   order: 6,
-  walk: Walk.first
+  walk: Walk.first,
+ photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520600624/street-art-the-caver.jpg"
   })
 Point.create!({
   name: "Fabrica do Braca de Prata",
@@ -343,7 +325,8 @@ Point.create!({
   longitude: -9.101242,
   description: "The last stop on the tour, a place full of many cool different spaces, a library, alternative craft shops and lively at night with concerts",
   order: 7,
-  walk: Walk.first
+  walk: Walk.first,
+photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446746/street-art-kobra.jpg"
   })
 
 p "finished seeding"
