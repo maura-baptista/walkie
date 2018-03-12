@@ -2,8 +2,9 @@ class CategoriesController < ApplicationController
   def index
     @categories = Category.all
     @walks = Walk.all
-    @walks = Walk.order(duration: params[:sort].to_sym)
-
+    unless params[:sort].nil?
+      @walks = Walk.order(duration: params[:sort].to_sym)
+    end
   end
 
   def show
