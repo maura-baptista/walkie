@@ -95,19 +95,57 @@ walk.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image
 walk.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
 walk.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
 
-walk2 = Walk.create!({
-  name: "Vhils Walk",
+
+walk7 = Walk.create!({
+  name: "Forgotten Delights",
   location: "Lisbon",
-  address: "Graca",
-  description: "Vhils’s art is poetic, complex, and ambitious. He penetrates through countless layers of posters, dirt, and plaster to set free the poetic images hidden beneath urban spaces. This is all done by drilling away old plaster relief forms.
+  address: "Montasanto",
+  description: "The Panoramico is a restaurant on a miradouro – which is a lookout – that was constructed almost 50 years ago. At some point, they probably didn’t have any money left, because they stopped the constructions and since then, it has been abandoned. Over the years, it fell into ruin and was more or less forgotten.
   ",
-  category: Category.first ,
-  duration: 25,
+  category: Category.first,
+  duration: 30,
   user: User.all.sample
   })
-walk2.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520503024/22684875.jpg")
-walk2.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520501662/vhils-1.jpg")
-walk2.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520501800/vhills_alcantera-770x429.jpg")
+walk7.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520860244/13.jpg")
+walk7.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
+walk7.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
+
+walk6 = Walk.create!({
+  name: "Along the Tejo",
+  location: "Lisbon",
+  address: "Tejo coast",
+  description: "Lisbon owes its existence to the river which has shaped the city’s destiny and given it its unique character. According to legend, the city was founded by Ulysses (the Roman name for Odysseus) in one of his adventurous journeys.
+  ",
+  category: Category.fourth,
+  duration: 30,
+  user: User.all.sample
+  })
+walk6.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520335852/jason-briscoe-104295-unsplash.jpg")
+walk6.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
+walk6.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
+
+
+
+
+walk5 = Walk.create!({
+  name: "Alcantara Secrets",
+  location: "Lisbon",
+  address: "Alcantara",
+  description: "
+The old port district of Alcântara got a face-lift in the 1990s, and since then it has been a nightlife hub, as well as a great place to relax by the river on warm days. The inauguration in 2008 of the Museu do Oriente was a regeneration landmark, and the colorful LX Factory has transformed a derelict industrial site into a creative hub of coworking spaces, café-bars, and boutiques, while the revamped docks are now home to smart bars and restaurants.
+
+  ",
+  duration: 45,
+  category: Category.last,
+  user: User.all.sample
+  })
+walk5.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520859998/LXFactoryPost.jpg")
+walk5.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
+walk5.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
+
+
+
+
 
 walk3 = Walk.create!({
   name: "Bordallo II and Trash Art Walk",
@@ -125,6 +163,22 @@ walk3.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/imag
 walk3.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520501920/bordalo-4.jpg")
 walk3.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520501923/bordalo-2.jpg")
 
+walk2 = Walk.create!({
+  name: "Vhils Walk",
+  location: "Lisbon",
+  address: "Graca",
+  description: "Vhils’s art is poetic, complex, and ambitious. He penetrates through countless layers of posters, dirt, and plaster to set free the poetic images hidden beneath urban spaces. This is all done by drilling away old plaster relief forms.
+  ",
+  category: Category.first ,
+  duration: 25,
+  user: User.all.sample
+  })
+walk2.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520859822/muraisobeylisboa_07.jpg")
+walk2.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520501662/vhils-1.jpg")
+walk2.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520501800/vhills_alcantera-770x429.jpg")
+
+
+
 walk4 = Walk.create!({
   name: "Old city tales",
   location: "Lisbon",
@@ -141,50 +195,7 @@ walk4.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/imag
 walk4.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
 
 
-walk5 = Walk.create!({
-  name: "Alcantara delights",
-  location: "Lisbon",
-  address: "Alcantara",
-  description: "
-The old port district of Alcântara got a face-lift in the 1990s, and since then it has been a nightlife hub, as well as a great place to relax by the river on warm days. The inauguration in 2008 of the Museu do Oriente was a regeneration landmark, and the colorful LX Factory has transformed a derelict industrial site into a creative hub of coworking spaces, café-bars, and boutiques, while the revamped docks are now home to smart bars and restaurants.
 
-  ",
-  duration: 45,
-  category: Category.last,
-  user: User.all.sample
-  })
-walk5.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520547187/lx_orig.jpg")
-walk5.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
-walk5.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
-
-
-walk6 = Walk.create!({
-  name: "Along the Tejo",
-  location: "Lisbon",
-  address: "Tejo coast",
-  description: "Lisbon owes its existence to the river which has shaped the city’s destiny and given it its unique character. According to legend, the city was founded by Ulysses (the Roman name for Odysseus) in one of his adventurous journeys.
-  ",
-  category: Category.fourth,
-  duration: 30,
-  user: User.all.sample
-  })
-walk6.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520546003/stock-photo-bridge-bike-lisbon-underbridge-baa0314c-5e4f-4cfa-9783-ec1cabecb713.jpg")
-walk6.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
-walk6.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
-
-walk7 = Walk.create!({
-  name: "Forgotten Delights",
-  location: "Lisbon",
-  address: "Montasanto",
-  description: "The Panoramico is a restaurant on a miradouro – which is a lookout – that was constructed almost 50 years ago. At some point, they probably didn’t have any money left, because they stopped the constructions and since then, it has been abandoned. Over the years, it fell into ruin and was more or less forgotten.
-  ",
-  category: Category.first,
-  duration: 30,
-  user: User.all.sample
-  })
-walk7.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520546847/maxresdefault.jpg")
-walk7.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
-walk7.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
 
 
 walk8 = Walk.create!({
@@ -198,7 +209,7 @@ It's very nice to have such a vast Nature just next to Lisbon.
   duration: 50,
   user: User.all.sample
   })
-walk8.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520547392/woods-landscape-road-loyalsock-state-forest-163703.jpg")
+walk8.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520860583/forest-07.jpg")
 walk8.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
 walk8.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
 
