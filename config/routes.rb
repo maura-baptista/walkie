@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
 
-
-  get "form_point" => "points#new_form_point", as: :form_point
-
-
   get 'users/profile'
 
 
