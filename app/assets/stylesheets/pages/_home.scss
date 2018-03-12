@@ -58,5 +58,20 @@ h3 {
 }
 
 h4 {
-  color: grey;
+  color: grey !important;
+}
+
+
+.get-started {
+  border-radius: 20%;
+  font-size: 10px;
+   background-color: Transparent;
+   color: white;
+   font-weight: bold;
+   border-width: 2px;
+   font-family: Raleway !important;
+}
+
+.get-started a:hover {
+      color: #df58c7;
 }

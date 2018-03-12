@@ -1,55 +1,19 @@
 
-<div class="container profile-background">
-  <div class="row">
-    <div class="col-xs-8 col-sm-9">
 
-      <br>
-      <h4><strong><%= current_user.first_name + " " + current_user.last_name %></strong></h4>
-      <hr class="title-separator">
-
-
-      <div>
-        <h6>Previous walks</h6>
-          <table>
-            <tbody>
-              <tr>
-                <% current_user.walks.each do |walk| %>
-                  <td> <%= link_to walk.name, walk_path(walk)%> </td>
-                <% end %>
-              </tr>
-            </tbody>
-         </table>
-      </div>
-
-      <div>
-        <h6>Uploaded walks</h6>
-        <hr class="title-separator">
-      </div>
-    </div>
-
-    <div class="col-xs-4 col-sm-3 avatar-colum">
-      <%= image_tag "maura.jpg", class: "profile-avatar" %>
-      <hr>
-      <br>
-      <br>
-
-      <div>
-        <h6><i class="fa fa-heart"></i>Favorite walks</h6>
-        <hr>
-      </div>
-
-
-    </div>
-
-
-
-
+<div class="window">
+  <div class="overlay"></div>
+  <div class="box header-profile">
+    <%= image_tag "maura.jpg", class: "profile-avatar" %>
+    <br>
+    <h2><strong><%= current_user.first_name + " " + current_user.last_name %></strong></h2>
   </div>
-
-
+  <div class="box footer">
+    <ul>
+      <!-- <li><a href=""><span class="ion-ios-camera-outline"></span> 401</a></li> -->
+      <!-- <li><a href=""><span class="ion-ios-heart-outline"></span> 333K</a></li> -->
+      <li><a href=""><span class="ion-ios-person-outline"></span> 225M</a></li>
+    </ul>
+    <a href="" class="btn">Follow</a>
+  </div>
 </div>
-
-
-
-
 
