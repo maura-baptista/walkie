@@ -100,8 +100,6 @@ GEM
     mapbox-sdk (2.0.0)
       json (~> 1.8.1)
       rest-client (~> 1.4)
-    material_icons (2.2.1)
-      railties (>= 3.2)
     method_source (0.9.0)
     mime-types (2.99.3)
     mini_mime (1.0.0)
@@ -245,7 +243,6 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   listen (~> 3.0.5)
   mapbox-sdk
-  material_icons
   omniauth-facebook
   pg (~> 0.21)
   pry-byebug
