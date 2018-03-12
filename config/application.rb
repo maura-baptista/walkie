@@ -8,6 +8,7 @@ Bundler.require(*Rails.groups)
 
 module Walkie
   class Application < Rails::Application
+    config.action_view.embed_authenticity_token_in_remote_forms = true
     config.generators do |generate|
       generate.assets false
       generate.helper false
@@ -21,3 +22,4 @@ module Walkie
     # -- all .rb files in that directory are automatically loaded.
   end
 end
+
