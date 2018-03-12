@@ -202,6 +202,22 @@ walk8.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/imag
 walk8.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
 walk8.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
 
+walk9 = Walk.create!({
+  name: "Sintra Secrets",
+  location: "Lisbon",
+  address: "Montasanto",
+  description: "A lot of trails around the park that will dive you into a very healthy forest with a lot of panoramic views to Lisbon as well as Sintra and the big scale of Monsanto.
+It's very nice to have such a vast Nature just next to Lisbon.
+  ",
+  category: Category.second,
+  duration: 50,
+  user: User.all.sample
+  })
+walk9.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520852708/91256761.jpg")
+walk9.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
+walk9.walk_attachments.create!(photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
+
+
 
 
 Review.create!({
