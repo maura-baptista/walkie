@@ -6,7 +6,8 @@ class UsersWalksController < ApplicationController
 
 
   def create
-    @walk = Walk.find(params[:walk_id])
+
+    @walk = Walk.find(params[:id])
     @user_walk = UserWalk.new(params[:walk_id])
     @user_walk.user = current_user
     @user_walk.walk = @walk

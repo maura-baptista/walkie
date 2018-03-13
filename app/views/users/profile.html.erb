@@ -15,7 +15,7 @@
       </div>
       <div class="message-body">
         <h6><strong>Favorite Walks</strong></h6>
-         <% @walks.each do |walk| %>
+         <% @walks_liked.each do |walk| %>
          <p><%= walk.name %></p>
          <% end %>
       </div>
@@ -27,7 +27,7 @@
     </div>
     <div class="message-body">
       <h6><strong>My Uploaded Walks</strong></h6>
-       <% @walk.each do |walk| %>
+       <% @walks_created.each do |walk| %>
        <p><%= walk.name %></p>
        <% end %>
     </div>
