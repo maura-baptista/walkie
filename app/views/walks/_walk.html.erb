@@ -1,8 +1,7 @@
 
 
   <div class="cards-container card-wrapper padded-top col-sm-6 col-lg-4">
-    <div class="card-image filter" style="background-image: /*linear-gradient(270deg, rgba(223, 88, 199, 0.5) 0%, rgba(223, 88, 199, 0.1) 100%),*/ url('<%= walk.walk_attachments.first.photo %>')">
-      <%= link_to like_walk_path(walk), remote: true do %>
+    <div class="card-image filter" style="background-image:url('<%= walk.walk_attachments.first.photo %>')">
         <div class="wishlist-rounded wishlist-rounded-white text-center">
 
             <!-- Inline SVG -->
@@ -13,7 +12,6 @@
             </svg>
 
         </div>
-        <% end %>
       </div>
 
 
@@ -27,7 +25,7 @@
         <span class="card-name"><%= walk.category.name %></span>
       </div>
       <div class="card-row">
-        <span class="card-location"><%= walk.location %> |</span>&nbsp
+        <span class="card-location"><%= walk.location %> |</span>&nbsp;
         <span class="card-location"><%= walk.duration %>mins</span>
 
       </div>
@@ -35,13 +33,15 @@
 
     <!-- Card Rating and Review -->
     <%= link_to walk_path(walk), anchor: "#reviews" do %>
+    <%= link_to walk_path(walk), anchor: "#likes" do %>
+
     <div class="card-rating-reviews">
       <div class="card-row">
-        <span class="card-reviews-count">
-          <%= walk.reviews.length %>
-        Reviews</span>
+        <span class="card-reviews-count"><%= walk.reviews.length %>&nbsp;Reviews |&nbsp;&nbsp;</span>
+        <span id="count"><%= walk.likes.length %>&nbsp;Likes</span>
       </div>
     </div>
+    <% end %>
     <% end %>
 
     <!-- Card Link -->
