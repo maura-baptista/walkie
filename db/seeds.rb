@@ -115,8 +115,8 @@ walk7 = Walk.create!({
   user: User.all.sample
   })
 walk7.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520860244/13.jpg")
-walk7.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
-walk7.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
+walk7.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520546847/maxresdefault.jpg")
+walk7.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520979015/images.jpg")
 
 
 
@@ -147,8 +147,8 @@ The old port district of Alcântara got a face-lift in the 1990s, and since then
   user: User.all.sample
   })
 walk5.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520859998/LXFactoryPost.jpg")
-walk5.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
-walk5.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
+walk5.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520868872/ansjzwvvrhvp67bus8nc.jpg")
+walk5.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520979111/watson-lisbon-portugal-lx-factory-street-art-1024x682.jpg")
 
 
 
@@ -163,8 +163,8 @@ walk6 = Walk.create!({
   user: User.all.sample
   })
 walk6.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520335852/jason-briscoe-104295-unsplash.jpg")
-walk6.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
-walk6.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
+walk6.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520979197/lisbon-2237559_960_720.jpg")
+walk6.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520979196/_ASR5529.jpg")
 
 
 
@@ -197,8 +197,8 @@ walk4 = Walk.create!({
   })
 
 walk4.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520865497/lisbon-alfama.jpg")
-walk4.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
-walk4.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
+walk4.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520979356/0.jpg")
+walk4.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520979352/122.jpg")
 
 
 
@@ -215,8 +215,8 @@ The old port district of Alcântara got a face-lift in the 1990s, and since then
   user: User.all.sample
   })
 walk5.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520869431/1221521665_d6c8fd78e0.jpg")
-walk5.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
-walk5.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
+walk5.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520979455/800px_COLOURBOX4948835.jpg")
+walk5.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/c_scale,w_226/v1520979458/download_1.jpg")
 
 
 
@@ -233,8 +233,8 @@ It's very nice to have such a vast Nature just next to Lisbon.
   user: User.all.sample
   })
 walk8.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520860583/forest-07.jpg")
-walk8.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
-walk8.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
+walk8.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520979956/0219.jpg")
+walk8.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520979953/images_1.jpg")
 
 
 walk9 = Walk.create!({
@@ -250,7 +250,7 @@ It's very nice to have such a vast Nature just next to Lisbon.
   })
 walk9.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520852708/91256761.jpg")
 walk9.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
-walk9.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
+walk9.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520980145/1501860681465.jpg")
 
 
 walk10 = Walk.create!({
@@ -265,8 +265,8 @@ walk10 = Walk.create!({
   })
 walk10.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520890362/belem-tower-2809818_960_720.jpg
 ")
-walk10.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
-walk10.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
+walk10.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520980264/pastel-de-nata-pasteis-de-belem.jpg")
+walk10.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520980268/capa6-1050x599.jpg")
 
 
 
