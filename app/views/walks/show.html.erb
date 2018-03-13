@@ -79,7 +79,7 @@
     <div class="timeline__start">
       <h4>Points of interest</h4>
     </div>
-    <% @walk.points.each do |point| %>
+    <% @walk.points.order(:order).each do |point| %>
     <div class="timeline__item">
       <div class="timeline-item__line">
         <div class="timeline-item__line--circle"></div>
