@@ -1,19 +1,50 @@
 <div class="window">
   <div class="overlay"></div>
   <div class="box header-profile">
-    <%= image_tag current_user.photo, class: "avatar-large" %>
+    <%= image_tag "image.png", class: "profile-avatar" %>
     <br>
     <h2><strong><%= current_user.first_name + " " + current_user.last_name %></strong></h2>
   </div>
-  <div class="box profile-footer">
 
-    <ul>
-      <!-- <li><a href=""><span class="ion-ios-camera-outline"></span> 401</a></li> -->
-      <!-- <li><a href=""><span class="ion-ios-heart-outline"></span> 333K</a></li> -->
-      <li><a href=""><span class="ion-ios-person-outline"></span> 225M</a></li>
-    </ul>
-    <td><a class="badge badge-pill badge-light" href="#"><i class="icon-shopping-cart icon-white"></i> follow </a></td>
-    <td>
+
+  <div class="box profile-footer">
+    <div class="message">
+      <div class="message-name">
+        <i class="fas fa-heart" style="color: white; font-size: 32px;"></i>
+      </div>
+      <div class="message-body">
+        <h6><strong>Favorite Walks</strong></h6>
+         <% @walks.each do |walk| %>
+         <p><%= walk.name %></p>
+         <% end %>
+      </div>
+    </div>
+
+  <div class="message">
+    <div class="message-name">
+      <i class="fas fa-plus-circle" style="color: white; font-size: 32px;"></i>
+    </div>
+    <div class="message-body">
+      <h6><strong>My Uploaded Walks</strong></h6>
+       <% @walk.each do |walk| %>
+       <p><%= walk.name %></p>
+       <% end %>
+    </div>
   </div>
+   <div class="message">
+      <div class="message-name">
+        <i class="fas fa-street-view" style="color: white; font-size: 32px;"></i>
+      </div>
+      <div class="message-body">
+        <h6><strong>My previous Walk</strong></h6>
+         <% @walks_previous.each do |walk| %>
+           <p><%= walk.name %></p>
+         <% end %>
+      </div>
+    </div>
+    <div class="social">
+      <td><a href="#" class="badge badge-pill badge-light"><i class=""></i> follow </a></td>
+      <td>
+    </div>
 </div>
 
