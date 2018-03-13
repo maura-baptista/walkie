@@ -1,20 +1,31 @@
 class LikesController < ApplicationController
+  before_action :set_walk, only: [:create, :destroy]
+  before_action :set_like, only: [:destroy]
 
   def create
-    @like = Like.new
-    walk = Walk.find(params[:id])
-    @like.walk = walk
-    @like.user = current_user
-    if check_like(walk, current_user)
-       @like.save
-
+    @walk.likes.create(user: current_user)
+    @like = @walk.likes.last
+    respond_to do |format|
+     format.js
     end
-
   end
 
-  def check_like(walk, user)
-    # if this return true, you can like it
-    Like.where(user: user, walk: walk).empty?
+  def destroy
+    @like.delete
+    @like = nil
+    respond_to do |format|
+     format.js
+    end
+  end
+
+  private
+
+  def set_like
+    @like = Like.find(params[:id])
+  end
+
+  def set_walk
+    @walk = Walk.find(params[:walk_id])
   end
 end
 

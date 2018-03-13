@@ -20,6 +20,10 @@ class Walk < ApplicationRecord
     WalkAttachment.where(walk: self)
   end
 
+  def find_like_by_user(user)
+    likes.find { |like| like.user == user }
+  end
+
   # validates :name, presence: true
   # validates :category, presence: true
   # validates :location, presence: true

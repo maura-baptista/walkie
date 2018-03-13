@@ -20,7 +20,7 @@ class WalksController < ApplicationController
 
   def show
     @reviews = @walk.reviews
-
+    @like = @walk.find_like_by_user(current_user)
     @walk_attachments = @walk.walk_attachments.all
     @point = Point.new
 
