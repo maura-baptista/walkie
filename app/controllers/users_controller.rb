@@ -1,6 +1,9 @@
 class UsersController < ApplicationController
   def profile
-    @walk = Walk.find(params[:walk_id])
-    @walk.likes = @walk
+    @walks = current_user.likes.map { |like| like.walk }
+    @walk = Walk.where(user: current_user)
+    @walks = current_user.walks
+
+
   end
 end
