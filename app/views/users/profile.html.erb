@@ -9,43 +9,42 @@
 
 
   <div class="box profile-footer">
-    <div class="message">
+    <div class="message-profile">
       <div class="message-name">
-        <i class="fas fa-heart" style="color: white; font-size: 32px;"></i>
+        <i class="fas fa-heart" style="color: #d17bc9; font-size: 32px;"></i>
       </div>
-      <div class="message-body">
-        <h6><strong>Favorite Walks</strong></h6>
+      <div class="message-body2">
+        <h6><strong>My Favorite Walks</strong></h6>
          <% @walks.each do |walk| %>
          <p><%= walk.name %></p>
          <% end %>
       </div>
     </div>
 
-  <div class="message">
+  <div class="message-profile">
     <div class="message-name">
-      <i class="fas fa-plus-circle" style="color: white; font-size: 32px;"></i>
+      <i class="fas fa-plus-circle" style="color: #d17bc9; font-size: 32px;"></i>
     </div>
-    <div class="message-body">
+    <div class="message-body2">
       <h6><strong>My Uploaded Walks</strong></h6>
        <% @walk.each do |walk| %>
        <p><%= walk.name %></p>
        <% end %>
     </div>
   </div>
-   <div class="message">
+   <div class="message-profile">
       <div class="message-name">
-        <i class="fas fa-street-view" style="color: white; font-size: 32px;"></i>
+        <i class="fas fa-street-view" style="color: #d17bc9; font-size: 32px;"></i>
       </div>
-      <div class="message-body">
-        <h6><strong>My previous Walk</strong></h6>
+      <div class="message-body2">
+        <h6><strong>My Previous Walk</strong></h6>
          <% @walks_previous.each do |walk| %>
            <p><%= walk.name %></p>
          <% end %>
       </div>
     </div>
     <div class="social">
-      <td><a href="#" class="badge badge-pill badge-light"><i class=""></i> follow </a></td>
-      <td>
+      <td></td>
     </div>
 </div>
 
