@@ -1,0 +1,9 @@
+ <% if @like %>
+    <%= link_to walk_like_path(@walk, @like), id: "loveButton", method: :delete, remote: true do %>
+      <span class="liked normal-button btn btn-default btn-circle fas fa-heart go-rounded-white text-center" style="color: red;"></span>
+    <% end %>
+  <% else %>
+    <%= link_to walk_likes_path(@walk), id: "loveButton", method: :post, remote: true do %>
+      <span class="normal-button btn btn-default btn-circle far fa-heart go-rounded-white text-center">
+   <% end %>
+  <% end %>

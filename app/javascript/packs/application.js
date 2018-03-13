@@ -1,4 +1,5 @@
 import "bootstrap";
+import { toggleLoveButton } from '../components/walks_show.js';
 
 $(document).ready(function(){
 
@@ -8,4 +9,6 @@ $(document).ready(function(){
       $('.alert').slideUp();
   }, 2000);
 })
+''
+
 
