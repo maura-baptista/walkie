@@ -1,3 +1,13 @@
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.12';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
 <%= render 'shared/carousel' %>
 <div class="buttons">
 
@@ -5,8 +15,15 @@
     <%= render "shared/love_badge" %>
   </span>
 
-  <span class="normal-button btn btn-default btn-circle material-icons go-rounded-white text-center" style="padding:4px 8px 4px 5px;" onclick="">share</span>
+  <span class="normal-button btn btn-default btn-circle material-icons go-rounded-white text-center" style="padding:4px 8px 4px 5px;" onclick="window.open(this.href='https://www.facebook.com/sharer/sharer.php?u=www.walkie.online','targetWindow',
+                                   'toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=600px,height=400px');return true;">share</span>
+
+
   <span class="go-button btn btn-default btn-circle go-rounded-white text-center" style="margin-left: 30vw ;" data-target="#myModal" data-toggle="modal">GO</span>
+
+
+
+
 
 
 <!-- Map Modal -->
