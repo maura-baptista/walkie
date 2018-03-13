@@ -15,12 +15,13 @@
       <div class="message-body">
         <h6><strong>Favorite Walks</strong></h6>
         <ul>
-          <li><%= current_user.like  %></li>
+          <%= @walk.each do |walk|  %>
+          <li><%= walk.current_user.likes  %></li>
         </ul>
       </div>
     </div>
 
-  <div class="message">
+  <div class="message"
     <div class="message-name">
       <i class="fas fa-plus-circle" style="color: white; font-size: 32px;"></i>
     </div>
