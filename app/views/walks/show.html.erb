@@ -317,6 +317,10 @@ map.on('load', function () {
         map.getCanvas().style.cursor = '';
     });
 
+    map.addControl(new MapboxGeocoder({
+    accessToken: mapboxgl.accessToken
+}));
+
     map.addControl(new mapboxgl.FullscreenControl());
 
     map.addControl(new mapboxgl.GeolocateControl({
@@ -332,11 +336,6 @@ map.on('load', function () {
   </div>
 
 
-<section class="white-stripe arrow">
- <div class="container">
-  <h3>Destinations</h3>
- </div>
-</section>
 
 <script>
   document.getElementById("loveButton").addEventListener("mouseover" (event) => {
