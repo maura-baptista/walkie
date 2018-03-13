@@ -127,7 +127,7 @@ walk2 = Walk.create!({
   description: "Vhils’s art is poetic, complex, and ambitious. He penetrates through countless layers of posters, dirt, and plaster to set free the poetic images hidden beneath urban spaces. This is all done by drilling away old plaster relief forms.
   ",
   category: Category.first ,
-  duration: 25,
+  duration: 60,
   user: User.all.sample
   })
 walk2.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520501662/vhils-1.jpg")
@@ -191,7 +191,7 @@ walk4 = Walk.create!({
   description: "Cobbled lanes, centuries-old houses, hole-in-the-wall restaurants and famous landmarks await you on this 2.5-hour walking tour of Lisbon’s enigmatic Alfama neighborhood. Explore the hilly district with a professional guide and revel in the village atmosphere as you wander down Alfama’s steep streets.
   ",
   category: Category.last,
-  duration: 30,
+  duration: 80,
 
   user: User.all.sample
   })
@@ -260,7 +260,7 @@ walk10 = Walk.create!({
   description: "Belem is the delightful district to the west of central Lisbon, and is the setting for many of the capital’s most iconic and important tourist attractions. The district makes for an enjoyable half day excursion, and combines historic monuments, fascinating museums and carefully maintained parks, all of which line the cooling waters of the Tejo estuary.
   ",
   category: Category.last,
-  duration: 50,
+  duration: 60,
   user: User.all.sample
   })
 walk10.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520890362/belem-tower-2809818_960_720.jpg
