@@ -1,7 +1,15 @@
 <%= render 'shared/carousel' %>
-
 <div class="buttons">
-  <span class="normal-button btn btn-default btn-circle far fa-heart go-rounded-white text-center"></span>
+
+
+
+  <%= link_to like_walk_path(@walk), remote: true do %>
+    <% if Like.where(user: current_user, walk: @walk).empty?%>
+    <span class="normal-button btn btn-default btn-circle far fa-heart go-rounded-white text-center" id="loveButton"></span>
+      <% else %>
+      <span class="normal-button btn btn-default btn-circle fas fa-heart go-rounded-white text-center" style="color: red;">
+    <% end %>
+  <% end %>
   <span class="normal-button btn btn-default btn-circle material-icons go-rounded-white text-center" style="padding:4px 8px 4px 5px;" onclick="">share</span>
   <span class="go-button btn btn-default btn-circle go-rounded-white text-center" style="margin-left: 30vw ;" data-target="#myModal" data-toggle="modal">GO</span>
 
@@ -28,23 +36,23 @@
 
       <br>
       <div class="d-inline categories">
-        <h4><%= @walk.category.name%></h4>
-       <h2><strong> <%=@walk.name %></strong></h2>
-        <button class="btn btn-oblong btn-primary text-center" data-target="#modal-window" data-toggle="modal">Add points of interest</button>
-
-       <h6>&nbsp&nbsp<%= @walk.duration %>&nbsp&nbsp&nbsp<i class="far fa-clock"></i>&nbsp&nbsp&nbsp<%= @walk.location%></h6>
-       <hr>
-      left
-        <p><%= @walk.description %></p>
+        <h6><%= @walk.category.name%></h6>
+        <h4 style="color: #161616 !important;"><strong> <%=@walk.name %></strong></h4>
         <br>
-      </p>
+        <p class="tagline">&nbsp;<%= @walk.duration %>&nbsp;&nbsp;&nbsp;<i class="far fa-clock icon"></i>&nbsp;&nbsp;&nbsp;<%= @walk.location%>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= @walk.likes.length %>&nbsp;Likes</p>
+        <hr>
+        <br>
+        <p><%= @walk.description %></p>
+
+        <% if @walk.user == current_user %>
+        <button class="btn btn-oblong btn-primary text-center" data-target="#modal-window" data-toggle="modal"> + points of interest</button>
+        <% end %>
+
+        <br>
+<br>
+      </div>
     </div>
   </div>
-</div>
-
-
-
-
 
 
 
@@ -311,6 +319,13 @@ map.on('load', function () {
 
     map.addControl(new mapboxgl.FullscreenControl());
 
+    map.addControl(new mapboxgl.GeolocateControl({
+    positionOptions: {
+        enableHighAccuracy: true
+    },
+    trackUserLocation: true
+}));
+
 
 
   </script>
@@ -321,6 +336,24 @@ map.on('load', function () {
 
 
 <style>
+
+  #instructions {
+  position: absolute;
+  margin: 20px;
+  width: 25%;
+  top: 0;
+  bottom: 0;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  overflow-y: scroll;
+  font-family: sans-serif;
+}
+
+.color-red {
+  color: red;
+}
+
+
 
 
 
@@ -335,3 +368,9 @@ map.on('load', function () {
  </div>
 </section>
 
+<script>
+  document.getElementById("loveButton").addEventListener("mouseover" (event) => {
+    event.currentTarget.classList.toggle("color-red");
+   });
+
+</script>

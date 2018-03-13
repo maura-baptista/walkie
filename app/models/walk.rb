@@ -4,7 +4,7 @@ class Walk < ApplicationRecord
 
   has_many :points, dependent: :destroy
   has_many :reviews, dependent: :destroy
-  has_many :likes
+  has_many :likes, dependent: :destroy
   has_many :user_walks
   has_many :users, through: :user_walks
   has_many :walk_attachments

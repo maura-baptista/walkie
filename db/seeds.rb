@@ -82,10 +82,10 @@ Category.create!({
   })
 
 walk = Walk.create!({
-  name: "Marvila Street Art Walk",
+  name: "Marvila Street Art Delights",
   location: "Lisbon",
   address: "Marvila",
-  description: "These days, cities are covered in good graffiti and bad graffiti, and Lisbon is one that has more than its fair share of the good variety. The themes are multifaceted, covering the country’s history, pop culture, and imaginative abstracts.
+  description: "At some point in the last years, Lisbon's graffiti artists upped their collective game. Now, pieces that once would've been cited as vandalism and whitewashed are worshiped as modern day masterpieces. Check out the work of some of Lisbon's most famous street artists on this walk.The themes are multifaceted, covering the country’s history, pop culture, and imaginative abstracts.
   ",
   category: Category.first ,
   duration: 35,
@@ -97,7 +97,7 @@ walk.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geeba
 
 
 walk7 = Walk.create!({
-  name: "Forgotten Delights",
+  name: "Forgotten Beauties",
   location: "Lisbon",
   address: "Montasanto",
   description: "The Panoramico is a restaurant on a miradouro – which is a lookout – that was constructed almost 50 years ago. At some point, they probably didn’t have any money left, because they stopped the constructions and since then, it has been abandoned. Over the years, it fell into ruin and was more or less forgotten.
@@ -113,7 +113,7 @@ walk7.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geeb
 
 
 walk2 = Walk.create!({
-  name: "Vhils Walk",
+  name: "Around town with Vhils",
   location: "Lisbon",
   address: "Graca",
   description: "Vhils’s art is poetic, complex, and ambitious. He penetrates through countless layers of posters, dirt, and plaster to set free the poetic images hidden beneath urban spaces. This is all done by drilling away old plaster relief forms.
@@ -127,7 +127,7 @@ walk2.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geeb
 walk2.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520501800/vhills_alcantera-770x429.jpg")
 
 walk5 = Walk.create!({
-  name: "Alcantara Secrets",
+  name: "Hidden Alcantara",
   location: "Lisbon",
   address: "Alcantara",
   description: "
@@ -141,10 +141,6 @@ The old port district of Alcântara got a face-lift in the 1990s, and since then
 walk5.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520859998/LXFactoryPost.jpg")
 walk5.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
 walk5.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
-
-
-
-
 
 
 
@@ -249,6 +245,21 @@ walk9.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geeb
 walk9.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
 
 
+walk10 = Walk.create!({
+  name: "Beyond Pasteis: Belem Reloaded ",
+  location: "Lisbon",
+  address: "Belem",
+  description: "Belem is the delightful district to the west of central Lisbon, and is the setting for many of the capital’s most iconic and important tourist attractions. The district makes for an enjoyable half day excursion, and combines historic monuments, fascinating museums and carefully maintained parks, all of which line the cooling waters of the Tejo estuary.
+  ",
+  category: Category.last,
+  duration: 50,
+  user: User.all.sample
+  })
+walk10.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520890362/belem-tower-2809818_960_720.jpg
+")
+walk10.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
+walk10.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
+
 
 
 Review.create!({
@@ -319,7 +330,7 @@ Point.create!({
   description: "Marvila Library is a good starting point of the graffitti walk",
   order: 1,
   walk: Walk.first,
-  photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520600631/street-art-zesar-behamonte.jpg"
+remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520600631/street-art-zesar-behamonte.jpg"
   })
 Point.create!({
   name: "Rua Alberto Jose Pessoa",
@@ -328,7 +339,7 @@ Point.create!({
   description: "The street has many graffitti murals",
   order: 2,
   walk: Walk.first,
-photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520600629/street-art-god-mess.jpg"
+remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520600629/street-art-god-mess.jpg"
   })
 Point.create!({
   name: "Rua Eduarda Lapa",
@@ -337,7 +348,7 @@ Point.create!({
   description: "The second main street full of street art murals",
   order: 3,
   walk: Walk.first,
-photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520600627/street-art-miguel-brum_1.jpg"
+remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520600627/street-art-miguel-brum_1.jpg"
   })
 Point.create!({
   name: "Bairro da Quinta do Chale",
@@ -346,7 +357,7 @@ Point.create!({
   description: "The coolest street murals are hidden away on these streets",
   order: 4,
   walk: Walk.first,
-photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520600728/968733d3cd63d5a52d22ffc9c042273b_1.jpg"
+remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520600728/968733d3cd63d5a52d22ffc9c042273b_1.jpg"
   })
 Point.create!({
   name: "Rua do Patrocinio",
@@ -355,7 +366,7 @@ Point.create!({
   description: "More amazing art murals here",
   order: 5,
   walk: Walk.first,
-photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520600620/f377c498a1.jpg"
+remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520600620/f377c498a1.jpg"
   })
 Point.create!({
   name: "Dois Corvos",
@@ -364,7 +375,7 @@ Point.create!({
   description: "Enjoy some cool graffiti whilst trying out some amazing beers in this Craft Beer Brewery",
   order: 6,
   walk: Walk.first,
- photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520600624/street-art-the-caver.jpg"
+ remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520600624/street-art-the-caver.jpg"
   })
 Point.create!({
   name: "Fabrica do Braca de Prata",
@@ -373,7 +384,7 @@ Point.create!({
   description: "The last stop on the tour, a place full of many cool different spaces, a library, alternative craft shops and lively at night with concerts",
   order: 7,
   walk: Walk.first,
-photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520446746/street-art-kobra.jpg"
+remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446746/street-art-kobra.jpg"
   })
 
 p "finished seeding"
