@@ -319,7 +319,7 @@ Point.create!({
   description: "Marvila Library is a good starting point of the graffitti walk",
   order: 1,
   walk: Walk.first,
-photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520600631/street-art-zesar-behamonte.jpg"
+  photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520600631/street-art-zesar-behamonte.jpg"
   })
 Point.create!({
   name: "Rua Alberto Jose Pessoa",
