@@ -13,7 +13,7 @@
 }
 
 #instructions {
-    margin-top: 429px;
+    margin-top: 500px;
     font-size: 21px;
     text-align: center;
     animation: fadein 5s;
@@ -21,6 +21,7 @@
     -webkit-animation: fadein 5s; /* Safari and Chrome */
     -o-animation: fadein 5s; /* Opera */
 }
+
 @keyframes fadein {
     from {
         opacity:0;
