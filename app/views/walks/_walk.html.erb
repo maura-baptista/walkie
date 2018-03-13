@@ -23,7 +23,9 @@
       </div>
       <div class="card-row">
         <span class="card-location"><%= walk.location %> |</span>&nbsp;
-        <span class="card-location"><%= walk.duration %>mins</span>
+        <span class="card-location"><%= walk.duration %>mins</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <span class="card-reviews-count card-rating-reviews"><%= walk.reviews.length %>&nbsp;Reviews |&nbsp;&nbsp;</span>
+        <span id="count" class="card-rating-reviews"><%= walk.likes.length %>&nbsp;Likes</span>
 
       </div>
     </div>
@@ -32,10 +34,8 @@
     <%= link_to walk_path(walk), anchor: "#reviews" do %>
     <%= link_to walk_path(walk), anchor: "#likes" do %>
 
-    <div class="card-rating-reviews">
+    <div >
       <div class="card-row">
-        <span class="card-reviews-count"><%= walk.reviews.length %>&nbsp;Reviews |&nbsp;&nbsp;</span>
-        <span id="count"><%= walk.likes.length %>&nbsp;Likes</span>
       </div>
     </div>
     <% end %>

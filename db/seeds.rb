@@ -96,7 +96,7 @@ walk = Walk.create!({
   description: "At some point in the last years, Lisbon's graffiti artists upped their collective game. Now, pieces that once would've been cited as vandalism and whitewashed are worshiped as modern day masterpieces. Check out the work of some of Lisbon's most famous street artists on this walk.The themes are multifaceted, covering the country’s history, pop culture, and imaginative abstracts.
   ",
   category: Category.first ,
-  duration: 35,
+  duration: 75,
   user: User.all.sample
   })
 walk.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446746/street-art-kobra.jpg")

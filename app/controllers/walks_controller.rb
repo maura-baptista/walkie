@@ -73,6 +73,10 @@ class WalksController < ApplicationController
 
   end
 
+def minmethod(minutes)
+  hours, minutes = minutes.divmod(60)
+  "#{hours.to_s.rjust(2)}hr  #{minutes.to_s.rjust(2)}minutes"
+end
 
 
   private
