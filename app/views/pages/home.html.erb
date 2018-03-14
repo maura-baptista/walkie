@@ -9,13 +9,15 @@
 <div id="myNav" class="overlay">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <div class="overlay-content">
-    <% Category.all.each do |category| %>
+    <h3><strong>Choose from </strong></h3>
+    ▿
+  <% Category.all.each do |category| %>
     <%= link_to category.name , category_path(category) %>
     <% end %>
   </div>
 </div>
 
-<button type="button" class="btn btn-default btn-xs get-started" span style="font-size:19px;cursor:pointer" onclick="openNav()">Get started</span></button>
+<button type="button" class="btn btn-default btn-xs get-started" span style="font-size:19px;cursor:pointer" onclick="openNav()">Go On</span></button>
 
 <script>
 function openNav() {

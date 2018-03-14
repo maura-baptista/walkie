@@ -21,16 +21,7 @@
 
   <span class="go-button btn btn-default btn-circle go-rounded-white text-center" style="margin-left: 30vw ;" data-target="#myModal" data-toggle="modal">GO</span>
 
-<<<<<<< HEAD
 
-  <!-- Map Modal -->
-  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content" style='width: 100%; height: 95vh;'>
-        <div id='map' style=' height: 95vh;'></div>
-        <div id='instructions'></div>
-      </div>
-=======
 <!-- Map Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
@@ -40,7 +31,6 @@
         x
       </button>
       <div id='instructions'></div>
->>>>>>> 23f44f97e3d67b77484fbebdaca59fc595109acd
     </div>
   </div>
 
@@ -63,8 +53,10 @@
         <% end %>
 
 
-        <span class="tagline" >&nbsp;<%= @walk.minmethod(@walk.duration) %> &nbsp;&nbsp;&nbsp;<i class="far fa-clock icon"></i>&nbsp;&nbsp;&nbsp;<%= @walk.location%>&nbsp;&nbsp;&nbsp; <i class="fa fa-map-pin icon"></i> &nbsp;&nbsp;&nbsp; </span>
-        <span class="tagline" id="count"><%= @walk.likes.length %>&nbsp;Likes  <i class="fa fa-star icon"></i></span>
+
+
+        <span class="tagline">&nbsp;<i class="far fa-clock icon">&nbsp;</i><%= @walk.minmethod(@walk.duration)%>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-map-pin icon">&nbsp;</i><%= @walk.location%>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span class="tagline" id="count"><i class="fa fa-star icon">&nbsp;</i><%= @walk.likes.length %>&nbsp;Likes</span>
 
 
         <hr>
@@ -76,7 +68,6 @@
     </div>
   </div>
 
-<<<<<<< HEAD
 
 
 

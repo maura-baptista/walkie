@@ -71,22 +71,22 @@ User.create!({
 
 
 Category.create!({
-  name: "Alternative Walks",
+  name: "Alternative",
   })
 Category.create!({
-  name: "Green Walks",
+  name: "Green",
   })
 Category.create!({
-  name: "Historical Walks",
+  name: "Historical",
   })
 Category.create!({
-  name: "Seaside Walks",
+  name: "Seaside",
   })
 Category.create!({
-  name: "Family Walks",
+  name: "Family",
   })
 Category.create!({
-  name: "Cultural Walks",
+  name: "Cultural",
   })
 
 walk = Walk.create!({
@@ -270,19 +270,19 @@ walk10.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/gee
 
 
 walk11 = Walk.create!({
-  name: "A ging",
+  name: "A ginjihna! A boozy trip",
   location: "Lisbon",
-  address: "Belem",
-  description: "Belem is the delightful district to the west of central Lisbon, and is the setting for many of the capital’s most iconic and important tourist attractions. The district makes for an enjoyable half day excursion, and combines historic monuments, fascinating museums and carefully maintained parks, all of which line the cooling waters of the Tejo estuary.
+  address: "Alfama",
+  description: "Portugal is famed for its excellent wines and ports, so visiting a local wine bar during your trip to Lisbon is essential. In recent years, the number of decent wine cellars and trendy bars has increased along with the influx of tourists. Our trail explores the best wine bars in the city, both those loved by tourists and the precious secrets of local city dwellers.
   ",
   category: Category.last,
   duration: 60,
   user: User.all.sample
   })
-walk11.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520890362/belem-tower-2809818_960_720.jpg
+walk11.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1521031186/Cherries_1.png
 ")
-walk11.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520980264/pastel-de-nata-pasteis-de-belem.jpg")
-walk11.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520980268/capa6-1050x599.jpg")
+walk11.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1521027482/201004-w-winebar-garrafeira-630x417.png")
+walk11.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1521027489/lisbon-port-wine-shop-image-2-by-messagez-com_.jpg")
 
 
 
