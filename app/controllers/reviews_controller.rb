@@ -6,16 +6,15 @@ class ReviewsController < ApplicationController
 
   def new
     @review = Review.new
-    authorize @review
+
   end
 
   def create
     # @booking.venue = @venue
     @walk = Walk.find(params[:walk_id])
     @review = Review.new(review_params)
-    authorize @review
     if @review.save
-      redirect_to walk_path
+      redirect_to walk_path(@walk)
     else
       render :new
     end
@@ -40,6 +39,6 @@ class ReviewsController < ApplicationController
   end
 
   def review_params
-    params.require(:review).permit(:content, :rating)
+    params.require(:review).permit(:content)
   end
 end
