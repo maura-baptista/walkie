@@ -90,17 +90,17 @@ Category.create!({
   })
 
 walk = Walk.create!({
-  name: "Marvila Street Art Delights",
+  name: "Marvellous Marvila Street Art",
   location: "Lisbon",
   address: "Marvila",
-  description: "At some point in the last years, Lisbon's graffiti artists upped their collective game. Now, pieces that once would've been cited as vandalism and whitewashed are worshiped as modern day masterpieces. Check out the work of some of Lisbon's most famous street artists on this walk.The themes are multifaceted, covering the country’s history, pop culture, and imaginative abstracts.
+  description: "At some point in the last years, Lisbon's graffiti artists upped their collective game. Now, pieces that once would've been cited as vandalism and whitewashed are worshiped as modern day masterpieces. Check out the work of some of Lisbon's most famous street artists on this amazing walk.The themes are multifaceted, covering the country’s history, pop culture, and imaginative abstract art.The trail starts at the  Municipal Library and stretches as far as Bairro Marquês de Abrantes, Bairro dos Alfinetes and Bairro da Quinta da Salgada. The them of the art represents “Ibero-American Cultural Identity.”
   ",
   category: Category.first ,
   duration: 75,
   user: User.all.sample
   })
 walk.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446746/street-art-kobra.jpg")
-walk.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
+walk.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1521024551/400410_muro_festival_de_arte_urbana_lx_2017.jpg")
 walk.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
 
 
@@ -267,6 +267,22 @@ walk10.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/gee
 ")
 walk10.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520980264/pastel-de-nata-pasteis-de-belem.jpg")
 walk10.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520980268/capa6-1050x599.jpg")
+
+
+walk11 = Walk.create!({
+  name: "A ging",
+  location: "Lisbon",
+  address: "Belem",
+  description: "Belem is the delightful district to the west of central Lisbon, and is the setting for many of the capital’s most iconic and important tourist attractions. The district makes for an enjoyable half day excursion, and combines historic monuments, fascinating museums and carefully maintained parks, all of which line the cooling waters of the Tejo estuary.
+  ",
+  category: Category.last,
+  duration: 60,
+  user: User.all.sample
+  })
+walk11.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520890362/belem-tower-2809818_960_720.jpg
+")
+walk11.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520980264/pastel-de-nata-pasteis-de-belem.jpg")
+walk11.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520980268/capa6-1050x599.jpg")
 
 
 

@@ -51,8 +51,8 @@
         <% end %>
 
 
-        <span class="tagline" >&nbsp;<%= @walk.minmethod(@walk.duration) %> &nbsp;&nbsp;&nbsp;<i class="far fa-clock icon"></i>&nbsp;&nbsp;&nbsp;<%= @walk.location%>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
-        <span class="tagline" id="count"><%= @walk.likes.length %>&nbsp;Likes</span>
+        <span class="tagline" >&nbsp;<%= @walk.minmethod(@walk.duration) %> &nbsp;&nbsp;&nbsp;<i class="far fa-clock icon"></i>&nbsp;&nbsp;&nbsp;<%= @walk.location%>&nbsp;&nbsp;&nbsp; <i class="fa fa-map-pin icon"></i> &nbsp;&nbsp;&nbsp; </span>
+        <span class="tagline" id="count"><%= @walk.likes.length %>&nbsp;Likes  <i class="fa fa-star icon"></i></span>
 
 
 
@@ -83,7 +83,7 @@
           <div class="timeline-item__image" style="background-image: url('<%= image_path point.photo %>')">
           </div>
           <div class="timeline-item__legend">
-            <p><%= point.order %>.<%=point.name %></p>
+            <p><strong><%= point.order %>.<%=point.name %></strong></p>
             <div><%= point.description %>.</div>
           </div>
         </div>
