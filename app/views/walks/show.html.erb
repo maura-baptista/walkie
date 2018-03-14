@@ -114,6 +114,7 @@
 <iframe src=<%= @walk.playlist %> width="100%" height="380" frameborder="0" allowtransparency="true"></iframe>
 </div>
 
+<% unless @walk.reviews.empty?%>
   <div>
     <h4>Reviews</h4>
     <% @reviews.each  do |review| %>
@@ -130,6 +131,8 @@
     </div>
     <% end %>
   </div>
+    <% end %>
+
   <br>
 
   <script>
