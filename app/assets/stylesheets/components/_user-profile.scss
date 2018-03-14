@@ -46,8 +46,9 @@ li {
 
 .window {
   box-shadow: #d17bc9;
-  height: 150vh;
+  height: 130vh;
   width: 100vw;
+  overflow-y: scroll;
 }
 
 .header-profile {
