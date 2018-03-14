@@ -1,51 +1,52 @@
-
 <div class="window">
   <div class="overlay"></div>
   <div class="box header-profile">
-    <%= image_tag "image.png", class: "profile-avatar" %>
+    <%= image_tag current_user.photo, class: "profile-avatar" %>
     <br>
     <h2><strong><%= current_user.first_name + " " + current_user.last_name %></strong></h2>
   </div>
 
 
   <div class="box profile-footer">
-    <div class="message">
+    <div class="message-profile">
       <div class="message-name">
-        <i class="fas fa-heart" style="color: white; font-size: 32px;"></i>
+        <i class="fas fa-heart" style="color: #d17bc9; font-size: 32px;"></i>
       </div>
       <div class="message-body">
         <h6><strong>Favorite Walks</strong></h6>
          <% @walks_liked.each do |walk| %>
+
          <p><%= walk.name %></p>
          <% end %>
       </div>
     </div>
 
-  <div class="message">
+  <div class="message-profile">
     <div class="message-name">
-      <i class="fas fa-plus-circle" style="color: white; font-size: 32px;"></i>
+      <i class="fas fa-plus-circle" style="color: #d17bc9; font-size: 32px;"></i>
     </div>
-    <div class="message-body">
+    <div class="message-body2">
       <h6><strong>My Uploaded Walks</strong></h6>
        <% @walks_created.each do |walk| %>
        <p><%= walk.name %></p>
        <% end %>
     </div>
   </div>
-   <div class="message">
+   <div class="message-profile">
       <div class="message-name">
-        <i class="fas fa-street-view" style="color: white; font-size: 32px;"></i>
+        <i class="fas fa-street-view" style="color: #d17bc9; font-size: 32px;"></i>
       </div>
       <div class="message-body">
         <h6><strong>My previous Walk</strong></h6>
           <% @walks_previous.each do |walk| %>
            <p><%= walk%></p>
           <% end %>
+
       </div>
     </div>
     <div class="social">
-      <td><a href="#" class="badge badge-pill badge-light"><i class=""></i> follow </a></td>
-      <td>
+      <td></td>
     </div>
 </div>
+
 

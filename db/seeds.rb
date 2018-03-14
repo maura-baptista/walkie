@@ -61,6 +61,14 @@ User.create!({
   photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520519728/11253888_10207694698942379_8476170414381940837_n.jpg"
   })
 
+User.create!({
+  first_name: "Irina",
+  last_name: "Popa",
+  email: "iri@verizon.net",
+  password: "123456",
+  photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520956548/iri.jpg"
+  })
+
 
 Category.create!({
   name: "Alternative Walks",

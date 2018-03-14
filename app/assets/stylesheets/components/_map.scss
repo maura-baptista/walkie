@@ -22,6 +22,10 @@
     -o-animation: fadein 5s; /* Opera */
 }
 
+.mapboxgl-popup-content {
+  border-radius: 10px !important;
+}
+
 @keyframes fadein {
     from {
         opacity:0;
