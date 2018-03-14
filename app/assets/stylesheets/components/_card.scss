@@ -181,8 +181,8 @@
   border-radius: 25px;
   background-color: $pink;
   border-color: $pink;
-  display: inline-block;
-  margin: 0 auto;
+  // display: inline-block;
+  // margin: 0 auto;
 
 }
 
@@ -193,22 +193,21 @@
   border-radius: 25px;
   background-color: $pink;
   border-color: $pink;
-  display: inline-block;
-  margin-left: 40px;
-
+  // display: inline-block;
 }
 
 .CTA-btn-completed{
   // background-color: $pink;
   // border-color: $pink;
   border-radius: 25px;
-  display: inline-block;
-  margin: 0 auto;
-
-
+  // display: inline-block;
 }
 
+.show-buttons{
 
+  display: flex;
+  justify-content: space-around;
+}
 
 
 

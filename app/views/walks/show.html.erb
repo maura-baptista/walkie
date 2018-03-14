@@ -67,7 +67,7 @@
 
         <hr>
         <% if @walk.user == current_user %>
-          <button class="CTA-btn-points-of-interest btn btn-primary text-center" data-target="#modal-window" data-toggle="modal"> + points of interest</button>
+          <button class="CTA-btn-points-of-interest btn btn-primary text-center" data-target="#modal-window" data-toggle="modal"> Add Points of Interest</button>
         <% end %>
         <br>
         <p><%= @walk.description %></p>
@@ -112,12 +112,16 @@
 <% end %>
 
 <br>
-<% if (current_user.walks.include? @walk) %>
+<div class= "show-buttons">
+  <% if (current_user.walks.include? @walk) %>
     <%= link_to 'Completed', walk_user_walks_path(@walk),class: "CTA-btn-completed btn btn-danger text-center", method: :post, disabled: true  %>
 <% else %>
     <%= link_to 'Mark as completed', walk_user_walks_path(@walk),class: "CTA-btn-mark-completed btn btn-primary text-center", method: :post %>
 <% end %>
    <%= link_to 'Add review', walk_user_walks_path(@walk),class: "CTA-btn-add-review btn-danger text-center", method: :post %>
+
+</div>
+
 
 <br>
 
