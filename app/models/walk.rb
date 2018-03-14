@@ -8,6 +8,7 @@ class Walk < ApplicationRecord
   has_many :user_walks
   has_many :users, through: :user_walks
   has_many :walk_attachments
+  has_many :completed_walks
   accepts_nested_attributes_for :walk_attachments
   # has_many :photos, through: :walk_attachmens
 
