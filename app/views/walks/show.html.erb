@@ -1,3 +1,7 @@
+<% content_for :meta_title, "#{@walk.name} is on #{DEFAULT_META["meta_product_name"]}" %>
+<% content_for :meta_description, @walk.description %>
+<% content_for :meta_image, cl_image_path(@walk.photos) %>
+
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -137,7 +141,7 @@
     mapboxgl.accessToken = 'pk.eyJ1IjoiZnJhbmNpc2NvYmFycmV0byIsImEiOiJjamVoMWRjMjMwbWh6MnFuczF6dGd6bmFoIn0.S5h45dvXuYQ3xoN-d504KA'; // replace this with your access token
     var map = new mapboxgl.Map({
       container: 'map',
-      style: 'mapbox://styles/mapbox/light-v9', // replace this with your style
+      style: 'mapbox://styles/mapbox/streets-v9', // replace this with your style
       center: [points[0].longitude, points[0].latitude],
       zoom: 13,
       pitch: 45,
@@ -158,7 +162,8 @@
                       "type": "Feature",
                       "properties": {
                           "description": point.description,
-                          "icon": "marker"
+                          "icon": "marker",
+                          "color": "red"
                       },
                       "geometry": {
                           "type": "Point",
@@ -274,6 +279,8 @@ map.on('load', function () {
               break;
           }
       }
+
+
 
          map.addLayer({
         'id': '3d-buildings',
@@ -397,3 +404,6 @@ map.on('load', function () {
       map.resize();
     }, 100);
   </script>
+
+
+
