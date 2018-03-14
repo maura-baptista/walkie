@@ -28,16 +28,15 @@
     <!-- Card Rating and Review -->
     <%= link_to walk_path(walk), anchor: "#reviews" do %>
     <%= link_to walk_path(walk), anchor: "#likes" do %>
+      <div class="card-row">
 
     <div class="card-rating-reviews">
-      <div class="card-row">
-        <span class="card-reviews-count"><%= walk.reviews.length %>&nbsp;Reviews |&nbsp;&nbsp;</span>
+        <span class="card-reviews-count"><%= walk.reviews.length %>&nbsp;Reviews&nbsp;&nbsp;&nbsp;</span>
         <span id="count"><%= walk.likes.length %>&nbsp;Likes</span>
-      </div>
     </div>
     <% end %>
     <% end %>
-
+</div>
     <!-- Card Link -->
     <%= link_to walk, class: "card-link" do %>
     <% end %>

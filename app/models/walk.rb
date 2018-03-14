@@ -12,6 +12,15 @@ class Walk < ApplicationRecord
   accepts_nested_attributes_for :walk_attachments
   # has_many :photos, through: :walk_attachmens
 
+  def minmethod(minutes)
+    if minutes > 60
+      hours, minutes = minutes.divmod(60)
+      "#{hours.to_s.rjust(2)}hr #{minutes.to_s.rjust(2)}minutes"
+    else
+      "#{minutes.to_s.rjust(2)}minutes"
+    end
+  end
+
 
   def participants
     users

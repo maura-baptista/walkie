@@ -71,36 +71,36 @@ User.create!({
 
 
 Category.create!({
-  name: "Alternative Walks",
+  name: "Alternative",
   })
 Category.create!({
-  name: "Green Walks",
+  name: "Green",
   })
 Category.create!({
-  name: "Historical Walks",
+  name: "Historical",
   })
 Category.create!({
-  name: "Seaside Walks",
+  name: "Seaside",
   })
 Category.create!({
-  name: "Family Walks",
+  name: "Family",
   })
 Category.create!({
-  name: "Cultural Walks",
+  name: "Cultural",
   })
 
 walk = Walk.create!({
-  name: "Marvila Street Art Delights",
+  name: "Marvellous Marvila Street Art",
   location: "Lisbon",
   address: "Marvila",
-  description: "At some point in the last years, Lisbon's graffiti artists upped their collective game. Now, pieces that once would've been cited as vandalism and whitewashed are worshiped as modern day masterpieces. Check out the work of some of Lisbon's most famous street artists on this walk.The themes are multifaceted, covering the country’s history, pop culture, and imaginative abstracts.
+  description: "At some point in the last years, Lisbon's graffiti artists upped their collective game. Now, pieces that once would've been cited as vandalism and whitewashed are worshiped as modern day masterpieces. Check out the work of some of Lisbon's most famous street artists on this amazing walk.The themes are multifaceted, covering the country’s history, pop culture, and imaginative abstract art.The theme of the art represents “Ibero-American Cultural Identity.”
   ",
   category: Category.first ,
-  duration: 35,
+  duration: 75,
   user: User.all.sample
   })
 walk.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446746/street-art-kobra.jpg")
-walk.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
+walk.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1521024551/400410_muro_festival_de_arte_urbana_lx_2017.jpg")
 walk.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
 
 
@@ -115,8 +115,8 @@ walk7 = Walk.create!({
   user: User.all.sample
   })
 walk7.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520860244/13.jpg")
-walk7.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
-walk7.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
+walk7.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520546847/maxresdefault.jpg")
+walk7.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520979015/images.jpg")
 
 
 
@@ -127,7 +127,7 @@ walk2 = Walk.create!({
   description: "Vhils’s art is poetic, complex, and ambitious. He penetrates through countless layers of posters, dirt, and plaster to set free the poetic images hidden beneath urban spaces. This is all done by drilling away old plaster relief forms.
   ",
   category: Category.first ,
-  duration: 25,
+  duration: 60,
   user: User.all.sample
   })
 walk2.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520501662/vhils-1.jpg")
@@ -147,8 +147,8 @@ The old port district of Alcântara got a face-lift in the 1990s, and since then
   user: User.all.sample
   })
 walk5.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520859998/LXFactoryPost.jpg")
-walk5.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
-walk5.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
+walk5.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520868872/ansjzwvvrhvp67bus8nc.jpg")
+walk5.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520979111/watson-lisbon-portugal-lx-factory-street-art-1024x682.jpg")
 
 
 
@@ -163,8 +163,8 @@ walk6 = Walk.create!({
   user: User.all.sample
   })
 walk6.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520335852/jason-briscoe-104295-unsplash.jpg")
-walk6.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
-walk6.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
+walk6.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520979197/lisbon-2237559_960_720.jpg")
+walk6.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520979196/_ASR5529.jpg")
 
 
 
@@ -191,14 +191,14 @@ walk4 = Walk.create!({
   description: "Cobbled lanes, centuries-old houses, hole-in-the-wall restaurants and famous landmarks await you on this 2.5-hour walking tour of Lisbon’s enigmatic Alfama neighborhood. Explore the hilly district with a professional guide and revel in the village atmosphere as you wander down Alfama’s steep streets.
   ",
   category: Category.last,
-  duration: 30,
+  duration: 80,
 
   user: User.all.sample
   })
 
 walk4.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520865497/lisbon-alfama.jpg")
-walk4.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
-walk4.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
+walk4.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520979356/0.jpg")
+walk4.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520979352/122.jpg")
 
 
 
@@ -215,8 +215,8 @@ The old port district of Alcântara got a face-lift in the 1990s, and since then
   user: User.all.sample
   })
 walk5.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520869431/1221521665_d6c8fd78e0.jpg")
-walk5.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
-walk5.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
+walk5.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520979455/800px_COLOURBOX4948835.jpg")
+walk5.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/c_scale,w_226/v1520979458/download_1.jpg")
 
 
 
@@ -233,8 +233,8 @@ It's very nice to have such a vast Nature just next to Lisbon.
   user: User.all.sample
   })
 walk8.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520860583/forest-07.jpg")
-walk8.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
-walk8.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
+walk8.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520979956/0219.jpg")
+walk8.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520979953/images_1.jpg")
 
 
 walk9 = Walk.create!({
@@ -250,7 +250,7 @@ It's very nice to have such a vast Nature just next to Lisbon.
   })
 walk9.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520852708/91256761.jpg")
 walk9.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
-walk9.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
+walk9.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520980145/1501860681465.jpg")
 
 
 walk10 = Walk.create!({
@@ -260,24 +260,40 @@ walk10 = Walk.create!({
   description: "Belem is the delightful district to the west of central Lisbon, and is the setting for many of the capital’s most iconic and important tourist attractions. The district makes for an enjoyable half day excursion, and combines historic monuments, fascinating museums and carefully maintained parks, all of which line the cooling waters of the Tejo estuary.
   ",
   category: Category.last,
-  duration: 50,
+  duration: 60,
   user: User.all.sample
   })
 walk10.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520890362/belem-tower-2809818_960_720.jpg
 ")
-walk10.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
-walk10.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
+walk10.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520980264/pastel-de-nata-pasteis-de-belem.jpg")
+walk10.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520980268/capa6-1050x599.jpg")
+
+
+walk11 = Walk.create!({
+  name: "A ginjihna! A boozy trip",
+  location: "Lisbon",
+  address: "Alfama",
+  description: "Portugal is famed for its excellent wines and ports, so visiting a local wine bar during your trip to Lisbon is essential. In recent years, the number of decent wine cellars and trendy bars has increased along with the influx of tourists. Our trail explores the best wine bars in the city, both those loved by tourists and the precious secrets of local city dwellers.
+  ",
+  category: Category.last,
+  duration: 60,
+  user: User.all.sample
+  })
+walk11.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1521031186/Cherries_1.png
+")
+walk11.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1521027482/201004-w-winebar-garrafeira-630x417.png")
+walk11.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1521027489/lisbon-port-wine-shop-image-2-by-messagez-com_.jpg")
 
 
 
 Review.create!({
-  content: "Amazing place! I saw so many cool things !",
+  content: "Wowza! I saw so many cool things!",
   walk: Walk.all.sample,
   user: User.all.sample
   })
 
 Review.create!({
-  content: "What a walk! The best weekend with Walkie!",
+  content: "Walkie is simply Wonderful!",
   walk: Walk.all.sample,
   user: User.all.sample
   })
@@ -310,7 +326,7 @@ Review.create!({
   user: User.all.sample
   })
 Review.create!({
-  content: "I'll certainly come back for more walks",
+  content: "Walkie talks the talk but also walks the walk",
   walk: Walk.all.sample,
   user: User.all.sample
   })
@@ -335,7 +351,7 @@ Point.create!({
   name: "Marvila Library",
   latitude: 38.740388,
   longitude: -9.109299,
-  description: "Marvila Library is a good starting point of the graffitti walk",
+  description: "Marvila Library is a good starting point for the graffitti walk",
   order: 1,
   walk: Walk.first,
 remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520600631/street-art-zesar-behamonte.jpg"
@@ -344,7 +360,7 @@ Point.create!({
   name: "Rua Alberto Jose Pessoa",
   latitude: 38.741509,
   longitude: -9.108027,
-  description: "The street has many graffitti murals",
+  description: "The street has some of the most famous art on show",
   order: 2,
   walk: Walk.first,
 remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520600629/street-art-god-mess.jpg"
@@ -353,7 +369,7 @@ Point.create!({
   name: "Rua Eduarda Lapa",
   latitude: 38.7415465,
   longitude: -9.10863,
-  description: "The second main street full of street art murals",
+  description: "Here you can see an amazing piece created by the duo Colectivo Licuado, from Uruguay, known for their semi-realistic art.",
   order: 3,
   walk: Walk.first,
 remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520600627/street-art-miguel-brum_1.jpg"
@@ -362,7 +378,7 @@ Point.create!({
   name: "Bairro da Quinta do Chale",
   latitude: 38.743362,
   longitude: -9.107827,
-  description: "The coolest street murals are hidden away on these streets",
+  description: "Look closely and you will see some gems hidden away on these streets",
   order: 4,
   walk: Walk.first,
 remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520600728/968733d3cd63d5a52d22ffc9c042273b_1.jpg"
@@ -371,7 +387,7 @@ Point.create!({
   name: "Rua do Patrocinio",
   latitude: 38.743538,
   longitude: -9.107635,
-  description: "More amazing art murals here",
+  description: "More amazing art murals here by Cix Mugre, an artist who works with elements from prehispanic Mexican culture.",
   order: 5,
   walk: Walk.first,
 remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520600620/f377c498a1.jpg"
