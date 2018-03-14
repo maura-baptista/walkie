@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   resources :categories, only: [ :index, :show]
 
   resources :walks, only: [ :index, :show, :new, :create, :edit, :update ] do
+    resources :reviews
     resources :points, only: [:new, :create]
     resources :user_walks, only: :create
     resources :likes, only: [:create, :destroy]

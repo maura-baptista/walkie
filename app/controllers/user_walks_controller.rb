@@ -7,7 +7,7 @@ class UserWalksController < ApplicationController
     @user_walk.user = current_user
     @user_walk.walk = @walk
     if @user_walk.save
-     redirect_to walk_path(@walk), notice: "Enjoy your walk!"
+     redirect_to walk_path(@walk), notice: "Thank you for walking with Walkie!!!"
     end
   end
 end
