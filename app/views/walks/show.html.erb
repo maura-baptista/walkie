@@ -54,8 +54,6 @@
 
         <span class="tagline">&nbsp;<i class="far fa-clock icon">&nbsp;&nbsp;</i><%= @walk.minmethod(@walk.duration)%>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-map-pin icon">&nbsp;&nbsp;</i><%= @walk.location%>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
         <span class="tagline" id="count"><i class="fa fa-star icon">&nbsp;</i><%= @walk.likes.length %>&nbsp;Likes</span>
-
-
         <hr>
         <br>
         <p><%= @walk.description %></p>
@@ -66,6 +64,9 @@
   </div>
 
 
+
+<!-- <iframe src="https://open.spotify.com/user/geebabygee/playlist/09vrf9JgCt1AD06mqwlubq
+"" width="300" height="380" frameborder="0" allowtransparency="true"></iframe> -->
 
 
 <% unless @walk.points.empty?%>
@@ -103,6 +104,11 @@
   <br>
   <br>
 
+<h4>Music</h4>
+<br>
+<div class="music">
+<iframe src=<%= @walk.playlist %> width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+</div>
 
   <div>
     <h4>Reviews</h4>
