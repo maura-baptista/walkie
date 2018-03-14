@@ -93,7 +93,7 @@ walk = Walk.create!({
   name: "Marvellous Marvila Street Art",
   location: "Lisbon",
   address: "Marvila",
-  description: "At some point in the last years, Lisbon's graffiti artists upped their collective game. Now, pieces that once would've been cited as vandalism and whitewashed are worshiped as modern day masterpieces. Check out the work of some of Lisbon's most famous street artists on this amazing walk.The themes are multifaceted, covering the country’s history, pop culture, and imaginative abstract art.The trail starts at the  Municipal Library and stretches as far as Bairro Marquês de Abrantes, Bairro dos Alfinetes and Bairro da Quinta da Salgada. The them of the art represents “Ibero-American Cultural Identity.”
+  description: "At some point in the last years, Lisbon's graffiti artists upped their collective game. Now, pieces that once would've been cited as vandalism and whitewashed are worshiped as modern day masterpieces. Check out the work of some of Lisbon's most famous street artists on this amazing walk.The themes are multifaceted, covering the country’s history, pop culture, and imaginative abstract art.The theme of the art represents “Ibero-American Cultural Identity.”
   ",
   category: Category.first ,
   duration: 75,
@@ -287,13 +287,13 @@ walk11.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/gee
 
 
 Review.create!({
-  content: "Amazing place! I saw so many cool things !",
+  content: "Wowza! I saw so many cool things!",
   walk: Walk.all.sample,
   user: User.all.sample
   })
 
 Review.create!({
-  content: "What a walk! The best weekend with Walkie!",
+  content: "Walkie is simply Wonderful!",
   walk: Walk.all.sample,
   user: User.all.sample
   })
@@ -326,7 +326,7 @@ Review.create!({
   user: User.all.sample
   })
 Review.create!({
-  content: "I'll certainly come back for more walks",
+  content: "Walkie talks the talk but also walks the walk",
   walk: Walk.all.sample,
   user: User.all.sample
   })
@@ -351,7 +351,7 @@ Point.create!({
   name: "Marvila Library",
   latitude: 38.740388,
   longitude: -9.109299,
-  description: "Marvila Library is a good starting point of the graffitti walk",
+  description: "Marvila Library is a good starting point for the graffitti walk",
   order: 1,
   walk: Walk.first,
 remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520600631/street-art-zesar-behamonte.jpg"
@@ -360,7 +360,7 @@ Point.create!({
   name: "Rua Alberto Jose Pessoa",
   latitude: 38.741509,
   longitude: -9.108027,
-  description: "The street has many graffitti murals",
+  description: "The street has some of the most famous art on show",
   order: 2,
   walk: Walk.first,
 remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520600629/street-art-god-mess.jpg"
@@ -369,7 +369,7 @@ Point.create!({
   name: "Rua Eduarda Lapa",
   latitude: 38.7415465,
   longitude: -9.10863,
-  description: "The second main street full of street art murals",
+  description: "Here you can see an amazing piece created by the duo Colectivo Licuado, from Uruguay, known for their semi-realistic art.",
   order: 3,
   walk: Walk.first,
 remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520600627/street-art-miguel-brum_1.jpg"
@@ -378,7 +378,7 @@ Point.create!({
   name: "Bairro da Quinta do Chale",
   latitude: 38.743362,
   longitude: -9.107827,
-  description: "The coolest street murals are hidden away on these streets",
+  description: "Look closely and you will see some gems hidden away on these streets",
   order: 4,
   walk: Walk.first,
 remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520600728/968733d3cd63d5a52d22ffc9c042273b_1.jpg"
@@ -387,7 +387,7 @@ Point.create!({
   name: "Rua do Patrocinio",
   latitude: 38.743538,
   longitude: -9.107635,
-  description: "More amazing art murals here",
+  description: "More amazing art murals here by Cix Mugre, an artist who works with elements from prehispanic Mexican culture.",
   order: 5,
   walk: Walk.first,
 remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520600620/f377c498a1.jpg"

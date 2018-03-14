@@ -33,19 +33,16 @@
       <div id='instructions'></div>
     </div>
   </div>
-
 </div>
 
 <%= render "points/form_modal"  %>
 
 <div class="container">
-
   <div class="row">
     <div class="col-xs-12" style="z-index: -1;">
       <br>
-      <br>
       <div class="d-inline categories">
-        <h6><%= @walk.category.name%></h6>
+        <h6><%= @walk.category.name%> Walk</h6>
         <h4 style="color: #161616 !important;"><strong> <%=@walk.name %></strong></h4>
         <br>
         <% if @walk.user == current_user %>
@@ -55,7 +52,7 @@
 
 
 
-        <span class="tagline">&nbsp;<i class="far fa-clock icon">&nbsp;</i><%= @walk.minmethod(@walk.duration)%>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-map-pin icon">&nbsp;</i><%= @walk.location%>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span class="tagline">&nbsp;<i class="far fa-clock icon">&nbsp;&nbsp;</i><%= @walk.minmethod(@walk.duration)%>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-map-pin icon">&nbsp;&nbsp;</i><%= @walk.location%>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
         <span class="tagline" id="count"><i class="fa fa-star icon">&nbsp;</i><%= @walk.likes.length %>&nbsp;Likes</span>
 
 
