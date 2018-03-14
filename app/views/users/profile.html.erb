@@ -12,9 +12,10 @@
       <div class="message-name">
         <i class="fas fa-heart" style="color: #d17bc9; font-size: 32px;"></i>
       </div>
-      <div class="message-body2">
-        <h6><strong>My Favorite Walks</strong></h6>
-         <% @walks.each do |walk| %>
+      <div class="message-body">
+        <h6><strong>Favorite Walks</strong></h6>
+         <% @walks_liked.each do |walk| %>
+
          <p><%= walk.name %></p>
          <% end %>
       </div>
@@ -26,7 +27,7 @@
     </div>
     <div class="message-body2">
       <h6><strong>My Uploaded Walks</strong></h6>
-       <% @walk.each do |walk| %>
+       <% @walks_created.each do |walk| %>
        <p><%= walk.name %></p>
        <% end %>
     </div>
@@ -35,11 +36,12 @@
       <div class="message-name">
         <i class="fas fa-street-view" style="color: #d17bc9; font-size: 32px;"></i>
       </div>
-      <div class="message-body2">
-        <h6><strong>My Previous Walk</strong></h6>
-         <% @walks_previous.each do |walk| %>
-           <p><%= walk.name %></p>
-         <% end %>
+      <div class="message-body">
+        <h6><strong>My previous Walk</strong></h6>
+          <% @walks_previous.each do |walk| %>
+           <p><%= walk%></p>
+          <% end %>
+
       </div>
     </div>
     <div class="social">
