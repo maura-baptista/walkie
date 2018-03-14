@@ -21,11 +21,6 @@
 
   <span class="go-button btn btn-default btn-circle go-rounded-white text-center" style="margin-left: 30vw ;" data-target="#myModal" data-toggle="modal">GO</span>
 
-
-
-
-
-
 <!-- Map Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
@@ -58,11 +53,8 @@
         <button class="btn btn-oblong btn-primary text-center" data-target="#modal-window" data-toggle="modal"> + points of interest</button>
         <% end %>
 
-
         <span class="tagline" >&nbsp;<%= @walk.duration %>&nbsp;&nbsp;&nbsp;<i class="far fa-clock icon"></i>&nbsp;&nbsp;&nbsp;<%= @walk.location%>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
         <span class="tagline" id="count"><%= @walk.likes.length %>&nbsp;Likes</span>
-
-
 
         <hr>
         <br>
@@ -72,8 +64,6 @@
       </div>
     </div>
   </div>
-
-
 
 <% unless @walk.points.empty?%>
 <div class="timeline">
@@ -127,9 +117,6 @@
   <% end %>
   <br>
 </div>
-
-
-
 
   <script>
     var points = <%= raw @walk.points.to_json %>;
