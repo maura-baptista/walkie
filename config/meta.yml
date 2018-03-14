@@ -1,0 +1,5 @@
+meta_product_name: "Walkie"
+meta_title: "Walkie - Discover your city"
+meta_description: "Tailored walking trails, showcasing the best hidden spots of the city."
+meta_image: "home.jpg"                       # should exist in `app/assets/images/`
+

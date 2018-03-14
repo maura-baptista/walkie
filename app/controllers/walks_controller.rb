@@ -73,6 +73,10 @@ class WalksController < ApplicationController
 
   end
 
+def minmethod(minutes)
+  hours, minutes = minutes.divmod(60)
+  "#{hours.to_s.rjust(2)}hr  #{minutes.to_s.rjust(2)}minutes"
+end
 
 
   private
@@ -85,7 +89,7 @@ class WalksController < ApplicationController
 
    def walk_params
     # params.require(:walk).permit(:name, :category, :location, :duration, :description,  walk_attachments_attributes: [:id, walk_id, :photo])
-     params.require(:walk).permit(:name, :location, :duration, :description, walk_attachments_attributes: [:id, :walk_id, :photo])
+     params.require(:walk).permit(:name, :location, :duration, :description, :playlist, walk_attachments_attributes: [:id, :walk_id, :photo])
 
   end
 
