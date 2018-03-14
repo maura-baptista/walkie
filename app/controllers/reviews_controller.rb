@@ -1,5 +1,7 @@
 class ReviewsController < ApplicationController
   before_action :set_review, only: [:edit, :update, :destroy]
+  before_action :set_walk, only: [:create, :update, :destroy]
+
   def index
     @reviews = Review.all
   end
@@ -10,9 +12,9 @@ class ReviewsController < ApplicationController
   end
 
   def create
-    # @booking.venue = @venue
-    @walk = Walk.find(params[:walk_id])
     @review = Review.new(review_params)
+    @review.walk = @walk
+    @review.user = current_user
     if @review.save
       redirect_to walk_path(@walk)
     else
@@ -33,6 +35,10 @@ class ReviewsController < ApplicationController
   end
 
   private
+
+  def set_walk
+    @walk = Walk.find(params[:walk_id])
+  end
 
   def set_review
     @review = Review.find(params[:id])

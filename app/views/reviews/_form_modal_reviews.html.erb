@@ -8,11 +8,11 @@
     <br>
     <br>
    <div class="form_title">
-     <center><h2 class="upload-title"-> <i class="fas fa-pencil-alt" style= "font-size:40px; color: white;"></i>&nbsp&nbspAdd points of interest</h2><center>
+     <center><h2 class="upload-title"-> <i class="fas fa-pencil-alt" style= "font-size:40px; color: white;"></i>&nbsp&nbspAdd a Review</h2><center>
    </div>
 
   <div class="row walk_form">
-     <%= simple_form_for @walk do |f| %>
+     <%= simple_form_for [@walk, Review.new] do |f| %>
        <%= f.input :content, placeholder:"leave your review"%>
        <%= f.submit "Add review ", class: "btn btn-primary btn-block" %>
       <% end %>
