@@ -169,15 +169,19 @@
 }
 
 // points of interest button
-.btn-oblong{
-  border-radius: 50px;
-  margin-left: 45vw;
-  margin-bottom: -68px;
-
+.CTA-btn-points-of-interest{
+  border-radius: 25px;
+  display: block;
+  margin: 0 auto;
 }
 
 // mark a walk as done button
 .btn-primary{
+ border-radius: 25px;
+
+}
+
+.CTA-buttons-show{
  border-radius: 25px;
 }
 
