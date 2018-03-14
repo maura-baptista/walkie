@@ -56,8 +56,8 @@
 
 
 
-        <span class="tagline">&nbsp;<i class="far fa-clock icon">&nbsp;&nbsp;</i><%= @walk.minmethod(@walk.duration)%>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-map-pin icon">&nbsp;&nbsp;</i><%= @walk.location%>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-        <span class="tagline" id="count"><i class="fa fa-star icon">&nbsp;</i><%= @walk.likes.length %>&nbsp;Likes</span>
+        <span class="tagline"><i class="far fa-clock icon" style="margin-right: 10px;">&nbsp;&nbsp;</i><%= @walk.minmethod(@walk.duration)%>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-map-pin icon" style="margin-right: 10px;">&nbsp;&nbsp;</i><%= @walk.location%>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span class="tagline" id="count"><i class="fa fa-star icon" style="margin-right: 10px;">&nbsp;</i><%= "#{@walk.likes.length} Like#{"s" if @walk.likes.length > 1}" %>&nbsp;</span>
         <hr>
         <br>
         <p><%= @walk.description %></p>
@@ -110,8 +110,8 @@
 
 <h4>Music</h4>
 <br>
-<div class="music">
-<iframe src=<%= @walk.playlist %> width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+<div class="music" style="padding: 0; margin-left: -15px;">
+<iframe src=<%= @walk.playlist %> width="100%" height="380" frameborder="0" allowtransparency="true"></iframe>
 </div>
 
   <div>
