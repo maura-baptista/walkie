@@ -173,13 +173,46 @@
   border-radius: 25px;
   display: block;
   margin: 0 auto;
+  background-color: $pink;
+  border-color: $pink;
 }
+
+.CTA-btn-mark-completed{
+  border-radius: 25px;
+  background-color: $pink;
+  border-color: $pink;
+  display: inline-block;
+  margin: 0 auto;
+
+}
+
+
+
+.CTA-btn-add-review{
+  padding: 7px;
+  border-radius: 25px;
+  background-color: $pink;
+  border-color: $pink;
+  display: inline-block;
+  margin-left: 40px;
+
+}
+
+.CTA-btn-completed{
+  // background-color: $pink;
+  // border-color: $pink;
+  border-radius: 25px;
+  display: inline-block;
+  margin: 0 auto;
+
+
+}
+
+
+
+
 
 // mark a walk as done button
-.btn-primary{
- border-radius: 25px;
-
-}
 
 .CTA-buttons-show{
  border-radius: 25px;
