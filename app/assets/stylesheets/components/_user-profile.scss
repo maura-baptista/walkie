@@ -6,7 +6,6 @@
 
 .avatar-colum{
   border-right-width: 10px;
-
 }
 
 .profile-avatar{
@@ -15,9 +14,6 @@
   box-shadow: 0 1px 2px rgba(0,0,0,0.2);
   border: white 1px solid;
   position: relative;
-  // top: auto;
-  // right:4px;
-
 }
 
 .title-separator{
@@ -48,10 +44,9 @@ li {
   position: relative;
 }
 
-
 .window {
   box-shadow: #d17bc9;
-  height: 130vh;
+  height: 150vh;
   width: 100vw;
 }
 
@@ -120,7 +115,6 @@ li {
   color: #706969;
   left: 0;
   position: absolute;
-  // text-align: center;
   top: 285px;
   width: inherit;
 }
@@ -164,15 +158,15 @@ li {
 .message-body2 {
   flex-grow: 1;
 }
-.message-name {
+.message-name2 {
   padding-left: 10px;
-  min-width: 100px;
+  min-width: 70px;
 }
-.message-name h3 {
+.message-name2 h3 {
   font-size: 13px;
   margin-bottom: 0px;
 }
-.message-name p {
+.message-name2 p {
   font-size: 13px;
   font-weight: lighter;
   opacity: 0.6;
