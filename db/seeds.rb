@@ -97,7 +97,8 @@ walk = Walk.create!({
   ",
   category: Category.first ,
   duration: 75,
-  user: User.all.sample
+  user: User.all.sample,
+  playlist: "https://open.spotify.com/user/geebabygee/playlist/09vrf9JgCt1AD06mqwlubq"
   })
 walk.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446746/street-art-kobra.jpg")
 walk.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1521024551/400410_muro_festival_de_arte_urbana_lx_2017.jpg")

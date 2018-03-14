@@ -89,7 +89,7 @@ end
 
    def walk_params
     # params.require(:walk).permit(:name, :category, :location, :duration, :description,  walk_attachments_attributes: [:id, walk_id, :photo])
-     params.require(:walk).permit(:name, :location, :duration, :description, walk_attachments_attributes: [:id, :walk_id, :photo])
+     params.require(:walk).permit(:name, :location, :duration, :description, :playlist, walk_attachments_attributes: [:id, :walk_id, :photo])
 
   end
 

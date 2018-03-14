@@ -168,12 +168,55 @@
   justify-content: center !important;
 }
 
-.btn-oblong{
-  border-radius: 50px;
-  margin-left: 45vw;
-  margin-bottom: -68px;
+// points of interest button
+.CTA-btn-points-of-interest{
+  border-radius: 25px;
+  display: block;
+  margin: 0 auto;
+  background-color: $pink;
+  border-color: $pink;
+}
+
+.CTA-btn-mark-completed{
+  border-radius: 25px;
+  background-color: $pink;
+  border-color: $pink;
+  // display: inline-block;
+  // margin: 0 auto;
 
 }
+
+
+
+.CTA-btn-add-review{
+  padding: 7px;
+  border-radius: 25px;
+  background-color: $pink;
+  border-color: $pink;
+  // display: inline-block;
+}
+
+.CTA-btn-completed{
+  // background-color: $pink;
+  // border-color: $pink;
+  border-radius: 25px;
+  // display: inline-block;
+}
+
+.show-buttons{
+
+  display: flex;
+  justify-content: space-around;
+}
+
+
+
+// mark a walk as done button
+
+.CTA-buttons-show{
+ border-radius: 25px;
+}
+
 
 .go-rounded-border {
   width: 44px;
