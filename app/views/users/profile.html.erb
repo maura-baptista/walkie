@@ -39,7 +39,7 @@
       <div class="message-body2" style="line-height: 1;">
         <h6><strong>My Completed Walks</strong></h6>
           <% @walks_previous.each do |walk| %>
-          <p><%= link_to walk.walk.name, walk_path(walk) %>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+          <p><%= link_to walk.name, walk_path(walk) %>&nbsp;&nbsp;&nbsp;&nbsp;</p>
           <p><em>Date: <%= walk.created_at.to_datetime.strftime("%B %d, %Y") %></em></p>
            <br>
           <% end %>
