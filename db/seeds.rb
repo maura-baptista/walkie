@@ -113,7 +113,8 @@ walk7 = Walk.create!({
   ",
   category: Category.first,
   duration: 30,
-  user: User.all.sample
+  user: User.all.sample,
+  playlist: "https://open.spotify.com/user/geebabygee/playlist/50CscF2B0SxX2JKfWKE8of"
   })
 walk7.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520860244/13.jpg")
 walk7.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520546847/maxresdefault.jpg")
@@ -145,7 +146,8 @@ The old port district of Alcântara got a face-lift in the 1990s, and since then
   ",
   duration: 45,
   category: Category.last,
-  user: User.all.sample
+  user: User.all.sample,
+  playlist: "https://open.spotify.com/user/geebabygee/playlist/2yoj28lqkLwz8NbCcdhklF"
   })
 walk5.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520859998/LXFactoryPost.jpg")
 walk5.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520868872/ansjzwvvrhvp67bus8nc.jpg")
@@ -161,7 +163,8 @@ walk6 = Walk.create!({
   ",
   category: Category.fourth,
   duration: 30,
-  user: User.all.sample
+  user: User.all.sample,
+  playlist: "https://open.spotify.com/user/geebabygee/playlist/2TkVlErvHoBXTFxVAdcehc"
   })
 walk6.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520335852/jason-briscoe-104295-unsplash.jpg")
 walk6.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520979197/lisbon-2237559_960_720.jpg")
@@ -177,7 +180,8 @@ walk3 = Walk.create!({
   ",
   category: Category.first ,
   duration: 45,
-  user: User.all.sample
+  user: User.all.sample,
+  playlist: "https://open.spotify.com/user/geebabygee/playlist/7LBBNjdtlESIoc3zcZzaz7"
   })
 walk3.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520501925/bordalo-1.jpg")
 walk3.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520501920/bordalo-4.jpg")
@@ -193,8 +197,8 @@ walk4 = Walk.create!({
   ",
   category: Category.last,
   duration: 80,
-
-  user: User.all.sample
+  user: User.all,
+  playlist: "https://open.spotify.com/user/geebabygee/playlist/3ddcOFOiDbs2y6shrbGdMg"
   })
 
 walk4.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520865497/lisbon-alfama.jpg")
@@ -213,7 +217,8 @@ The old port district of Alcântara got a face-lift in the 1990s, and since then
   ",
   duration: 45,
   category: Category.last,
-  user: User.all.sample
+  user: User.all.sample,
+  playlist: "https://open.spotify.com/user/geebabygee/playlist/0O6O5CqvPISvWavkKB9zr4"
   })
 walk5.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520869431/1221521665_d6c8fd78e0.jpg")
 walk5.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520979455/800px_COLOURBOX4948835.jpg")
@@ -231,7 +236,8 @@ It's very nice to have such a vast Nature just next to Lisbon.
   ",
   category: Category.second,
   duration: 50,
-  user: User.all.sample
+  user: User.all.sample,
+  playlist: "https://open.spotify.com/user/geebabygee/playlist/4RJZMumTEjU5bUEcUwCtmY"
   })
 walk8.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520860583/forest-07.jpg")
 walk8.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520979956/0219.jpg")
@@ -247,7 +253,8 @@ It's very nice to have such a vast Nature just next to Lisbon.
   ",
   category: Category.second,
   duration: 50,
-  user: User.all.sample
+  user: User.all.sample,
+  playlist: "https://open.spotify.com/user/geebabygee/playlist/6tpi79Mt4fUAq7kySy1OXl"
   })
 walk9.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520852708/91256761.jpg")
 walk9.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
@@ -262,7 +269,8 @@ walk10 = Walk.create!({
   ",
   category: Category.last,
   duration: 60,
-  user: User.all.sample
+  user: User.all.sample,
+  playlist: "https://open.spotify.com/user/geebabygee/playlist/4n7955UX2npfEfLY3AQCuu"
   })
 walk10.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520890362/belem-tower-2809818_960_720.jpg
 ")
@@ -278,7 +286,8 @@ walk11 = Walk.create!({
   ",
   category: Category.last,
   duration: 60,
-  user: User.all.sample
+  user: User.all.sample,
+  playlist: "https://open.spotify.com/user/geebabygee/playlist/4waN8EvhYFLy8r0B160Ol7"
   })
 walk11.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1521031186/Cherries_1.png
 ")
