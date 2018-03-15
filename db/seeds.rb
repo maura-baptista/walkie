@@ -197,7 +197,7 @@ walk4 = Walk.create!({
   ",
   category: Category.last,
   duration: 80,
-  user: User.all,
+  user: User.all.sample,
   playlist: "https://open.spotify.com/user/geebabygee/playlist/3ddcOFOiDbs2y6shrbGdMg"
   })
 
