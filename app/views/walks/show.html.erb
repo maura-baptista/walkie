@@ -135,9 +135,10 @@
 <% unless @walk.reviews.empty?%>
   <div>
     <h4>Reviews</h4>
-    <% @reviews.each  do |review| %>
+    <% @reviews.reverse.  each  do |review| %>
     <div class="message">
-      <%= image_tag review.user.photo, class: "avatar-large" %>
+      <%= image_tag (review.user.facebook_picture_url || review.user.photo )|| "http://placehold.it/30x30", class: "avatar-large"  %>
+
       <div class="message-name">
         <h3><%=  review.user.first_name %></h3>
         <h3><%=  review.user.last_name %></h3>
