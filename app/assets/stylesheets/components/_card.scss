@@ -172,27 +172,32 @@
 .CTA-btn-points-of-interest{
   border-radius: 25px;
   display: block;
-  margin: 0 auto;
+  margin: auto;
   background-color: $pink;
-  border-color: $pink;
+  border: none;
+  color: white;
 }
 
 .CTA-btn-mark-completed{
   border-radius: 25px;
   background-color: $pink;
-  border-color: $pink;
+  border: none;
+  color: white;
+  width: 51.5px;
+  margin: 0 10px;
   // display: inline-block;
   // margin: 0 auto;
 
 }
 
-
-
 .CTA-btn-add-review{
   padding: 7px;
   border-radius: 25px;
   background-color: $pink;
-  border-color: $pink;
+  border: none;
+  color: white;
+  width: 51.5px;
+  margin: 0 10px;
   // display: inline-block;
 }
 
@@ -203,10 +208,14 @@
   // display: inline-block;
 }
 
+.btn .svg-inline--fa {
+  color: white !important;
+}
+
 .show-buttons{
 
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   margin-bottom: 100px;
 }
 

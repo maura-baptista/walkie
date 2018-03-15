@@ -106,7 +106,7 @@
       </div>
     </div>
   </div>
-  <% end %>
+<% end %>
 
 <br>
 
@@ -150,11 +150,13 @@
 
 <div class="show-buttons">
   <% if user_signed_in? && current_user.walks.include?(@walk) %>
-      <%= link_to 'Completed', walk_user_walks_path(@walk),class: "CTA-btn-completed btn btn-danger text-center", method: :post, disabled: true  %>
+      <%= link_to 'Completed', walk_user_walks_path(@walk),class: "CTA-btn-completed btn btn-default text-center", method: :post, disabled: true %>
   <% else %>
-      <%= link_to 'Mark as completed', walk_user_walks_path(@walk), class: "CTA-btn-mark-completed btn btn-primary text-center", method: :post %>
+      <%= link_to walk_user_walks_path(@walk), class: "CTA-btn-mark-completed btn btn-default text-center", method: :post do %>
+        <i class="fa fa-check"></i>
+      <% end %>
   <% end %>
-     <button class="CTA-btn-add-review btn-danger text-center" data-target="#modal-window-2" data-toggle="modal"> Add Review</button>
+     <button class="CTA-btn-add-review btn text-center" data-target="#modal-window-2" data-toggle="modal"><i class="fa fa-comment"></i></button>
 
 </div>
 
