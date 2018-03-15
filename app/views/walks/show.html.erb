@@ -113,7 +113,7 @@
 
 <br>
 
-<h4>Music</h4>
+<h4>Vibe out on this walk with <i class="fab fa-spotify"></i></h4>
 <br>
 <div class="music" style="padding: 0; margin-left: -15px;">
 <iframe src=<%= @walk.playlist %> width="100%" height="380" frameborder="0" allowtransparency="true"></iframe>
@@ -121,15 +121,7 @@
 
 <br>
 
-<div class= "show-buttons">
-  <% if (current_user.walks.include? @walk) %>
-      <%= link_to 'Completed', walk_user_walks_path(@walk),class: "CTA-btn-completed btn btn-danger text-center", method: :post, disabled: true  %>
-  <% else %>
-      <%= link_to 'Mark as completed', walk_user_walks_path(@walk),class: "CTA-btn-mark-completed btn btn-primary text-center", method: :post %>
-  <% end %>
-     <button class="CTA-btn-add-review btn-danger text-center" data-target="#modal-window-2" data-toggle="modal"> Add Review</button>
 
-</div>
 
 
 <% unless @walk.reviews.empty?%>
@@ -137,7 +129,7 @@
     <h4>Reviews</h4>
     <% @reviews.each  do |review| %>
     <div class="message">
-      <%= image_tag review.user.photo, class: "avatar-large" %>
+      <%= image_tag review.user.photo ? review.user.photo : 'steve.jpg', class: "avatar-large" %>
       <div class="message-name">
         <h3><%=  review.user.first_name %></h3>
         <h3><%=  review.user.last_name %></h3>
@@ -152,6 +144,16 @@
     <% end %>
 
   <br>
+
+<div class="show-buttons">
+  <% if (current_user.walks.include? @walk) %>
+      <%= link_to 'Completed', walk_user_walks_path(@walk),class: "CTA-btn-completed btn btn-danger text-center", method: :post, disabled: true  %>
+  <% else %>
+      <%= link_to 'Mark as completed', walk_user_walks_path(@walk),class: "CTA-btn-mark-completed btn btn-primary text-center", method: :post %>
+  <% end %>
+     <button class="CTA-btn-add-review btn-danger text-center" data-target="#modal-window-2" data-toggle="modal"> Add Review</button>
+
+</div>
 
   <%= render 'reviews/form_modal_reviews' %>
 
