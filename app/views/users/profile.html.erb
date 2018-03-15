@@ -16,7 +16,7 @@
         <h6><strong>Favorite Walks</strong></h6>
          <% @walks_liked.each do |walk| %>
 
-         <p><%= link_to walk.name, walk_path(walk.likes) %></p>
+         <p><%= link_to walk.name, walk_path(walk) %></p>
          <% end %>
       </div>
     </div>
@@ -28,7 +28,7 @@
     <div class="message-body2">
       <h6><strong>My Uploaded Walks</strong></h6>
        <% @walks_created.each do |walk| %>
-       <p><%= walk.name %></p>
+       <p><%= link_to walk.name, walk_path(walk) %></p>
        <% end %>
     </div>
   </div>
@@ -39,8 +39,9 @@
       <div class="message-body2" style="line-height: 1;">
         <h6><strong>My Completed Walks</strong></h6>
           <% @walks_previous.each do |walk| %>
-           <p><%= walk.walk.name%>&nbsp;&nbsp;&nbsp;&nbsp;</p>
-           <p><em>Date: <%= walk.created_at.to_datetime.strftime("%B %d, %Y") %></em></p>
+          <p><%= link_to walk.walk.name, walk_path(walk) %>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+          <p><em>Date: <%= walk.created_at.to_datetime.strftime("%B %d, %Y") %></em></p>
+           <br>
           <% end %>
 
       </div>
