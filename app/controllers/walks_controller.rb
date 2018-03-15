@@ -1,7 +1,7 @@
 class WalksController < ApplicationController
 
   before_action :set_walk, only: [:show, :edit, :update, :destroy]
-  skip_before_action :authenticate_user!, only: [:show]
+  skip_before_action :authenticate_user!, only: [:index, :show]
   helper_method :sort_direction
 
   def index
