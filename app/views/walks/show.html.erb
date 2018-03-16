@@ -56,8 +56,8 @@
 
 
 
-        <span class="tagline"><i class="far fa-clock icon" style="margin-right: 10px;">&nbsp;&nbsp;</i><%= @walk.minmethod(@walk.duration)%>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-map-pin icon" style="margin-right: 10px;">&nbsp;&nbsp;</i><%= @walk.location%>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-        <span class="tagline" id="count"><i class="fa fa-star icon" style="margin-right: 10px;">&nbsp;</i><%= "#{@walk.likes.length} Like#{"s" if @walk.likes.length > 1}" %>&nbsp;</span>
+        <span class="tagline" style="color: black;"><i class="far fa-clock icon" style="margin-right: 10px;">&nbsp;&nbsp;</i><%= @walk.minmethod(@walk.duration)%>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-map-pin icon" style="margin-right: 10px;">&nbsp;&nbsp;</i><%= @walk.location%>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span class="tagline" id="count" style="color: black;"><i class="fa fa-star icon" style="margin-right: 10px;">&nbsp;</i><%= "#{@walk.likes.length} Like#{"s" if @walk.likes.length > 1}" %>&nbsp;</span>
         <hr>
         <% if @walk.user == current_user %>
           <button class="CTA-btn-points-of-interest btn btn-primary text-center" data-target="#modal-window" data-toggle="modal"> Add Points of Interest</button>
