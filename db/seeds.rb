@@ -18,7 +18,7 @@ User.create!({
   last_name: "Monteiro",
   email: "joemonteiro@verizon.net",
   password: "123456",
-  photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520520397/20258116_104215333594155_8026645643865689250_n.jpg"
+  photo: "http://res.cloudinary.com/geebabygee/image/upload/c_scale,w_640/v1520520397/20258116_104215333594155_8026645643865689250_n.jpg"
   })
 
 User.create!({
@@ -26,7 +26,7 @@ User.create!({
   last_name: "Barreto",
   email: "barrrr@sweetpeachyboy.net",
   password: "123456",
-  photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520518949/26733717_471026946626212_2213751371031631593_n.jpg"
+  photo: "http://res.cloudinary.com/geebabygee/image/upload/c_scale,w_640/v1520518949/26733717_471026946626212_2213751371031631593_n.jpg"
   })
 
 User.create!({
@@ -34,7 +34,7 @@ User.create!({
   last_name: "Castro",
   email: "maria@verizon.net",
   password: "123456",
-  photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520519876/14572838_10209041836381309_6064047794073558588_n.jpg"
+  photo: "http://res.cloudinary.com/geebabygee/image/upload/c_scale,w_640/v1520519876/14572838_10209041836381309_6064047794073558588_n.jpg"
   })
 
 User.create!({
@@ -42,7 +42,7 @@ User.create!({
   last_name: "Azeveado",
   email: "cisco@verizon.net",
   password: "123456",
-  photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520546130/29540270.jpg"
+  photo: "http://res.cloudinary.com/geebabygee/image/upload/c_scale,w_640/v1520546130/29540270.jpg"
   })
 
 User.create!({
@@ -50,7 +50,7 @@ User.create!({
   last_name: "Master",
   email: "heroku@verizon.net",
   password: "123456",
-  photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520546128/20076484.jpg"
+  photo: "http://res.cloudinary.com/geebabygee/image/upload/c_scale,w_640/v1520546128/20076484.jpg"
   })
 
 User.create!({
@@ -58,7 +58,7 @@ User.create!({
   last_name: "Manel",
   email: "manelo@verizon.net",
   password: "123456",
-  photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520519728/11253888_10207694698942379_8476170414381940837_n.jpg"
+  photo: "http://res.cloudinary.com/geebabygee/image/upload/c_scale,w_640/v1520519728/11253888_10207694698942379_8476170414381940837_n.jpg"
   })
 
 User.create!({
@@ -66,7 +66,7 @@ User.create!({
   last_name: "Popa",
   email: "iri@verizon.net",
   password: "123456",
-  photo: "http://res.cloudinary.com/geebabygee/image/upload/v1520956548/iri.jpg"
+  photo: "http://res.cloudinary.com/geebabygee/image/upload/c_scale,w_640/v1520956548/iri.jpg"
   })
 
 
@@ -101,9 +101,9 @@ walk = Walk.create!({
   playlist: "https://open.spotify.com/embed?uri=spotify:user:geebabygee:playlist:09vrf9JgCt1AD06mqwlubq"
 
   })
-walk.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446746/street-art-kobra.jpg")
-walk.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1521024551/400410_muro_festival_de_arte_urbana_lx_2017.jpg")
-walk.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446742/street-art-steep.jpg")
+walk.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/c_scale,w_640/v1520446746/street-art-kobra.jpg")
+walk.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/c_scale,w_640/v1521024551/400410_muro_festival_de_arte_urbana_lx_2017.jpg")
+walk.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/c_scale,w_640/v1520446742/street-art-steep.jpg")
 
 
 walk7 = Walk.create!({
@@ -117,9 +117,9 @@ walk7 = Walk.create!({
   user: User.all.sample,
   playlist: "https://open.spotify.com/embed?uri=spotify:user:geebabygee:playlist:50CscF2B0SxX2JKfWKE8of"
   })
-walk7.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520860244/13.jpg")
-walk7.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520546847/maxresdefault.jpg")
-walk7.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520979015/images.jpg")
+walk7.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/c_scale,w_640/v1520860244/13.jpg")
+walk7.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/c_scale,w_640/v1520546847/maxresdefault.jpg")
+walk7.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/c_scale,w_640/v1520979015/images.jpg")
 
 
 
@@ -133,9 +133,9 @@ walk2 = Walk.create!({
   duration: 60,
   user: User.all.sample
   })
-walk2.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520501662/vhils-1.jpg")
-walk2.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520859822/muraisobeylisboa_07.jpg")
-walk2.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520501800/vhills_alcantera-770x429.jpg")
+walk2.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/c_scale,w_640/v1520501662/vhils-1.jpg")
+walk2.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/c_scale,w_640/v1520859822/muraisobeylisboa_07.jpg")
+walk2.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/c_scale,w_640/v1520501800/vhills_alcantera-770x429.jpg")
 
 walk5 = Walk.create!({
   name: "Hidden Alcantara",
@@ -150,9 +150,9 @@ The old port district of Alcântara got a face-lift in the 1990s, and since then
   user: User.all.sample,
   playlist: "https://open.spotify.com/embed?uri=spotify:user:geebabygee:playlist:2yoj28lqkLwz8NbCcdhklF"
   })
-walk5.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520859998/LXFactoryPost.jpg")
-walk5.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520868872/ansjzwvvrhvp67bus8nc.jpg")
-walk5.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520979111/watson-lisbon-portugal-lx-factory-street-art-1024x682.jpg")
+walk5.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/c_scale,w_640/v1520859998/LXFactoryPost.jpg")
+walk5.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/c_scale,w_640/v1520868872/ansjzwvvrhvp67bus8nc.jpg")
+walk5.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/c_scale,w_640/v1520979111/watson-lisbon-portugal-lx-factory-street-art-1024x682.jpg")
 
 
 
@@ -167,9 +167,9 @@ walk6 = Walk.create!({
   user: User.all.sample,
   playlist: "https://open.spotify.com/embed?uri=spotify:user:geebabygee:playlist:2TkVlErvHoBXTFxVAdcehc"
   })
-walk6.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520335852/jason-briscoe-104295-unsplash.jpg")
-walk6.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520979197/lisbon-2237559_960_720.jpg")
-walk6.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520979196/_ASR5529.jpg")
+walk6.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/c_scale,w_640/v1520335852/jason-briscoe-104295-unsplash.jpg")
+walk6.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/c_scale,w_640/v1520979197/lisbon-2237559_960_720.jpg")
+walk6.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/c_scale,w_640/v1520979196/_ASR5529.jpg")
 
 
 
@@ -184,9 +184,9 @@ walk3 = Walk.create!({
   user: User.all.sample,
   playlist: "https://open.spotify.com/embed?uri=spotify:user:geebabygee:playlist:7LBBNjdtlESIoc3zcZzaz7"
   })
-walk3.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520501925/bordalo-1.jpg")
-walk3.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520501920/bordalo-4.jpg")
-walk3.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520501923/bordalo-2.jpg")
+walk3.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/c_scale,w_640/v1520501925/bordalo-1.jpg")
+walk3.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/c_scale,w_640/v1520501920/bordalo-4.jpg")
+walk3.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/c_scale,w_640/v1520501923/bordalo-2.jpg")
 
 
 
@@ -202,9 +202,9 @@ walk4 = Walk.create!({
   playlist: "https://open.spotify.com/embed?uri=spotify:user:geebabygee:playlist:3ddcOFOiDbs2y6shrbGdMg"
   })
 
-walk4.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520865497/lisbon-alfama.jpg")
-walk4.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520979356/0.jpg")
-walk4.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520979352/122.jpg")
+walk4.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/c_scale,w_640/v1520865497/lisbon-alfama.jpg")
+walk4.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/c_scale,w_640/v1520979356/0.jpg")
+walk4.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/c_scale,w_640/v1520979352/122.jpg")
 
 
 
@@ -221,8 +221,8 @@ The old port district of Alcântara got a face-lift in the 1990s, and since then
   user: User.all.sample,
   playlist: "https://open.spotify.com/embed?uri=spotify:user:geebabygee:playlist:0O6O5CqvPISvWavkKB9zr4"
   })
-walk5.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520869431/1221521665_d6c8fd78e0.jpg")
-walk5.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520979455/800px_COLOURBOX4948835.jpg")
+walk5.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/c_scale,w_640/v1520869431/1221521665_d6c8fd78e0.jpg")
+walk5.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/c_scale,w_640/v1520979455/800px_COLOURBOX4948835.jpg")
 walk5.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/c_scale,w_226/v1520979458/download_1.jpg")
 
 
@@ -240,9 +240,9 @@ It's very nice to have such a vast Nature just next to Lisbon.
   user: User.all.sample,
   playlist: "https://open.spotify.com/embed?uri=spotify:user:geebabygee:playlist:4RJZMumTEjU5bUEcUwCtmY"
   })
-walk8.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520860583/forest-07.jpg")
-walk8.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520979956/0219.jpg")
-walk8.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520979953/images_1.jpg")
+walk8.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/c_scale,w_640/v1520860583/forest-07.jpg")
+walk8.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/c_scale,w_640/v1520979956/0219.jpg")
+walk8.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/c_scale,w_640/v1520979953/images_1.jpg")
 
 
 walk9 = Walk.create!({
@@ -257,9 +257,9 @@ It's very nice to have such a vast Nature just next to Lisbon.
   user: User.all.sample,
   playlist: "https://open.spotify.com/embed?uri=spotify:user:geebabygee:playlist:6tpi79Mt4fUAq7kySy1OXl"
   })
-walk9.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520852708/91256761.jpg")
-walk9.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446738/street-art-licuado.jpg")
-walk9.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520980145/1501860681465.jpg")
+walk9.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/c_scale,w_640/v1520852708/91256761.jpg")
+walk9.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/c_scale,w_640/v1520446738/street-art-licuado.jpg")
+walk9.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/c_scale,w_640/v1520980145/1501860681465.jpg")
 
 
 walk10 = Walk.create!({
@@ -275,8 +275,8 @@ walk10 = Walk.create!({
   })
 walk10.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520890362/belem-tower-2809818_960_720.jpg
 ")
-walk10.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520980264/pastel-de-nata-pasteis-de-belem.jpg")
-walk10.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520980268/capa6-1050x599.jpg")
+walk10.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/c_scale,w_640/v1520980264/pastel-de-nata-pasteis-de-belem.jpg")
+walk10.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/c_scale,w_640/v1520980268/capa6-1050x599.jpg")
 
 
 walk11 = Walk.create!({
@@ -290,10 +290,10 @@ walk11 = Walk.create!({
   user: User.all.sample,
   playlist: "https://open.spotify.com/embed?uri=spotify:user:geebabygee:playlist:4waN8EvhYFLy8r0B160Ol7"
   })
-walk11.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1521031186/Cherries_1.png
+walk11.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/c_scale,w_640/v1521031186/Cherries_1.png
 ")
-walk11.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1521027482/201004-w-winebar-garrafeira-630x417.png")
-walk11.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1521027489/lisbon-port-wine-shop-image-2-by-messagez-com_.jpg")
+walk11.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/c_scale,w_640/v1521027482/201004-w-winebar-garrafeira-630x417.png")
+walk11.walk_attachments.create!(remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/c_scale,w_640/v1521027489/lisbon-port-wine-shop-image-2-by-messagez-com_.jpg")
 
 
 
@@ -365,7 +365,7 @@ Point.create!({
   description: "Marvila Library is a good starting point for the graffitti walk",
   order: 1,
   walk: Walk.first,
-remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520600631/street-art-zesar-behamonte.jpg"
+remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/c_scale,w_640/v1520600631/street-art-zesar-behamonte.jpg"
   })
 Point.create!({
   name: "Rua Alberto Jose Pessoa",
@@ -374,7 +374,7 @@ Point.create!({
   description: "The street has some of the most famous art on show",
   order: 2,
   walk: Walk.first,
-remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520600629/street-art-god-mess.jpg"
+remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/c_scale,w_640/v1520600629/street-art-god-mess.jpg"
   })
 Point.create!({
   name: "Rua Eduarda Lapa",
@@ -383,7 +383,7 @@ Point.create!({
   description: "Here you can see an amazing piece created by the duo Colectivo Licuado, from Uruguay, known for their semi-realistic art.",
   order: 3,
   walk: Walk.first,
-remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520600627/street-art-miguel-brum_1.jpg"
+remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/c_scale,w_640/v1520600627/street-art-miguel-brum_1.jpg"
   })
 Point.create!({
   name: "Bairro da Quinta do Chale",
@@ -392,7 +392,7 @@ Point.create!({
   description: "Look closely and you will see some gems hidden away on these streets",
   order: 4,
   walk: Walk.first,
-remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520600728/968733d3cd63d5a52d22ffc9c042273b_1.jpg"
+remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/c_scale,w_640/v1520600728/968733d3cd63d5a52d22ffc9c042273b_1.jpg"
   })
 Point.create!({
   name: "Rua do Patrocinio",
@@ -401,7 +401,7 @@ Point.create!({
   description: "More amazing art murals here by Cix Mugre, an artist who works with elements from prehispanic Mexican culture.",
   order: 5,
   walk: Walk.first,
-remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520600620/f377c498a1.jpg"
+remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/c_scale,w_640/v1520600620/f377c498a1.jpg"
   })
 Point.create!({
   name: "Dois Corvos",
@@ -410,7 +410,7 @@ Point.create!({
   description: "Enjoy some cool graffiti whilst trying out some amazing beers in this Craft Beer Brewery",
   order: 6,
   walk: Walk.first,
- remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520600624/street-art-the-caver.jpg"
+ remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/c_scale,w_640/v1520600624/street-art-the-caver.jpg"
   })
 Point.create!({
   name: "Fabrica do Braca de Prata",
@@ -419,7 +419,7 @@ Point.create!({
   description: "The last stop on the tour, a place full of many cool different spaces, a library, alternative craft shops and lively at night with concerts",
   order: 7,
   walk: Walk.first,
-remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/v1520446746/street-art-kobra.jpg"
+remote_photo_url: "http://res.cloudinary.com/geebabygee/image/upload/c_scale,w_640/v1520446746/street-art-kobra.jpg"
   })
 
 p "finished seeding"
