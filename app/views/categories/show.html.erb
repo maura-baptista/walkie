@@ -1,13 +1,13 @@
 <div class="container">
   <br>
   <span class="dropdown dropdown-menu-right"><%= @category.name %>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-    <button class="btn btn-default btn-xs dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style=" margin-left: 23px; ">
+    <button class="btn btn-default btn-xs dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style=" margin-left: 123px; ">
       Sort by time:
       <span class="caret"></span>
     </button>
     <ul class="dropdown-menu dropdown-menu-right dropdown-color" aria-labelledby="dropdownMenu1">
-      <li><%= link_to "ascending", category_path(@category, sort: :asc)  %></li>
-      <li><%= link_to "descending", category_path(@category, sort: :desc)  %></li>
+      <li><%= link_to "shortest", category_path(@category, sort: :asc)  %></li>
+      <li><%= link_to "longest", category_path(@category, sort: :desc)  %></li>
     </ul>
   </div>
 </span>
