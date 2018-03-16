@@ -42,32 +42,32 @@ body {
 }
 
 .slideshow li:nth-child(1) {
-  background-image: url(http://res.cloudinary.com/geebabygee/image/upload/c_scale,w_640/v1520334116/david-marcu-158231-unsplash.jpg);
+  background-image: url(http://res.cloudinary.com/geebabygee/image/upload/c_scale,w_1400/v1520334116/david-marcu-158231-unsplash.jpg);
 
 }
 .slideshow li:nth-child(2) {
  background-image:  linear-gradient(
       rgba(0, 0, 0, 0.1),
       rgba(0, 0, 0, 0.1)
-    ), url(http://res.cloudinary.com/geebabygee/image/upload/c_scale,w_640/v1520458099/matthew-brodeur-6439-unsplash.jpg);
+    ), url(http://res.cloudinary.com/geebabygee/image/upload/c_scale,w_1400/v1520458099/matthew-brodeur-6439-unsplash.jpg);
   animation-delay: 10s;
 }
 .slideshow li:nth-child(3) {
   background-image:  linear-gradient(
       rgba(0, 0, 0, 0.3),
       rgba(0, 0, 0, 0.3)
-    ),url(http://res.cloudinary.com/geebabygee/image/upload/c_scale,w_640/v1520335688/samuel-zeller-144543-unsplash.jpg);
+    ),url(http://res.cloudinary.com/geebabygee/image/upload/c_scale,w_1400/v1520335688/samuel-zeller-144543-unsplash.jpg);
   animation-delay: 20s;
 }
 .slideshow li:nth-child(4) {
-  background-image: url(   http://res.cloudinary.com/geebabygee/image/upload/c_scale,w_640/v1520458104/mag-pole-102167-unsplash.jpg );
+  background-image: url(   http://res.cloudinary.com/geebabygee/image/upload/c_scale,w_1400/v1520458104/mag-pole-102167-unsplash.jpg );
   animation-delay: 30s;
 }
 .slideshow li:nth-child(5) {
   background-image:     linear-gradient(
       rgba(0, 0, 0, 0.2),
       rgba(0, 0, 0, 0.2)
-    ),url(http://res.cloudinary.com/geebabygee/image/upload/c_scale,w_640/v1520335852/jason-briscoe-104295-unsplash.jpg);
+    ),url(http://res.cloudinary.com/geebabygee/image/upload/c_scale,w_1400/v1520335852/jason-briscoe-104295-unsplash.jpg);
   animation-delay: 40s;
 }
 
