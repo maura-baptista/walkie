@@ -12,9 +12,7 @@
       <%= f.input :duration, placeholder:"45min", collection: [15, 30, 45, 60, 75, 90] %>
       <%= f.input :playlist, placeholder:"Copy Spotify link here" %>
       <%= f.input :description, placeholder:"very interesting walk to get to know on of Lisbon's main neighborhood, in the city center" %>
-      <%= f.simple_fields_for :walk_attachments, WalkAttachment.new do |w| %>
-      <%= w.input :photo, as: :file, input_html:{ multiple: true, name:"walk_attachments[photo][]" } %>
-      <% end %>
+
       <%= f.submit "Add walk ", class: "btn btn-primary btn-block" %>
 
     <% end %>
