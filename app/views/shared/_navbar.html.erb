@@ -4,7 +4,6 @@
   <i class="fas fa-home"></i>
   <% end %>
 
-
   <%= link_to categories_path, class: "navbar-icons" do%>
     <i class="fa fa-search"></i>
   <% end %>
@@ -12,8 +11,6 @@
   <%= link_to new_walk_path, class: "navbar-icons" do%>
     <i class="fa fa-plus"></i>
   <% end %>
-
-
 
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
@@ -25,7 +22,8 @@
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
         <div class="dropdown">
-          <%= image_tag "http://kitt.lewagon.com/placeholder/users/geebabygee", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+          <% avatar_url = current_user.facebook_picture_url || "http://placehold.it/30x30" %>
+          <%= image_tag avatar_url, class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
             <li>
               <%= link_to users_profile_path do %>

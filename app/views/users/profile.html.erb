@@ -1,44 +1,49 @@
 <div class="window">
   <div class="overlay"></div>
   <div class="box header-profile">
-    <%= image_tag current_user.photo, class: "profile-avatar" %>
+
+    <%= image_tag (current_user.facebook_picture_url || current_user.photo )|| 'steve.jpg', class: "avatar-large"  %>
     <br>
     <h2><strong><%= current_user.first_name + " " + current_user.last_name %></strong></h2>
   </div>
 
   <div class="box profile-footer">
     <div class="message-profile">
-      <div class="message-name">
+      <div class="message-name2">
         <i class="fas fa-heart" style="color: #d17bc9; font-size: 32px;"></i>
       </div>
       <div class="message-body2">
-        <h6><strong>My Favorite Walks</strong></h6>
-         <% @walks.each do |walk| %>
-         <p><%= walk.name %></p>
+        <h6><strong>Favorite Walks</strong></h6>
+         <% @walks_liked.each do |walk| %>
+
+         <p><%= link_to walk.name, walk_path(walk) %></p>
          <% end %>
       </div>
     </div>
 
   <div class="message-profile">
-    <div class="message-name">
+    <div class="message-name2">
       <i class="fas fa-plus-circle" style="color: #d17bc9; font-size: 32px;"></i>
     </div>
     <div class="message-body2">
       <h6><strong>My Uploaded Walks</strong></h6>
-       <% @walk.each do |walk| %>
-       <p><%= walk.name %></p>
+       <% @walks_created.each do |walk| %>
+       <p><%= link_to walk.name, walk_path(walk) %></p>
        <% end %>
     </div>
   </div>
    <div class="message-profile">
-      <div class="message-name">
+      <div class="message-name2">
         <i class="fas fa-street-view" style="color: #d17bc9; font-size: 32px;"></i>
       </div>
-      <div class="message-body2">
-        <h6><strong>My Previous Walk</strong></h6>
-         <% @walks_previous.each do |walk| %>
-           <p><%= walk.name %></p>
-         <% end %>
+      <div class="message-body2" style="line-height: 1;">
+        <h6><strong>My Completed Walks</strong></h6>
+          <% @walks_previous.each do |walk| %>
+          <p><%= link_to walk.name, walk_path(walk) %>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+          <p><em>Date: <%= walk.created_at.to_datetime.strftime("%B %d, %Y") %></em></p>
+           <br>
+          <% end %>
+
       </div>
     </div>
     <div class="social">

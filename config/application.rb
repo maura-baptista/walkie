@@ -9,6 +9,12 @@ Bundler.require(*Rails.groups)
 module Walkie
   class Application < Rails::Application
     config.action_view.embed_authenticity_token_in_remote_forms = true
+    config.action_dispatch.default_headers = {
+      'X-Frame-Options' => 'ALLOWALL',
+      'X-XSS-Protection' => '1; mode=block',
+      'X-Content-Type-Options' => 'nosniff'
+    }
+
     config.generators do |generate|
       generate.assets false
       generate.helper false
@@ -17,6 +23,7 @@ module Walkie
 
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.

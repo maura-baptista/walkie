@@ -57,13 +57,6 @@ GEM
       aws_cf_signer
       rest-client
     coderay (1.1.2)
-    coffee-rails (4.2.2)
-      coffee-script (>= 2.2.0)
-      railties (>= 4.0.0)
-    coffee-script (2.4.1)
-      coffee-script-source
-      execjs
-    coffee-script-source (1.12.2)
     concurrent-ruby (1.0.5)
     crass (1.0.3)
     devise (4.4.1)
@@ -166,6 +159,11 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
+    rails_real_favicon (0.0.4)
+      json (~> 1.7)
+      rails (>= 3.1)
+      rest-client (~> 1.8)
+      rubyzip (~> 1)
     railties (5.1.5)
       actionpack (= 5.1.5)
       activesupport (= 5.1.5)
@@ -184,6 +182,7 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 3.0)
       netrc (~> 0.7)
+    rubyzip (1.2.1)
     sass (3.5.5)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -198,8 +197,6 @@ GEM
     simple_form (3.5.1)
       actionpack (> 4, < 5.2)
       activemodel (> 4, < 5.2)
-    social-share-button (1.1.0)
-      coffee-rails
     spring (2.0.2)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -258,10 +255,10 @@ DEPENDENCIES
   pry-rails
   puma
   rails (= 5.1.5)
+  rails_real_favicon
   redis
   sass-rails
   simple_form
-  social-share-button
   spring
   spring-watcher-listen (~> 2.0.0)
   uglifier

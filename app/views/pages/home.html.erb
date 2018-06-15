@@ -2,29 +2,33 @@
     <h1><strong>Walkie</strong></h1>
     <h3><strong>Discover your city.</strong></h3>
      <br>
-  <br>
-  <br>
-  <br>
+    <br>
+    <br>
 
 <div id="myNav" class="overlay">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <div class="overlay-content">
-    <% Category.all.each do |category| %>
+    <h3><strong>Choose from </strong></h3>
+    ▿
+  <% Category.all.each do |category| %>
     <%= link_to category.name , category_path(category) %>
     <% end %>
   </div>
 </div>
 
-
-<button type="button" class="btn btn-default btn-xs get-started" span style="font-size:19px;cursor:pointer" onclick="openNav()">Get started</span></button>
+<button type="button" class="btn btn-default btn-xs get-started" span style="font-size:19px;cursor:pointer" onclick="openNav()">Let's Go</span></button>
 
 <script>
 function openNav() {
     document.getElementById("myNav").style.width = "100%";
+    document.getElementById("body").style.height = "100vh"
+    document.getElementById("body").style.overflow = "hidden"
 }
 
 function closeNav() {
     document.getElementById("myNav").style.width = "0%";
+    document.getElementById("body").style.height = "auto"
+    document.getElementById("body").style.overflow = "visible"
 }
 </script>
 
@@ -40,6 +44,8 @@ function closeNav() {
   <li></li>
   <li></li>
 </ul>
+<br>
+<br>
 <br>
 <br>
 <h4>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<strong>Popular Walks in Lisbon</strong>

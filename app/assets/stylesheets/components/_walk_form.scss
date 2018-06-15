@@ -1,7 +1,6 @@
 
-
 .walk_form {
-    height: 110vh;
+    height: auto;
     max-width: 600px;
     padding: 10px 20px;
     border: 0.5px solid #ada9a9;
@@ -18,7 +17,6 @@ abbr[title="required"] {
   display: none;
 }
 
-
 .form_title {
   color: white;
   max-width: 100%;
@@ -27,7 +25,6 @@ abbr[title="required"] {
   padding: 7px 20px;
   background: $pink;
   position: relative;
-
 }
 
 .upload-title{
@@ -41,8 +38,8 @@ abbr[title="required"] {
   border-radius: 25px;
   background-color: $pink;
   border-color: $pink;
+  margin: 30px auto 100px auto;
 }
-
 
 .form-control:focus {
     border-color: $pink;
